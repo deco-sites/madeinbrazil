@@ -4,7 +4,7 @@ import { DOMParser } from "deno-dom";
 const AUTH_TOKEN =
   "patqPStV56SAyWPdL.b8ee254879699e0c7cd3cb4c9fd128d52b2bf5d99eccd89cf5b1b6c7dd594ee1";
 const AIRTABLE_URL =
-  "https://api.airtable.com/v0/appUFpUsqerCzZAct/tblP1U9nfrENiiTiB/viwLCPNmWIRsOGMuI";
+  "https://api.airtable.com/v0/appUFpUsqerCzZAct/tblP1U9nfrENiiTiB";
 
 const parseBody = async <T>(
   body: ReadableStream<Uint8Array> | null,
@@ -27,7 +27,7 @@ const parseBody = async <T>(
 };
 
 const fetchCompanies = async (
-  orderBy: OrderBy,
+  orderBy: string,
   employees: number | null,
   companyStage: string | null,
   capital: string | null,
@@ -65,6 +65,10 @@ const fetchCompanies = async (
     .then((response) => response.json())
     .then((data: AirTableListResponse) => {
       return data.records.map(toCompany);
+    })
+    .catch((error) => {
+      console.error(error);
+      throw new Error(error);
     });
 };
 
@@ -116,7 +120,7 @@ const normalizeCompany = async (
 export const companies: {
   list: Company[];
   getList: (
-    orderBy: OrderBy,
+    orderBy: string,
     employees: number | null,
     companyStage: string | null,
     capital: string | null,
@@ -127,7 +131,7 @@ export const companies: {
 } = {
   list: [],
   getList: async function (
-    orderBy: OrderBy,
+    orderBy: string,
     employees: number | null,
     companyStage: string | null,
     capital: string | null,
@@ -247,9 +251,4 @@ interface CompanyDB {
   segment: string;
   companyStage: string;
   companyUpvotes: number;
-}
-
-export enum OrderBy {
-  CREATED_TIME = "createdTime",
-  COMPANY_UPVOTES = "companyUpvotes",
 }

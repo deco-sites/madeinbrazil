@@ -6,19 +6,21 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/companyListLoader.ts";
 import * as $$$$0 from "./routes/_app.tsx";
-import * as $$$$1 from "./routes/styles.css.ts";
-import * as $$$$2 from "./routes/api/companies.ts";
+import * as $$$$1 from "./routes/admin/[...catchall].tsx";
+import * as $$$$2 from "./routes/styles.css.ts";
+import * as $$$$3 from "./routes/api/companies.ts";
 import * as $$$$$0 from "./islands/OutOfStock.tsx";
 import * as $$$$$1 from "./islands/HeaderSearchbar.tsx";
 import * as $$$$$2 from "./islands/HeaderModals.tsx";
-import * as $$$$$3 from "./islands/Newsletter.tsx";
-import * as $$$$$4 from "./islands/SearchControls.tsx";
-import * as $$$$$5 from "./islands/ProductImageZoom.tsx";
-import * as $$$$$6 from "./islands/SliderJS.tsx";
-import * as $$$$$7 from "./islands/WishlistButton.tsx";
-import * as $$$$$8 from "./islands/HeaderButton.tsx";
-import * as $$$$$9 from "./islands/ShippingSimulation.tsx";
-import * as $$$$$10 from "./islands/AddToCartButton.tsx";
+import * as $$$$$3 from "./islands/CompaniesHeader.tsx";
+import * as $$$$$4 from "./islands/Newsletter.tsx";
+import * as $$$$$5 from "./islands/SearchControls.tsx";
+import * as $$$$$6 from "./islands/ProductImageZoom.tsx";
+import * as $$$$$7 from "./islands/SliderJS.tsx";
+import * as $$$$$8 from "./islands/WishlistButton.tsx";
+import * as $$$$$9 from "./islands/HeaderButton.tsx";
+import * as $$$$$10 from "./islands/ShippingSimulation.tsx";
+import * as $$$$$11 from "./islands/AddToCartButton.tsx";
 import * as $$$$$$$$0 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$$$1 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$$$2 from "./sections/Miscellaneous/CampaignTimer.tsx";
@@ -29,20 +31,21 @@ import * as $$$$$$$$6 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$$$7 from "./sections/DesignSystem/DesignSystem.tsx";
 import * as $$$$$$$$8 from "./sections/Links/LinkTree.tsx";
 import * as $$$$$$$$9 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$$$10 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$$$11 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$$$12 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$$$13 from "./sections/Content/Faq.tsx";
-import * as $$$$$$$$14 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$$$15 from "./sections/Content/Logos.tsx";
-import * as $$$$$$$$16 from "./sections/Content/Testimonials.tsx";
-import * as $$$$$$$$17 from "./sections/Header/Header.tsx";
-import * as $$$$$$$$18 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$$$19 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$$$20 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$$$21 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$$$22 from "./sections/Category/CategoryList.tsx";
-import * as $$$$$$$$23 from "./sections/Category/CategoryBanner.tsx";
+import * as $$$$$$$$10 from "./sections/CompaniesHeader.tsx";
+import * as $$$$$$$$11 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$$$12 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$$$13 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$$$14 from "./sections/Content/Faq.tsx";
+import * as $$$$$$$$15 from "./sections/Content/Benefits.tsx";
+import * as $$$$$$$$16 from "./sections/Content/Logos.tsx";
+import * as $$$$$$$$17 from "./sections/Content/Testimonials.tsx";
+import * as $$$$$$$$18 from "./sections/Header/Header.tsx";
+import * as $$$$$$$$19 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$$$20 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$$$21 from "./sections/Images/ImageGallery.tsx";
+import * as $$$$$$$$22 from "./sections/Images/BannerGrid.tsx";
+import * as $$$$$$$$23 from "./sections/Category/CategoryList.tsx";
+import * as $$$$$$$$24 from "./sections/Category/CategoryBanner.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -194,7 +197,8 @@ const manifest = {
     "./routes/_app.tsx": $$$$0,
     "./routes/_middleware.ts": $live_middleware,
     "./routes/[...catchall].tsx": $live_catchall,
-    "./routes/api/companies.ts": $$$$2,
+    "./routes/admin/[...catchall].tsx": $$$$1,
+    "./routes/api/companies.ts": $$$$3,
     "./routes/index.tsx": $live_catchall,
     "./routes/live/_meta.ts": $live_meta,
     "./routes/live/editorData.ts": $live_editorData,
@@ -205,20 +209,21 @@ const manifest = {
     "./routes/live/previews/index.tsx": $live_previews_index,
     "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
-    "./routes/styles.css.ts": $$$$1,
+    "./routes/styles.css.ts": $$$$2,
   },
   "islands": {
-    "./islands/AddToCartButton.tsx": $$$$$10,
-    "./islands/HeaderButton.tsx": $$$$$8,
+    "./islands/AddToCartButton.tsx": $$$$$11,
+    "./islands/CompaniesHeader.tsx": $$$$$3,
+    "./islands/HeaderButton.tsx": $$$$$9,
     "./islands/HeaderModals.tsx": $$$$$2,
     "./islands/HeaderSearchbar.tsx": $$$$$1,
-    "./islands/Newsletter.tsx": $$$$$3,
+    "./islands/Newsletter.tsx": $$$$$4,
     "./islands/OutOfStock.tsx": $$$$$0,
-    "./islands/ProductImageZoom.tsx": $$$$$5,
-    "./islands/SearchControls.tsx": $$$$$4,
-    "./islands/ShippingSimulation.tsx": $$$$$9,
-    "./islands/SliderJS.tsx": $$$$$6,
-    "./islands/WishlistButton.tsx": $$$$$7,
+    "./islands/ProductImageZoom.tsx": $$$$$6,
+    "./islands/SearchControls.tsx": $$$$$5,
+    "./islands/ShippingSimulation.tsx": $$$$$10,
+    "./islands/SliderJS.tsx": $$$$$7,
+    "./islands/WishlistButton.tsx": $$$$$8,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i1$$$$0,
@@ -227,34 +232,35 @@ const manifest = {
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/madeinbraziltec/sections/Category/CategoryBanner.tsx":
-      $$$$$$$$23,
-    "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx": $$$$$$$$22,
-    "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx": $$$$$$$$14,
-    "deco-sites/madeinbraziltec/sections/Content/Faq.tsx": $$$$$$$$13,
-    "deco-sites/madeinbraziltec/sections/Content/Logos.tsx": $$$$$$$$15,
-    "deco-sites/madeinbraziltec/sections/Content/Testimonials.tsx": $$$$$$$$16,
+      $$$$$$$$24,
+    "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx": $$$$$$$$23,
+    "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx": $$$$$$$$10,
+    "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx": $$$$$$$$15,
+    "deco-sites/madeinbraziltec/sections/Content/Faq.tsx": $$$$$$$$14,
+    "deco-sites/madeinbraziltec/sections/Content/Logos.tsx": $$$$$$$$16,
+    "deco-sites/madeinbraziltec/sections/Content/Testimonials.tsx": $$$$$$$$17,
     "deco-sites/madeinbraziltec/sections/DesignSystem/DesignSystem.tsx":
       $$$$$$$$7,
     "deco-sites/madeinbraziltec/sections/Footer/Footer.tsx": $$$$$$$$0,
-    "deco-sites/madeinbraziltec/sections/Header/Header.tsx": $$$$$$$$17,
-    "deco-sites/madeinbraziltec/sections/Images/BannerGrid.tsx": $$$$$$$$21,
-    "deco-sites/madeinbraziltec/sections/Images/Carousel.tsx": $$$$$$$$19,
-    "deco-sites/madeinbraziltec/sections/Images/ImageGallery.tsx": $$$$$$$$20,
+    "deco-sites/madeinbraziltec/sections/Header/Header.tsx": $$$$$$$$18,
+    "deco-sites/madeinbraziltec/sections/Images/BannerGrid.tsx": $$$$$$$$22,
+    "deco-sites/madeinbraziltec/sections/Images/Carousel.tsx": $$$$$$$$20,
+    "deco-sites/madeinbraziltec/sections/Images/ImageGallery.tsx": $$$$$$$$21,
     "deco-sites/madeinbraziltec/sections/Images/ShoppableBanner.tsx":
-      $$$$$$$$18,
+      $$$$$$$$19,
     "deco-sites/madeinbraziltec/sections/Links/LinkTree.tsx": $$$$$$$$8,
     "deco-sites/madeinbraziltec/sections/Links/Shortcuts.tsx": $$$$$$$$9,
     "deco-sites/madeinbraziltec/sections/Miscellaneous/CampaignTimer.tsx":
       $$$$$$$$2,
     "deco-sites/madeinbraziltec/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$$$1,
-    "deco-sites/madeinbraziltec/sections/Newsletter/Newsletter.tsx": $$$$$$$$10,
+    "deco-sites/madeinbraziltec/sections/Newsletter/Newsletter.tsx": $$$$$$$$11,
     "deco-sites/madeinbraziltec/sections/Product/ProductDetails.tsx": $$$$$$$$4,
     "deco-sites/madeinbraziltec/sections/Product/ProductShelf.tsx": $$$$$$$$3,
     "deco-sites/madeinbraziltec/sections/Product/SearchResult.tsx": $$$$$$$$5,
     "deco-sites/madeinbraziltec/sections/Product/Wishlist.tsx": $$$$$$$$6,
-    "deco-sites/madeinbraziltec/sections/Social/InstagramPosts.tsx": $$$$$$$$11,
-    "deco-sites/madeinbraziltec/sections/Social/WhatsApp.tsx": $$$$$$$$12,
+    "deco-sites/madeinbraziltec/sections/Social/InstagramPosts.tsx": $$$$$$$$12,
+    "deco-sites/madeinbraziltec/sections/Social/WhatsApp.tsx": $$$$$$$$13,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,

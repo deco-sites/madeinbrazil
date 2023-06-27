@@ -62,6 +62,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/AddToCartButton.tsx",
+              "./islands/CompaniesHeader.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
@@ -87,6 +88,7 @@
               "$live/sections/UseSlot.tsx",
               "deco-sites/madeinbraziltec/sections/Category/CategoryBanner.tsx",
               "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx",
+              "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Faq.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Logos.tsx",
@@ -270,14 +272,11 @@
         }
       ]
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@OrderBy": {
-      "title": "OrderBy"
-    },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz@Props": {
       "type": "object",
       "properties": {
         "orderBy": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@OrderBy",
+          "type": "string",
           "description": "order of items",
           "title": "Order By"
         },
@@ -8815,7 +8814,7 @@
       "properties": {
         "fontFamily": {
           "type": "string",
-          "default": "'Albert Sans'",
+          "default": "'Lexend'",
           "title": "Font Family"
         },
         "styleInnerHtml": {
@@ -13488,6 +13487,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g=": {
+      "title": "./islands/CompaniesHeader.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesHeader.tsx"
+          ],
+          "default": "./islands/CompaniesHeader.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g=": {
       "title": "./islands/HeaderButton.tsx",
       "type": "object",
@@ -13964,6 +13979,22 @@
             "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx"
           ],
           "default": "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA==": {
+      "title": "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx"
+          ],
+          "default": "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx"
         }
       }
     },
@@ -15523,6 +15554,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0FkZFRvQ2FydEJ1dHRvbi50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
         },
         {
@@ -15620,6 +15654,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g="

@@ -216,11 +216,11 @@ export interface Miscellaneous {
 
 export interface Font {
   /**
-   * @default 'Albert Sans'
+   * @default 'Lexend'
    */
   fontFamily: string;
   /**
-   * @default @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');
+   * @default @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
    * \@format css
    */
   styleInnerHtml: string;
@@ -304,13 +304,13 @@ const toVariables = (t: Theme): [string, string][] => {
 };
 
 const defaultTheme = {
-  "primary": "hsla(209, 28%, 21%, 1)",
+  "primary": "#242424",
   "primary-content": "hsla(0, 0%, 100%, 1)",
-  "secondary": "hsla(104, 18%, 46%, 1)",
+  "secondary": "#727272",
   "secondary-content": "hsla(0, 0%, 100%, 1)",
   "accent": "hsla(8, 69%, 65%, 1)",
   "accent-content": "hsla(0, 0%, 100%, 1)",
-  "neutral": "hsla(0, 0%, 47%, 1)",
+  "neutral": "#ABABAB",
   "base-100": "hsla(0, 0%, 100%, 1)",
   "success": "hsl(150 62% 95%)",
   "warning": "hsl(43 100% 95%)",
@@ -356,7 +356,7 @@ function Section({
     [
       "--font-family",
       fonts?.fontFamily ??
-        "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+        "'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
     ],
   ]
     .map(([cssVar, value]) => `${cssVar}: ${value}`)

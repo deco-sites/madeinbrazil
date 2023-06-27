@@ -1,10 +1,10 @@
 import type { LoaderFunction } from "$live/types.ts";
 import type { Company } from "deco-sites/madeinbraziltec/routes/api/companies.ts";
-import { companies, OrderBy } from "../routes/api/companies.ts";
+import { companies } from "../routes/api/companies.ts";
 
 export interface Props {
   /** @description order of items */
-  orderBy: OrderBy;
+  orderBy: string;
   /** @description number of employees */
   employees?: number;
   /** @description company stage */
@@ -23,7 +23,7 @@ const companyListLoader: LoaderFunction<Props, Company[]> = async (
   _req,
   _ctx,
   {
-    orderBy,
+    orderBy = "createdTime",
     employees = null,
     companyStage = null,
     capital = null,
