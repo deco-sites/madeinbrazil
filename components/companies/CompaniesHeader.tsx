@@ -47,7 +47,7 @@ export default function CompaniesHeader() {
         </div>
 
         <div className="relative mt-16">
-          <p className="relative text-secondary --p font-normal text-[24px] leading-7 max-w-[781px]">
+          <p className="relative text-secondary --p font-montserrat font-normal text-[24px] leading-7 max-w-[781px]">
             Discover the game-changers, innovators, and disruptors in our
             catalog of Brazilian tech companies. Explore the forefront of
             technological advancement in Brazil.
