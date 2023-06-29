@@ -43,13 +43,14 @@ const fetchCompanies = async (
     segment: segment && `{segment} = "${segment}"`,
   };
 
-  const filterByFormula = Object.entries(filters)
-    .filter(([_, value]) => value)
-    .map(([_, value]) => value)
-    .join(" AND ");
+  const filterByFormula = `AND(${
+    Object.values(filters)
+      .filter((filter) => filter)
+      .join(", ")
+  })`;
 
   const params = new URLSearchParams({
-    maxRecords: "100",
+    "maxRecords": "100",
     "sort[0][field]": orderBy,
     "sort[0][direction]": "desc",
   });
@@ -155,6 +156,36 @@ export const companies: {
 };
 
 export const handler: Handlers = {
+  async GET(req) {
+    const queryParameters = new URL(req.url).searchParams;
+
+    const orderBy = queryParameters.get("orderBy") ?? "createdTime";
+    const employees = Number(queryParameters.get("employees")) ?? null;
+    const companyStage = queryParameters.get("companyStage") ?? null;
+    const capital = queryParameters.get("capital") ?? null;
+    const segment = queryParameters.get("segment") ?? null;
+
+    await companies.getList(
+      orderBy,
+      employees,
+      companyStage,
+      capital,
+      segment,
+    );
+
+    const status = 200;
+
+    return new Response(
+      JSON.stringify({
+        status,
+        data: companies.list,
+      }),
+      {
+        status,
+      },
+    );
+  },
+
   async POST(req) {
     const body = await parseBody<Company>(req.body);
 
@@ -228,8 +259,16 @@ export interface Company {
   companyUpvotes: number;
 }
 
+export type CompanyRequest =
+  & Pick<
+    Company,
+    "employees" | "companyStage" | "capital" | "segment"
+  >
+  & { orderBy: string };
+
 interface AirTableListResponse {
   records: Record[];
+  offset: string;
 }
 
 interface Record {

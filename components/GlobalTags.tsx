@@ -45,6 +45,33 @@ function GlobalTags() {
           @font-face {   font-family: 'Lexend';   font-style: normal;   font-weight: 900;   src: url(${
             asset("/fonts/Lexend-Black.woff2")
           }) format('woff2'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 100;   src: url(${
+            asset("/fonts/Montserrat-Thin.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 200;   src: url(${
+            asset("/fonts/Montserrat-ExtraLight.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 300;   src: url(${
+            asset("/fonts/Montserrat-Light.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 400;   src: url(${
+            asset("/fonts/Montserrat-Regular.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 500;   src: url(${
+            asset("/fonts/Montserrat-Medium.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 600;   src: url(${
+            asset("/fonts/Montserrat-SemiBold.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 700;   src: url(${
+            asset("/fonts/Montserrat-Bold.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 800;   src: url(${
+            asset("/fonts/Montserrat-ExtraBold.woff")
+          }) format('woff'); }
+          @font-face {   font-family: 'Montserrat';   font-style: normal;   font-weight: 900;   src: url(${
+            asset("/fonts/Montserrat-Black.woff")
+          }) format('woff'); }
                 
             `,
         }}

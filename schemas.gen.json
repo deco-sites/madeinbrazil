@@ -63,6 +63,7 @@
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/AddToCartButton.tsx",
               "./islands/CompaniesHeader.tsx",
+              "./islands/CompaniesList.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
@@ -89,6 +90,7 @@
               "deco-sites/madeinbraziltec/sections/Category/CategoryBanner.tsx",
               "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx",
               "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx",
+              "deco-sites/madeinbraziltec/sections/CompaniesList.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Faq.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Logos.tsx",
@@ -13503,6 +13505,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvbXBhbmllc0xpc3QudHN4": {
+      "title": "./islands/CompaniesList.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesList.tsx"
+          ],
+          "default": "./islands/CompaniesList.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g=": {
       "title": "./islands/HeaderButton.tsx",
       "type": "object",
@@ -13995,6 +14013,22 @@
             "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx"
           ],
           "default": "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g=": {
+      "title": "deco-sites/madeinbraziltec/sections/CompaniesList.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbraziltec/sections/CompaniesList.tsx"
+          ],
+          "default": "deco-sites/madeinbraziltec/sections/CompaniesList.tsx"
         }
       }
     },
@@ -15557,6 +15591,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0xpc3QudHN4"
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
         },
         {
@@ -15657,6 +15694,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g="
