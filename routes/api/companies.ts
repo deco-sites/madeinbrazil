@@ -28,7 +28,7 @@ const parseBody = async <T>(
 
 const fetchCompanies = async (
   orderBy: string,
-  employees: number | null,
+  employees: string | null,
   companyStage: string | null,
   capital: string | null,
   segment: string | null,
@@ -36,17 +36,27 @@ const fetchCompanies = async (
   const myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
 
+  const parseFilter = (filter: string | null, filterName: string) => {
+    if (!filter) return null;
+
+    const filterValues = filter.split(",").map((value) => value.trim());
+    const filterConditions = filterValues.map((value) =>
+      `{${filterName}} = "${value}"`
+    );
+    const filterFormula = `OR(${filterConditions.join(", ")})`;
+
+    return filterFormula;
+  };
+
   const filters = {
-    employees: employees && `{employees} >= ${employees}`,
-    companyStage: companyStage && `{companyStage} = "${companyStage}"`,
-    capital: capital && `{capital} = "${capital}"`,
-    segment: segment && `{segment} = "${segment}"`,
+    employees: parseFilter(employees, "employees"),
+    companyStage: parseFilter(companyStage, "companyStage"),
+    capital: parseFilter(capital, "capital"),
+    segment: parseFilter(segment, "segment"),
   };
 
   const filterByFormula = `AND(${
-    Object.values(filters)
-      .filter((filter) => filter)
-      .join(", ")
+    Object.values(filters).filter((f) => f).join(",")
   })`;
 
   const params = new URLSearchParams({
@@ -66,6 +76,79 @@ const fetchCompanies = async (
     .then((response) => response.json())
     .then((data: AirTableListResponse) => {
       return data.records.map(toCompany);
+    })
+    .catch((error) => {
+      console.error(error);
+      throw new Error(error);
+    });
+};
+
+const fetchFilters = async () => {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
+
+  const filterList = [
+    "employees",
+    "companyStage",
+    "capital",
+    "segment",
+  ];
+
+  const filtersQuery = filterList.map((filter, index) => {
+    if (index === 0) {
+      return `fields[]=${filter}`;
+    } else {
+      return `&fields[]=${filter}`;
+    }
+  });
+
+  return await fetch(`${AIRTABLE_URL}?${encodeURI(filtersQuery.join(""))}`, {
+    method: "GET",
+    headers: myHeaders,
+  })
+    .then((response) => response.json())
+    .then((data: AirTableListResponse) => {
+      const filters = data.records.reduce<FilterListSet>(
+        (acc, record) => {
+          const { fields } = record;
+          acc.employees.values.add(fields.employees);
+          acc.companyStage.values.add(fields.companyStage);
+          acc.capital.values.add(fields.capital);
+          acc.segment.values.add(fields.segment);
+
+          return acc;
+        },
+        {
+          employees: {
+            name: "Number of Employees",
+            values: new Set([]),
+          },
+          companyStage: {
+            name: "Company Stage",
+            values: new Set([]),
+          },
+          capital: {
+            name: "Capital",
+            values: new Set([]),
+          },
+          segment: {
+            name: "Segment",
+            values: new Set([]),
+          },
+        },
+      );
+
+      const filterList = Object.entries(filters).map(
+        ([key, value]) => {
+          return {
+            name: key,
+            label: value.name,
+            values: Array.from(value.values),
+          };
+        },
+      );
+
+      return filterList as FilterList[];
     })
     .catch((error) => {
       console.error(error);
@@ -120,20 +203,23 @@ const normalizeCompany = async (
 
 export const companies: {
   list: Company[];
+  filterList: FilterList[];
   getList: (
     orderBy: string,
-    employees: number | null,
+    employees: string | null,
     companyStage: string | null,
     capital: string | null,
     segment: string | null,
   ) => Promise<Company[]>;
+  getFilters: () => Promise<FilterList[]>;
   update: (s: Company) => Promise<void>;
   add: (s: Company) => Promise<void>;
 } = {
   list: [],
+  filterList: [] as FilterList[],
   getList: async function (
     orderBy: string,
-    employees: number | null,
+    employees: string | null,
     companyStage: string | null,
     capital: string | null,
     segment: string | null,
@@ -146,6 +232,11 @@ export const companies: {
       segment,
     )) as Company[];
     return this.list;
+  },
+  getFilters: async function () {
+    this.filterList = await fetchFilters();
+
+    return this.filterList;
   },
   update: async function (company) {
     await updateCompany(company, "PATCH");
@@ -160,7 +251,7 @@ export const handler: Handlers = {
     const queryParameters = new URL(req.url).searchParams;
 
     const orderBy = queryParameters.get("orderBy") ?? "createdTime";
-    const employees = Number(queryParameters.get("employees")) ?? null;
+    const employees = queryParameters.get("employees") ?? null;
     const companyStage = queryParameters.get("companyStage") ?? null;
     const capital = queryParameters.get("capital") ?? null;
     const segment = queryParameters.get("segment") ?? null;
@@ -217,6 +308,31 @@ export const handler: Handlers = {
     );
   },
 };
+
+export interface FilterListSet {
+  employees: {
+    name: string;
+    values: Set<number>;
+  };
+  companyStage: {
+    name: string;
+    values: Set<string>;
+  };
+  capital: {
+    name: string;
+    values: Set<string>;
+  };
+  segment: {
+    name: string;
+    values: Set<string>;
+  };
+}
+
+export interface FilterList {
+  name: string;
+  label: string;
+  values: string[] | number[];
+}
 
 interface AirtableAttachment {
   id: string;

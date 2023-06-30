@@ -13,6 +13,7 @@
           "not": {
             "enum": [
               "deco-sites/madeinbraziltec/functions/companyListLoader.ts",
+              "deco-sites/madeinbraziltec/functions/filterListLoader.ts",
               "deco-sites/std/functions/butterCMSAds.ts",
               "deco-sites/std/functions/butterCMSBrands.ts",
               "deco-sites/std/functions/butterCMSCategories.ts",
@@ -319,6 +320,74 @@
         "orderBy"
       ],
       "title": "deco-sites/madeinbraziltec/functions/companyListLoader.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "values": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "type": "array",
+          "title": "Values"
+        }
+      },
+      "required": [
+        "name",
+        "label",
+        "values"
+      ],
+      "title": "FilterList"
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList"
+          },
+          "title": "deco-sites/madeinbraziltec/routes/api/companies.ts@FilterList[]"
+        },
+        {
+          "title": "filter List Loader",
+          "description": "Gets filters from company information",
+          "type": "object",
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+              ],
+              "default": "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+            }
+          }
+        }
+      ]
     },
     "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvYnV0dGVyQ01TL3R5cGVzLnRz@Category": {
       "type": "object",
@@ -7192,6 +7261,19 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "filterList": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
+          "title": "Filter List"
+        }
+      },
+      "required": [
+        "filterList"
+      ],
+      "title": "deco-sites/madeinbraziltec/components/companies/CompaniesList.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Form": {
       "type": "object",
       "properties": {
@@ -12494,6 +12576,23 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2ZpbHRlckxpc3RMb2FkZXIudHM=": {
+      "title": "filter List Loader",
+      "description": "Gets filters from company information",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+          ],
+          "default": "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0Fkcy50cw==": {
       "title": "Butter CMS Featured Ads Loader",
       "description": "Useful for shelves and static galleries.",
@@ -13508,6 +13607,11 @@
     "Li9pc2xhbmRzL0NvbXBhbmllc0xpc3QudHN4": {
       "title": "./islands/CompaniesList.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -14019,6 +14123,11 @@
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g=": {
       "title": "deco-sites/madeinbraziltec/sections/CompaniesList.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -15411,6 +15520,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2ZpbHRlckxpc3RMb2FkZXIudHM="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0Fkcy50cw=="

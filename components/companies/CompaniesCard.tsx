@@ -4,11 +4,12 @@ import type { Company } from "deco-sites/madeinbraziltec/routes/api/companies.ts
 interface Props {
   company: Company;
   isCardClicked: boolean;
+  orderBy: string;
   setIsCardClicked: (isCardClicked: boolean) => void;
 }
 
 export default function CompaniesList(
-  { company, isCardClicked, setIsCardClicked }: Props,
+  { company, isCardClicked, orderBy, setIsCardClicked }: Props,
 ) {
   const [isCurrentCardClicked, setIsCurrentCardClicked] = useState(false);
 
@@ -56,46 +57,66 @@ export default function CompaniesList(
                 {company.name}
               </h2>
               <div className="flex flex-wrap gap-3 pt-6">
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque">
+                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
                   {formatEmployees(company.employees)}
                 </span>
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque">
+                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
                   {company.companyStage}
                 </span>
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque">
+                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
                   {company.capital}
                 </span>
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque">
+                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
                   {company.segment}
                 </span>
               </div>
             </div>
-            <div className="flex gap-4 pt-12">
-              <a
-                href={`mailto:${company.email}`}
-                className="flex items-center justify-center w-14 h-12 bg-primary rounded-full"
-              >
-                <img src="/email.svg" alt="Email" />
-              </a>
-              <a
-                href={company.instagram}
-                className="flex items-center justify-center w-14 h-12 bg-primary rounded-full"
-              >
-                <img src="/instagram.svg" alt="Instagram" />
-              </a>
-              <a
-                href={company.website}
-                className="flex items-center justify-center w-14 h-12 bg-primary rounded-full"
-              >
-                <img src="/website.svg" alt="Website" />
-              </a>
+            <div className="flex mt-12 h-12 relative">
+              <div className="flex justify-between absolute gap-4 w-full z-10">
+                <div className="flex gap-4">
+                  <a
+                    onClick={(e) => e.stopPropagation()}
+                    href={`mailto:${company.email}`}
+                    className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
+                  >
+                    <img src="/email.svg" alt="Email" />
+                  </a>
+                  <a
+                    onClick={(e) => e.stopPropagation()}
+                    href={company.instagram}
+                    className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
+                  >
+                    <img src="/instagram.svg" alt="Instagram" />
+                  </a>
+                  <a
+                    onClick={(e) => e.stopPropagation()}
+                    href={company.website}
+                    className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
+                  >
+                    <img src="/link.svg" alt="Website" />
+                  </a>
+                </div>
+                {orderBy !== "createdTime" && (
+                  <button
+                    className="flex items-center gap-4 px-4 py-3 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    <img src="/like.svg" alt="Likes" />
+                    <span>
+                      {company.companyUpvotes}
+                    </span>
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className={`absolute top-0 left-0 w-full h-full bg-primary opacity-0 transition-opacity duration-300 ${
-          isCurrentCardClicked ? "opacity-100 " : ""
+        className={`absolute z-0 top-0 left-0 w-full h-full bg-primary opacity-0 transition-opacity duration-300 ${
+          isCurrentCardClicked ? "opacity-100 z-20" : ""
         }`}
       >
         <div className="flex flex-col items-start h-full px-8 py-12">

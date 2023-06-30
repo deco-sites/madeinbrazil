@@ -6,7 +6,7 @@ export interface Props {
   /** @description order of items */
   orderBy: string;
   /** @description number of employees */
-  employees?: number;
+  employees?: string;
   /** @description company stage */
   companyStage?: string;
   /** @description capital */

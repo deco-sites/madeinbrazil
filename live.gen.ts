@@ -4,7 +4,8 @@
 
 import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
-import * as $0 from "./functions/companyListLoader.ts";
+import * as $0 from "./functions/filterListLoader.ts";
+import * as $1 from "./functions/companyListLoader.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$1 from "./routes/admin/[...catchall].tsx";
 import * as $$$$2 from "./routes/styles.css.ts";
@@ -166,7 +167,8 @@ import * as i2$$$$$19 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts";
 
 const manifest = {
   "functions": {
-    "deco-sites/madeinbraziltec/functions/companyListLoader.ts": $0,
+    "deco-sites/madeinbraziltec/functions/companyListLoader.ts": $1,
+    "deco-sites/madeinbraziltec/functions/filterListLoader.ts": $0,
     "deco-sites/std/functions/butterCMSAds.ts": i2$0,
     "deco-sites/std/functions/butterCMSBrands.ts": i2$1,
     "deco-sites/std/functions/butterCMSCategories.ts": i2$2,
