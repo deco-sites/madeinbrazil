@@ -102,7 +102,7 @@ export default function CompaniesFilter(
         </div>
       </button>
       {isOpen && (
-        <div className="flex flex-col gap-2 absolute top-[calc(100%+8px)] left-0 w-full bg-white rounded-lg shadow-md transition-all ease-in-out px-6 pt-6 pb-4 z-50 max-w-[230px] min-w-[230px] h-[228px]">
+        <div className="flex flex-col gap-2 absolute top-[calc(100%+8px)] left-0 w-full bg-white rounded-lg shadow-[0_0_12px_0_rgba(0,0,0,0.2)] transition-all ease-in-out px-6 pt-6 pb-4 z-50 max-w-[230px] min-w-[230px] h-[228px]">
           <div className="flex flex-col gap-4 overflow-y-auto h-[120px]">
             {filter.values.map((option) => (
               <div

@@ -115,7 +115,7 @@ export default function CompaniesList(
         </div>
       </div>
       <div
-        className={`absolute z-0 top-0 left-0 w-full h-full bg-primary opacity-0 transition-opacity duration-300 ${
+        className={`absolute -z-10 top-0 left-0 w-full h-full bg-primary opacity-0 transition-opacity duration-300 ${
           isCurrentCardClicked ? "opacity-100 z-20" : ""
         }`}
       >
