@@ -285,7 +285,7 @@
         },
         "employees": {
           "type": [
-            "number",
+            "string",
             "null"
           ],
           "description": "number of employees",

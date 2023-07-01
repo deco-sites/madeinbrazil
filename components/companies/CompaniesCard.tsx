@@ -28,7 +28,7 @@ export default function CompaniesList(
 
   return (
     <div
-      className={`w-[calc(50%-32px)] cursor-pointer rounded-3xl shadow-[0_0_12px_0_rgba(0,0,0,0.2)] relative overflow-hidden mb-16 max-w-[590px] ${
+      className={`w-full cursor-pointer rounded-3xl shadow-[0_0_12px_0_rgba(0,0,0,0.2)] relative overflow-hidden mb-16 max-w-[590px] ${
         isCardClicked && !isCurrentCardClicked
           ? "opacity-40 pointer-events-none"
           : ""

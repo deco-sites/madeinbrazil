@@ -14,6 +14,7 @@
     "std/": "https://deno.land/std@0.190.0/",
     "partytown/": "https://denopkg.com/deco-cx/partytown@0.4.0/",
     "daisyui": "npm:daisyui@3.0.3",
+    "@tailwindcss/forms": "npm:@tailwindcss/forms@0.5.3",
     "prefetch": "https://deno.land/x/prefetch@0.0.6/mod.ts",
     "deno-dom": "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts"
   }

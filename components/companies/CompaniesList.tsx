@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useCallback, useEffect, useState } from "preact/hooks";
 import { LoaderReturnType } from "$live/types.ts";
 
 import CompaniesCard from "./CompaniesCard.tsx";
@@ -36,10 +36,15 @@ export default function CompaniesList({ filterList }: Props) {
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilters[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  const fetchCompanies = () => {
+    const queryString = selectedFilters.reduce((acc, curr) => {
+      const values = curr.values.join(",");
+      return `${acc}&${curr.name}=${values}`;
+    }, "");
+
     setIsLoading(true);
     fetch(
-      `/api/companies?orderBy=${orderBy}`,
+      `/api/companies?orderBy=${orderBy}${queryString}`,
       {
         method: "GET",
       },
@@ -50,26 +55,24 @@ export default function CompaniesList({ filterList }: Props) {
     ).finally(() => {
       setIsLoading(false);
     });
-  }, [orderBy]);
+  };
 
   useEffect(() => {
-    const queryString = selectedFilters.reduce((acc, curr) => {
-      const values = curr.values.join(",");
-      return `${acc}&${curr.name}=${values}`;
-    }, "");
+    fetchCompanies();
+  }, [orderBy]);
 
-    // fetch companies with filters
-    fetch(
-      `/api/companies?orderBy=${orderBy}${queryString}`,
-      {
-        method: "GET",
-      },
-    ).then((res) => res.json()).then(
-      (data: CompanyResponse) => {
-        setCompaniesList(data.data);
-      },
-    );
-  }, [selectedFilters]);
+  const applyFilters = () => {
+    fetchCompanies();
+  };
+
+  const clearFilters = (filterName: string) => {
+    setSelectedFilters((prevFilters) => {
+      const newFilters = prevFilters.filter((filter) =>
+        filter.name !== filterName
+      );
+      return newFilters;
+    });
+  };
 
   const handleOrderBy = () => {
     setOrderBy(() => {
@@ -118,7 +121,7 @@ export default function CompaniesList({ filterList }: Props) {
 
   return (
     <div className="min-h-[calc(100vh-98px)] text-zinc-100 flex justify-between flex-col md:px-10 mx-auto bg-gradient-to-r from-yellow-opaque from-50% to-green-opaque to-50%">
-      <div className="flex flex-col mx-auto max-w-[1375px] min-h-[calc(100vh-98px)] w-full bg-white border-x-2 border-black border-opacity-20 pt-14 px-24">
+      <div className="flex flex-col mx-auto max-w-[1440px] min-h-[calc(100vh-98px)] w-full bg-white border-x-2 border-black border-opacity-20 pt-14 px-14">
         <button
           onClick={() => handleOrderBy()}
           className="flex bg-gray-opaque rounded-[40px] w-fit hover:bg-opacity-80 transition-all ease-in-out"
@@ -145,13 +148,16 @@ export default function CompaniesList({ filterList }: Props) {
           </div>
         </button>
         <div className="flex flex-col justify-between items-center mt-14">
-          <div className="flex flex-wrap justify-start gap-4 w-full">
+          <div className="flex flex-wrap justify-start gap-4 w-full transition-all ease-in-out">
             {filterList.map((filter) => (
               <CompaniesFilter
                 key={filter.name}
                 filter={filter}
                 handleSelectedFilters={handleSelectedFilters}
                 selectedFilters={selectedFilters}
+                applyFilters={applyFilters}
+                clearFilters={clearFilters}
+                isLoading={isLoading}
               />
             ))}
           </div>
@@ -159,7 +165,7 @@ export default function CompaniesList({ filterList }: Props) {
             <div className="mt-14">
               {companiesList.length
                 ? (
-                  <div className="flex flex-wrap justify-between gap-16">
+                  <div className="grid min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3">
                     {companiesList.map((company) => (
                       <CompaniesCard
                         key={company.id}
