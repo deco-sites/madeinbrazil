@@ -1,5 +1,4 @@
 import { Handlers } from "$fresh/server.ts";
-import { DOMParser } from "deno-dom";
 
 const AUTH_TOKEN =
   "patqPStV56SAyWPdL.b8ee254879699e0c7cd3cb4c9fd128d52b2bf5d99eccd89cf5b1b6c7dd594ee1";
@@ -171,34 +170,25 @@ const updateCompany = async (
   myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
   myHeaders.append("Content-Type", "application/json");
 
-  await fetch(`${AIRTABLE_URL}${method === "PATCH" ? `/${recordId!}` : ""}`, {
+  const body = JSON.stringify({
+    fields: record,
+  });
+
+  const url = `${AIRTABLE_URL}/${recordId}`;
+
+  return await fetch(url, {
     method,
     headers: myHeaders,
-    body: JSON.stringify({ fields: record }),
-  }).catch((error) => {
-    throw new Error(error);
-  });
-};
-
-const normalizeCompany = async (
-  company: CompanyDB,
-): Promise<Company> => {
-  const html = await fetch(encodeURI(company.website)).then((r) => r.text());
-  const document = new DOMParser().parseFromString(html, "text/html");
-
-  if (!document) return company as Company;
-
-  const decoState = JSON.parse(
-    document.querySelector("#__DECO_STATE")?.textContent ?? "null",
-  );
-
-  return {
-    ...company,
-    logo: decoState?.logo ?? company.logo,
-    banner: decoState?.banner ?? company.banner,
-    name: decoState?.name ?? company.name,
-    about: decoState?.about ?? company.about,
-  };
+    body,
+  })
+    .then((response) => response.json())
+    .then((data: AirtableUpdateResponse) => {
+      return data;
+    })
+    .catch((error) => {
+      console.error(error);
+      throw new Error(error);
+    });
 };
 
 export const companies: {
@@ -212,7 +202,7 @@ export const companies: {
     segment: string | null,
   ) => Promise<Company[]>;
   getFilters: () => Promise<FilterList[]>;
-  update: (s: Company) => Promise<void>;
+  update: (s: Company) => Promise<AirtableUpdateResponse>;
   add: (s: Company) => Promise<void>;
 } = {
   list: [],
@@ -239,7 +229,9 @@ export const companies: {
     return this.filterList;
   },
   update: async function (company) {
-    await updateCompany(company, "PATCH");
+    const response = await updateCompany(company, "PATCH");
+
+    return response;
   },
   add: async function (company) {
     await updateCompany(company, "POST");
@@ -286,21 +278,40 @@ export const handler: Handlers = {
       });
     }
 
-    const newCompany = await normalizeCompany(body);
+    companies.add(body);
 
-    if (!newCompany) {
-      return new Response("Site connection problem", {
-        status: 400,
-      });
-    }
-
-    await companies.add(newCompany);
-    const status = 201;
+    const status = 200;
 
     return new Response(
       JSON.stringify({
         status,
-        data: newCompany,
+        data: body,
+      }),
+      {
+        status,
+      },
+    );
+  },
+
+  async PATCH(req) {
+    const body = await parseBody<Company>(req.body);
+
+    console.log(body);
+
+    if (!body) {
+      return new Response("Insert a correct body", {
+        status: 400,
+      });
+    }
+
+    const companiesResponse = await companies.update(body);
+
+    const status = 200;
+
+    return new Response(
+      JSON.stringify({
+        status,
+        data: companiesResponse.fields,
       }),
       {
         status,
@@ -357,6 +368,12 @@ interface AirtableAttachment {
       height: number;
     };
   };
+}
+
+interface AirtableUpdateResponse {
+  id: string;
+  fields: CompanyDB;
+  createdTime: string;
 }
 
 export interface Company {

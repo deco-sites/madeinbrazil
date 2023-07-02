@@ -1,4 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
+
+import CompaniesUpvoteButton from "./CompaniesUpvoteButton.tsx";
+
 import type { Company } from "deco-sites/madeinbraziltec/routes/api/companies.ts";
 
 interface Props {
@@ -6,10 +9,11 @@ interface Props {
   isCardClicked: boolean;
   orderBy: string;
   setIsCardClicked: (isCardClicked: boolean) => void;
+  fetchCompanies: (showReload: boolean) => void;
 }
 
-export default function CompaniesList(
-  { company, isCardClicked, orderBy, setIsCardClicked }: Props,
+export default function CompaniesCard(
+  { company, isCardClicked, orderBy, setIsCardClicked, fetchCompanies }: Props,
 ) {
   const [isCurrentCardClicked, setIsCurrentCardClicked] = useState(false);
 
@@ -79,35 +83,28 @@ export default function CompaniesList(
                     href={`mailto:${company.email}`}
                     className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
                   >
-                    <img src="/email.svg" alt="Email" />
+                    <img src="/email-white.svg" alt="Email" />
                   </a>
                   <a
                     onClick={(e) => e.stopPropagation()}
                     href={company.instagram}
                     className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
                   >
-                    <img src="/instagram.svg" alt="Instagram" />
+                    <img src="/instagram-white.svg" alt="Instagram" />
                   </a>
                   <a
                     onClick={(e) => e.stopPropagation()}
                     href={company.website}
                     className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
                   >
-                    <img src="/link.svg" alt="Website" />
+                    <img src="/link-white.svg" alt="Website" />
                   </a>
                 </div>
-                {orderBy !== "createdTime" && (
-                  <button
-                    className="flex items-center gap-4 px-4 py-3 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                    }}
-                  >
-                    <img src="/like.svg" alt="Likes" />
-                    <span>
-                      {company.companyUpvotes}
-                    </span>
-                  </button>
+                {orderBy === "createdTime" && (
+                  <CompaniesUpvoteButton
+                    company={company}
+                    fetchCompanies={fetchCompanies}
+                  />
                 )}
               </div>
             </div>

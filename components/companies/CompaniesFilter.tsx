@@ -74,9 +74,9 @@ export default function CompaniesFilter(
   return (
     <div
       key={filter.name}
-      className={`flex flex-col relative ${
-        isOpen ? "min-w-[230px]" : ""
-      } transition-all ease-in-out`}
+      className={`flex flex-col relative min-w-[150px] ${
+        isOpen ? "min-w-[219px]" : ""
+      } transition-all duration-300 ease-in-out`}
     >
       <button
         className={`flex rounded-[40px] w-fit hover:bg-opacity-80 transition-all ease-in-out ${

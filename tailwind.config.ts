@@ -21,6 +21,20 @@ export default {
         "green-opaque": "rgba(22, 184, 62, 0.40)",
         "yellow-opaque": "rgba(255, 225, 31, 0.60)",
       },
+      keyframes: {
+        "bottom-to-top-140": {
+          "0%": { transform: "translateY(140%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+        "bottom-to-top-275": {
+          "0%": { transform: "translateY(275%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+      },
+      animation: {
+        "bottomtotop140": "bottom-to-top-140 300ms ease-in-out",
+        "bottomtotop275": "bottom-to-top-275 300ms ease-in-out",
+      },
     },
   },
 };

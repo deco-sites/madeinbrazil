@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { LoaderReturnType } from "$live/types.ts";
 
 import CompaniesCard from "./CompaniesCard.tsx";
+import CompaniesCardLoader from "./CompaniesCardLoader.tsx";
 import CompaniesFilter from "./CompaniesFilter.tsx";
 import LoadingIcon from "../utils/LoadingIcon.tsx";
 import type {
@@ -32,17 +33,16 @@ export default function CompaniesList({ filterList }: Props) {
   const [isCardClicked, setCardClicked] = useState(false);
   const [orderBy, setOrderBy] = useState(OrderBy.MOST_POPULAR);
   const [companiesList, setCompaniesList] = useState([] as Company[]);
-
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilters[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchCompanies = () => {
+  const fetchCompanies = (showReload = true) => {
     const queryString = selectedFilters.reduce((acc, curr) => {
       const values = curr.values.join(",");
       return `${acc}&${curr.name}=${values}`;
     }, "");
 
-    setIsLoading(true);
+    showReload && setIsLoading(true);
     fetch(
       `/api/companies?orderBy=${orderBy}${queryString}`,
       {
@@ -53,7 +53,7 @@ export default function CompaniesList({ filterList }: Props) {
         setCompaniesList(data.data);
       },
     ).finally(() => {
-      setIsLoading(false);
+      showReload && setIsLoading(false);
     });
   };
 
@@ -161,11 +161,19 @@ export default function CompaniesList({ filterList }: Props) {
               />
             ))}
           </div>
-          <div>
-            <div className="mt-14">
-              {companiesList.length
+          <div className="w-full">
+            <div className="mt-14 w-full">
+              {isLoading
                 ? (
-                  <div className="grid min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3">
+                  <div className="grid min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3 auto-cols-max w-full">
+                    {Array.from({ length: 6 }).map((_, index) => (
+                      <CompaniesCardLoader key={index} />
+                    ))}
+                  </div>
+                )
+                : companiesList.length
+                ? (
+                  <div className="grid min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3 w-full">
                     {companiesList.map((company) => (
                       <CompaniesCard
                         key={company.id}
@@ -173,12 +181,11 @@ export default function CompaniesList({ filterList }: Props) {
                         isCardClicked={isCardClicked}
                         orderBy={orderBy}
                         setIsCardClicked={setCardClicked}
+                        fetchCompanies={fetchCompanies}
                       />
                     ))}
                   </div>
                 )
-                : isLoading
-                ? <LoadingIcon />
                 : (
                   <div className="flex justify-center items-center h-[calc(100vh-98px)]">
                     <h1 className="text-3xl">No companies found</h1>
