@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon/Instagram" clip-path="url(#clip0_406_2952)">
+<path id="Vector" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#242424" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M16.3043 2.25H7.69565C4.6881 2.25 2.25 4.6881 2.25 7.69565V16.3043C2.25 19.3119 4.6881 21.75 7.69565 21.75H16.3043C19.3119 21.75 21.75 19.3119 21.75 16.3043V7.69565C21.75 4.6881 19.3119 2.25 16.3043 2.25Z" stroke="#242424" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M17 8C17.5523 8 18 7.55228 18 7C18 6.44772 17.5523 6 17 6C16.4477 6 16 6.44772 16 7C16 7.55228 16.4477 8 17 8Z" fill="#242424"/>
+</g>
+<defs>
+<clipPath id="clip0_406_2952">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

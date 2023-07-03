@@ -32,7 +32,6 @@ export default function CompaniesFilter(
   };
 
   useEffect(() => {
-    // check if current filter has values selected
     const isFilterSelected = selectedFilters.find((selectedFilter) =>
       selectedFilter.name === filter.name
     )?.values.length;

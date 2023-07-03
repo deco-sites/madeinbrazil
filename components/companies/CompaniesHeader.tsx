@@ -39,7 +39,7 @@ export default function CompaniesHeader() {
 
           <div className="absolute top-0 left-[52rem]">
             <img
-              className="animate-[spin_12s_linear_infinite]"
+              className="animate-[spin_12s_linear]"
               src="/stamp.png"
               alt="Stamp"
             />

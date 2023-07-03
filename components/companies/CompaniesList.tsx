@@ -1,10 +1,9 @@
 import { useEffect, useState } from "preact/hooks";
 import { LoaderReturnType } from "$live/types.ts";
 
-import CompaniesCard from "./CompaniesCard.tsx";
-import CompaniesCardLoader from "./CompaniesCardLoader.tsx";
+import CompaniesCard from "./CompaniesCard/CompaniesCard.tsx";
+import CompaniesCardLoader from "./CompaniesCard/CompaniesCardLoader.tsx";
 import CompaniesFilter from "./CompaniesFilter.tsx";
-import LoadingIcon from "../utils/LoadingIcon.tsx";
 import type {
   Company,
   FilterList,

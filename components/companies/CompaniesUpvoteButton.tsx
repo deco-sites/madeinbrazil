@@ -1,6 +1,8 @@
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 import LoadingIcon from "../utils/LoadingIcon.tsx";
+
+// import { getCookie, setCookie } from "../../functions/cookieUtils.ts";
 
 import type {
   Company,
@@ -17,8 +19,59 @@ export default function CompaniesUpvoteButton({
 }: Props) {
   const [upvotes, setUpvotes] = useState(company.companyUpvotes);
   const [isUpvoting, setIsUpvoting] = useState(false);
+  const [isUpvoted, setIsUpvoted] = useState(false);
+
+  function setCookie(name: string, value: string, years: number) {
+    console.log("setCookie", name, value, years);
+
+    const expirationDate = new Date();
+    expirationDate.setFullYear(expirationDate.getFullYear() + years);
+
+    console.log("setCookie", name, value, years, expirationDate);
+
+    const cookieString = `${encodeURIComponent(name)}=${
+      encodeURIComponent(
+        value,
+      )
+    };expires=${expirationDate.toUTCString()};path=/`;
+    document.cookie = cookieString;
+  }
+
+  function getCookie(name: string): string | null {
+    console.log("getCookie", name);
+
+    const encodedName = encodeURIComponent(name);
+    const cookieArray = document.cookie.split(";");
+
+    for (const cookie of cookieArray) {
+      const [cookieName, cookieValue] = cookie.split("=");
+      if (cookieName.trim() === encodedName) {
+        return decodeURIComponent(cookieValue);
+      }
+    }
+
+    return null;
+  }
+
+  const checkIfCompanyIsUpvoted = (companyId: string): boolean => {
+    const upvotedCompanies = getCookie("upvotedCompanies");
+
+    if (upvotedCompanies && companyId) {
+      const parsedUpvotedCompanies = JSON.parse(upvotedCompanies) as string[];
+
+      return parsedUpvotedCompanies.includes(companyId);
+    }
+
+    return false;
+  };
+
+  useEffect(() => {
+    company?.id && setIsUpvoted(checkIfCompanyIsUpvoted(company.id));
+  }, [company]);
 
   const handleUpvote = () => {
+    if (isUpvoted) return;
+
     setUpvotes(upvotes + 1);
     setIsUpvoting(true);
 
@@ -37,6 +90,26 @@ export default function CompaniesUpvoteButton({
       }
       fetchCompanies(false);
       setIsUpvoting(false);
+
+      const upvotedCompanies = getCookie("upvotedCompanies");
+
+      console.log("upvotedCompanies", upvotedCompanies);
+
+      if (company.id) {
+        if (upvotedCompanies) {
+          const parsedUpvotedCompanies = JSON.parse(
+            upvotedCompanies,
+          ) as string[];
+          parsedUpvotedCompanies.push(company?.id);
+          setCookie(
+            "upvotedCompanies",
+            JSON.stringify(parsedUpvotedCompanies),
+            2,
+          );
+        } else {
+          setCookie("upvotedCompanies", JSON.stringify([company?.id]), 2);
+        }
+      }
     }).catch((err) => {
       console.log(err);
       setUpvotes(upvotes - 1);
@@ -49,7 +122,7 @@ export default function CompaniesUpvoteButton({
     <button
       className={`flex items-center gap-4 px-4 py-3 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out ${
         isUpvoting ? "opacity-40 pointer-events-none" : ""
-      }`}
+      } ${isUpvoted ? "bg-opacity-80 pointer-events-none" : ""} `}
       onClick={(e) => {
         e.stopPropagation();
         handleUpvote();

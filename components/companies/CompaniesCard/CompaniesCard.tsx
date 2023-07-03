@@ -1,6 +1,8 @@
 import { useEffect, useState } from "preact/hooks";
 
-import CompaniesUpvoteButton from "./CompaniesUpvoteButton.tsx";
+import CompaniesUpvoteButton from "../CompaniesUpvoteButton.tsx";
+import CompaniesCardTag from "./CompaniesCardTag.tsx";
+import CompaniesCardLink from "./CompaniesCardLink.tsx";
 
 import type { Company } from "deco-sites/madeinbraziltec/routes/api/companies.ts";
 
@@ -40,7 +42,7 @@ export default function CompaniesCard(
       onClick={() => setIsCurrentCardClicked(!isCurrentCardClicked)}
     >
       <div>
-        <div className="h-[266px] bg-primary rounded-t-3xl">
+        <div className="h-[170px] bg-primary rounded-t-3xl">
           <img
             className="h-full w-full object-cover rounded-t-3xl"
             src={company.banner[0].url}
@@ -48,57 +50,43 @@ export default function CompaniesCard(
           />
         </div>
         <div className="bg-white rounded-b-3xl relative">
-          <div className="flex items-center absolute top-[-40px] left-[40px] w-[80px] h-[80px] bg-white rounded-full">
+          <div className="flex items-center absolute top-[-32px] left-[24px] w-[64px] h-[64px] bg-white rounded-full">
             <img
               className="object-contain rounded-full"
               src={company.logo[0].url}
               alt={company.name}
             />
           </div>
-          <div className="flex flex-col justify-between h-full p-8 pt-20">
+          <div className="flex flex-col justify-between h-full p-6 pt-14">
             <div className="flex flex-col">
-              <h2 className="text-primary font-montserrat font-semibold text-[40px]">
+              <h2 className="text-primary font-montserrat font-semibold text-[32px]">
                 {company.name}
               </h2>
-              <div className="flex flex-wrap gap-3 pt-6">
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
-                  {formatEmployees(company.employees)}
-                </span>
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
-                  {company.companyStage}
-                </span>
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
-                  {company.capital}
-                </span>
-                <span className="text-primary font-montserrat font-medium text-sm px-4 py-3 bg-neutral bg-opacity-20 rounded-[40px] border border-primary-opaque hover:bg-opacity-80 shadow-md transition ease-in-out">
-                  {company.segment}
-                </span>
+              <div className="flex flex-wrap gap-2 pt-6">
+                <CompaniesCardTag tag={formatEmployees(company.employees)} />
+                <CompaniesCardTag tag={company.companyStage} />
+                <CompaniesCardTag tag={company.capital} />
+                <CompaniesCardTag tag={company.segment} />
               </div>
             </div>
-            <div className="flex mt-12 h-12 relative">
+            <div className="flex mt-8 h-12 relative">
               <div className="flex justify-between absolute gap-4 w-full z-10">
-                <div className="flex gap-4">
-                  <a
-                    onClick={(e) => e.stopPropagation()}
+                <div className="flex gap-1">
+                  <CompaniesCardLink
                     href={`mailto:${company.email}`}
-                    className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
-                  >
-                    <img src="/email-white.svg" alt="Email" />
-                  </a>
-                  <a
-                    onClick={(e) => e.stopPropagation()}
+                    imgSrc="/email-black.svg"
+                    alt="Email"
+                  />
+                  <CompaniesCardLink
                     href={company.instagram}
-                    className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
-                  >
-                    <img src="/instagram-white.svg" alt="Instagram" />
-                  </a>
-                  <a
-                    onClick={(e) => e.stopPropagation()}
+                    imgSrc="/instagram-black.svg"
+                    alt="Instagram"
+                  />
+                  <CompaniesCardLink
                     href={company.website}
-                    className="flex items-center justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
-                  >
-                    <img src="/link-white.svg" alt="Website" />
-                  </a>
+                    imgSrc="/link-black.svg"
+                    alt="Website"
+                  />
                 </div>
                 {orderBy === "createdTime" && (
                   <CompaniesUpvoteButton
