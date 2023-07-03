@@ -1,5 +1,4 @@
 import { useEffect, useState } from "preact/hooks";
-import { LoaderReturnType } from "$live/types.ts";
 
 import CompaniesCard from "./CompaniesCard/CompaniesCard.tsx";
 import CompaniesCardLoader from "./CompaniesCard/CompaniesCardLoader.tsx";
@@ -10,7 +9,7 @@ import type {
 } from "deco-sites/madeinbraziltec/routes/api/companies.ts";
 
 export type Props = {
-  filterList: LoaderReturnType<FilterList[]>;
+  filterList: FilterList[] | undefined;
 };
 
 enum OrderBy {
@@ -119,13 +118,13 @@ export default function CompaniesList({ filterList }: Props) {
   };
 
   return (
-    <div className="min-h-[calc(100vh-98px)] text-zinc-100 flex justify-between flex-col md:px-10 mx-auto bg-gradient-to-r from-yellow-opaque from-50% to-green-opaque to-50%">
-      <div className="flex flex-col mx-auto max-w-[1440px] min-h-[calc(100vh-98px)] w-full bg-white border-x-2 border-black border-opacity-20 pt-14 px-14">
+    <div className="min-h-[calc(100vh-98px)] text-zinc-100 flex justify-between flex-col mx-auto z-[5] w-full">
+      <div className="flex flex-col mx-auto max-w-[1440px] min-h-[calc(100vh-98px)] w-full bg-white md:border-x-2 border-b-2 border-black border-opacity-20 pt-14 px-4 md:px-24 items-center md:items-start">
         <button
           onClick={() => handleOrderBy()}
           className="flex bg-gray-opaque rounded-[40px] w-fit hover:bg-opacity-80 transition-all ease-in-out"
         >
-          <div className="flex it ems-center px-2 py-3">
+          <div className="flex items-center px-2 py-3">
             <span
               className={`${
                 orderBy === OrderBy.MOST_POPULAR
@@ -146,9 +145,9 @@ export default function CompaniesList({ filterList }: Props) {
             </span>
           </div>
         </button>
-        <div className="flex flex-col justify-between items-center mt-14">
+        <div className="flex flex-col justify-between items-center mt-14 w-full">
           <div className="flex flex-wrap justify-start gap-4 w-full transition-all ease-in-out">
-            {filterList.map((filter) => (
+            {filterList?.map((filter) => (
               <CompaniesFilter
                 key={filter.name}
                 filter={filter}

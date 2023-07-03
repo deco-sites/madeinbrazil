@@ -71,6 +71,7 @@
               "./islands/CompaniesFloatingButton.tsx",
               "./islands/CompaniesHeader.tsx",
               "./islands/CompaniesList.tsx",
+              "./islands/CompaniesPage.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
@@ -100,6 +101,7 @@
               "deco-sites/madeinbraziltec/sections/CompaniesFloatingButton.tsx",
               "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx",
               "deco-sites/madeinbraziltec/sections/CompaniesList.tsx",
+              "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Faq.tsx",
               "deco-sites/madeinbraziltec/sections/Content/Logos.tsx",
@@ -7599,11 +7601,22 @@
       ],
       "title": "deco-sites/madeinbraziltec/components/companies/CompaniesFloatingButton.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "FilterList[]|null"
+    },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props": {
       "type": "object",
       "properties": {
         "filterList": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]|null",
           "title": "Filter List"
         }
       },
@@ -8313,6 +8326,19 @@
       },
       "required": [],
       "title": "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "filterList": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
+          "title": "Filter List"
+        }
+      },
+      "required": [
+        "filterList"
+      ],
+      "title": "deco-sites/madeinbraziltec/components/companies/CompaniesPage.tsx@Props"
     },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=@Props": {
       "type": "object",
@@ -14138,6 +14164,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvbXBhbmllc1BhZ2UudHN4": {
+      "title": "./islands/CompaniesPage.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesPage.tsx"
+          ],
+          "default": "./islands/CompaniesPage.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g=": {
       "title": "./islands/HeaderButton.tsx",
       "type": "object",
@@ -14688,6 +14730,27 @@
             "deco-sites/madeinbraziltec/sections/CompaniesList.tsx"
           ],
           "default": "deco-sites/madeinbraziltec/sections/CompaniesList.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g=": {
+      "title": "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx"
+          ],
+          "default": "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx"
         }
       }
     },
@@ -16316,6 +16379,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0xpc3QudHN4"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc1BhZ2UudHN4"
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
         },
         {
@@ -16425,6 +16491,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g="

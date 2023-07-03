@@ -93,8 +93,6 @@ export default function CompaniesUpvoteButton({
 
       const upvotedCompanies = getCookie("upvotedCompanies");
 
-      console.log("upvotedCompanies", upvotedCompanies);
-
       if (company.id) {
         if (upvotedCompanies) {
           const parsedUpvotedCompanies = JSON.parse(
@@ -110,6 +108,8 @@ export default function CompaniesUpvoteButton({
           setCookie("upvotedCompanies", JSON.stringify([company?.id]), 2);
         }
       }
+
+      setIsUpvoted(true);
     }).catch((err) => {
       console.log(err);
       setUpvotes(upvotes - 1);
@@ -122,7 +122,7 @@ export default function CompaniesUpvoteButton({
     <button
       className={`flex items-center gap-4 px-4 py-3 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out ${
         isUpvoting ? "opacity-40 pointer-events-none" : ""
-      } ${isUpvoted ? "bg-opacity-80 pointer-events-none" : ""} `}
+      } ${isUpvoted ? "bg-opacity-80 cursor-not-allowed" : ""} `}
       onClick={(e) => {
         e.stopPropagation();
         handleUpvote();
