@@ -6,7 +6,7 @@ import CompaniesFooter from "./CompaniesFooter.tsx";
 
 import type {
   FilterList,
-} from "deco-sites/madeinbraziltec/routes/api/companies.ts";
+} from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
 export type Props = {
   filterList: LoaderReturnType<FilterList[]>;

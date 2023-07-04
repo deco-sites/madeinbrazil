@@ -4,9 +4,7 @@ import LoadingIcon from "../utils/LoadingIcon.tsx";
 
 // import { getCookie, setCookie } from "../../functions/cookieUtils.ts";
 
-import type {
-  Company,
-} from "deco-sites/madeinbraziltec/routes/api/companies.ts";
+import type { Company } from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
 interface Props {
   company: Company;

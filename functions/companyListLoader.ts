@@ -1,5 +1,5 @@
 import type { LoaderFunction } from "$live/types.ts";
-import type { Company } from "deco-sites/madeinbraziltec/routes/api/companies.ts";
+import type { Company } from "deco-sites/madeinbrazil/routes/api/companies.ts";
 import { companies } from "../routes/api/companies.ts";
 
 export interface Props {

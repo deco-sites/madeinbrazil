@@ -12,8 +12,8 @@
           "type": "string",
           "not": {
             "enum": [
-              "deco-sites/madeinbraziltec/functions/companyListLoader.ts",
-              "deco-sites/madeinbraziltec/functions/filterListLoader.ts",
+              "deco-sites/madeinbrazil/functions/companyListLoader.ts",
+              "deco-sites/madeinbrazil/functions/filterListLoader.ts",
               "deco-sites/std/functions/butterCMSAds.ts",
               "deco-sites/std/functions/butterCMSBrands.ts",
               "deco-sites/std/functions/butterCMSCategories.ts",
@@ -96,34 +96,34 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
-              "deco-sites/madeinbraziltec/sections/Category/CategoryBanner.tsx",
-              "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx",
-              "deco-sites/madeinbraziltec/sections/CompaniesFloatingButton.tsx",
-              "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx",
-              "deco-sites/madeinbraziltec/sections/CompaniesList.tsx",
-              "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx",
-              "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx",
-              "deco-sites/madeinbraziltec/sections/Content/Faq.tsx",
-              "deco-sites/madeinbraziltec/sections/Content/Logos.tsx",
-              "deco-sites/madeinbraziltec/sections/Content/Testimonials.tsx",
-              "deco-sites/madeinbraziltec/sections/DesignSystem/DesignSystem.tsx",
-              "deco-sites/madeinbraziltec/sections/Footer/Footer.tsx",
-              "deco-sites/madeinbraziltec/sections/Header/Header.tsx",
-              "deco-sites/madeinbraziltec/sections/Images/BannerGrid.tsx",
-              "deco-sites/madeinbraziltec/sections/Images/Carousel.tsx",
-              "deco-sites/madeinbraziltec/sections/Images/ImageGallery.tsx",
-              "deco-sites/madeinbraziltec/sections/Images/ShoppableBanner.tsx",
-              "deco-sites/madeinbraziltec/sections/Links/LinkTree.tsx",
-              "deco-sites/madeinbraziltec/sections/Links/Shortcuts.tsx",
-              "deco-sites/madeinbraziltec/sections/Miscellaneous/CampaignTimer.tsx",
-              "deco-sites/madeinbraziltec/sections/Miscellaneous/CookieConsent.tsx",
-              "deco-sites/madeinbraziltec/sections/Newsletter/Newsletter.tsx",
-              "deco-sites/madeinbraziltec/sections/Product/ProductDetails.tsx",
-              "deco-sites/madeinbraziltec/sections/Product/ProductShelf.tsx",
-              "deco-sites/madeinbraziltec/sections/Product/SearchResult.tsx",
-              "deco-sites/madeinbraziltec/sections/Product/Wishlist.tsx",
-              "deco-sites/madeinbraziltec/sections/Social/InstagramPosts.tsx",
-              "deco-sites/madeinbraziltec/sections/Social/WhatsApp.tsx",
+              "deco-sites/madeinbrazil/sections/Category/CategoryBanner.tsx",
+              "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesList.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesPage.tsx",
+              "deco-sites/madeinbrazil/sections/Content/Benefits.tsx",
+              "deco-sites/madeinbrazil/sections/Content/Faq.tsx",
+              "deco-sites/madeinbrazil/sections/Content/Logos.tsx",
+              "deco-sites/madeinbrazil/sections/Content/Testimonials.tsx",
+              "deco-sites/madeinbrazil/sections/DesignSystem/DesignSystem.tsx",
+              "deco-sites/madeinbrazil/sections/Footer/Footer.tsx",
+              "deco-sites/madeinbrazil/sections/Header/Header.tsx",
+              "deco-sites/madeinbrazil/sections/Images/BannerGrid.tsx",
+              "deco-sites/madeinbrazil/sections/Images/Carousel.tsx",
+              "deco-sites/madeinbrazil/sections/Images/ImageGallery.tsx",
+              "deco-sites/madeinbrazil/sections/Images/ShoppableBanner.tsx",
+              "deco-sites/madeinbrazil/sections/Links/LinkTree.tsx",
+              "deco-sites/madeinbrazil/sections/Links/Shortcuts.tsx",
+              "deco-sites/madeinbrazil/sections/Miscellaneous/CampaignTimer.tsx",
+              "deco-sites/madeinbrazil/sections/Miscellaneous/CookieConsent.tsx",
+              "deco-sites/madeinbrazil/sections/Newsletter/Newsletter.tsx",
+              "deco-sites/madeinbrazil/sections/Product/ProductDetails.tsx",
+              "deco-sites/madeinbrazil/sections/Product/ProductShelf.tsx",
+              "deco-sites/madeinbrazil/sections/Product/SearchResult.tsx",
+              "deco-sites/madeinbrazil/sections/Product/Wishlist.tsx",
+              "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx",
+              "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configNuvemShop.tsx",
@@ -174,7 +174,7 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@Company": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@Company": {
       "type": "object",
       "properties": {
         "id": {
@@ -251,7 +251,7 @@
       ],
       "title": "Company"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@Company[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@Company[]": {
       "anyOf": [
         {
           "$ref": "#/definitions/Resolvable"
@@ -259,9 +259,9 @@
         {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@Company"
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@Company"
           },
-          "title": "deco-sites/madeinbraziltec/routes/api/companies.ts@Company[]"
+          "title": "deco-sites/madeinbrazil/routes/api/companies.ts@Company[]"
         },
         {
           "title": "Company List Loader",
@@ -269,7 +269,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz@Props"
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz@Props"
             }
           ],
           "required": [
@@ -279,15 +279,15 @@
             "__resolveType": {
               "type": "string",
               "enum": [
-                "deco-sites/madeinbraziltec/functions/companyListLoader.ts"
+                "deco-sites/madeinbrazil/functions/companyListLoader.ts"
               ],
-              "default": "deco-sites/madeinbraziltec/functions/companyListLoader.ts"
+              "default": "deco-sites/madeinbrazil/functions/companyListLoader.ts"
             }
           }
         }
       ]
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz@Props": {
       "type": "object",
       "properties": {
         "orderBy": {
@@ -331,9 +331,9 @@
       "required": [
         "orderBy"
       ],
-      "title": "deco-sites/madeinbraziltec/functions/companyListLoader.ts@Props"
+      "title": "deco-sites/madeinbrazil/functions/companyListLoader.ts@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList": {
       "type": "object",
       "properties": {
         "name": {
@@ -370,7 +370,7 @@
       ],
       "title": "FilterList"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]": {
       "anyOf": [
         {
           "$ref": "#/definitions/Resolvable"
@@ -378,9 +378,9 @@
         {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList"
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList"
           },
-          "title": "deco-sites/madeinbraziltec/routes/api/companies.ts@FilterList[]"
+          "title": "deco-sites/madeinbrazil/routes/api/companies.ts@FilterList[]"
         },
         {
           "title": "filter List Loader",
@@ -393,9 +393,9 @@
             "__resolveType": {
               "type": "string",
               "enum": [
-                "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+                "deco-sites/madeinbrazil/functions/filterListLoader.ts"
               ],
-              "default": "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+              "default": "deco-sites/madeinbrazil/functions/filterListLoader.ts"
             }
           }
         }
@@ -7583,7 +7583,7 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4@Props": {
       "type": "object",
       "properties": {
         "email": {
@@ -7599,12 +7599,12 @@
         "email",
         "instagram"
       ],
-      "title": "deco-sites/madeinbraziltec/components/companies/CompaniesFloatingButton.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/companies/CompaniesFloatingButton.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]|null": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]|null": {
       "anyOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]"
         },
         {
           "type": "null"
@@ -7612,20 +7612,33 @@
       ],
       "title": "FilterList[]|null"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props": {
       "type": "object",
       "properties": {
         "filterList": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]|null",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]|null",
           "title": "Filter List"
         }
       },
       "required": [
         "filterList"
       ],
-      "title": "deco-sites/madeinbraziltec/components/companies/CompaniesList.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/companies/CompaniesList.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Form": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "filterList": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
+          "title": "Filter List"
+        }
+      },
+      "required": [
+        "filterList"
+      ],
+      "title": "deco-sites/madeinbrazil/components/companies/CompaniesPage.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Form": {
       "type": "object",
       "properties": {
         "placeholder": {
@@ -7654,7 +7667,7 @@
       "required": [],
       "title": "Form"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -7673,7 +7686,7 @@
           "title": "Description"
         },
         "form": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Form",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Form",
           "title": "Form"
         }
       },
@@ -7703,7 +7716,7 @@
       ],
       "title": "SKU"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9TaGlwcGluZ1NpbXVsYXRpb24udHN4@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9TaGlwcGluZ1NpbXVsYXRpb24udHN4@Props": {
       "type": "object",
       "properties": {
         "items": {
@@ -7717,7 +7730,7 @@
       "required": [
         "items"
       ],
-      "title": "deco-sites/madeinbraziltec/components/ui/ShippingSimulation.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/ui/ShippingSimulation.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
       "type": "object",
@@ -8107,7 +8120,7 @@
       "format": "image-uri",
       "title": "Image"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner": {
       "type": "object",
       "properties": {
         "matcher": {
@@ -8163,25 +8176,25 @@
       ],
       "title": "Banner"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner"
       },
       "title": "Banner[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Props": {
       "type": "object",
       "properties": {
         "banners": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Banner[]",
           "title": "Banners"
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/components/ui/CategoryBanner.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/ui/CategoryBanner.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category": {
       "type": "object",
       "properties": {
         "tag": {
@@ -8226,14 +8239,14 @@
       ],
       "title": "Category"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category"
       },
       "title": "Category[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Props": {
       "type": "object",
       "properties": {
         "header": {
@@ -8258,7 +8271,7 @@
           "title": "Header"
         },
         "list": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Category[]",
           "title": "List"
         },
         "layout": {
@@ -8325,22 +8338,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "filterList": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
-          "title": "Filter List"
-        }
-      },
-      "required": [
-        "filterList"
-      ],
-      "title": "deco-sites/madeinbraziltec/components/companies/CompaniesPage.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -8631,9 +8631,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Content/Benefits.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question": {
       "type": "object",
       "properties": {
         "question": {
@@ -8652,14 +8652,14 @@
       ],
       "title": "Question"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question"
       },
       "title": "Question[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Contact": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Contact": {
       "type": "object",
       "properties": {
         "title": {
@@ -8699,7 +8699,7 @@
       "required": [],
       "title": "Contact"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -8717,11 +8717,11 @@
           "title": "Description"
         },
         "questions": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Question[]",
           "title": "Questions"
         },
         "contact": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Contact",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Contact",
           "title": "Contact"
         },
         "layout": {
@@ -8770,9 +8770,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Content/Faq.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Content/Faq.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image": {
       "type": "object",
       "properties": {
         "image": {
@@ -8790,14 +8790,14 @@
       ],
       "title": "Image"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image"
       },
       "title": "Image[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -8815,7 +8815,7 @@
           "title": "Description"
         },
         "images": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Image[]",
           "title": "Images"
         },
         "layout": {
@@ -8843,9 +8843,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Content/Logos.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Content/Logos.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial": {
       "type": "object",
       "properties": {
         "text": {
@@ -8909,14 +8909,14 @@
       "required": [],
       "title": "Testimonial"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial"
       },
       "title": "Testimonial[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -8934,7 +8934,7 @@
           "title": "Description"
         },
         "testimonials": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Testimonial[]",
           "title": "Testimonials"
         },
         "layout": {
@@ -8978,9 +8978,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Content/Testimonials.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Content/Testimonials.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Colors": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Colors": {
       "type": "object",
       "properties": {
         "primary": {
@@ -9051,7 +9051,7 @@
       ],
       "title": "Colors"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@OptionalColors": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@OptionalColors": {
       "type": "object",
       "properties": {
         "primary-focus": {
@@ -9193,7 +9193,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
       "type": "object",
       "properties": {
         "--rounded-box": {
@@ -9271,7 +9271,7 @@
       ],
       "title": "Miscellaneous"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Font": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Font": {
       "type": "object",
       "properties": {
         "fontFamily": {
@@ -9290,30 +9290,30 @@
       ],
       "title": "Font"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Props": {
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Colors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Colors",
           "title": "Colors"
         },
         "optionalColors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@OptionalColors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@OptionalColors",
           "title": "Optional Colors"
         },
         "miscellaneous": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous",
           "title": "Miscellaneous"
         },
         "fonts": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Font",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Font",
           "title": "Fonts"
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/DesignSystem/DesignSystem.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/DesignSystem/DesignSystem.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@NewsletterForm": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@NewsletterForm": {
       "type": "object",
       "properties": {
         "placeholder": {
@@ -9342,7 +9342,7 @@
       "required": [],
       "title": "NewsletterForm"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item": {
       "type": "object",
       "properties": {
         "label": {
@@ -9360,14 +9360,14 @@
       ],
       "title": "Item"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item"
       },
       "title": "Item[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section": {
       "type": "object",
       "properties": {
         "label": {
@@ -9375,7 +9375,7 @@
           "title": "Label"
         },
         "items": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
           "title": "Items"
         }
       },
@@ -9385,14 +9385,14 @@
       ],
       "title": "Section"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section"
       },
       "title": "Section[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem": {
       "type": "object",
       "properties": {
         "label": {
@@ -9442,14 +9442,14 @@
       ],
       "title": "SocialItem"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem"
       },
       "title": "SocialItem[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem": {
       "type": "object",
       "properties": {
         "label": {
@@ -9489,14 +9489,14 @@
       ],
       "title": "PaymentItem"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem"
       },
       "title": "PaymentItem[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@MobileApps": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@MobileApps": {
       "type": "object",
       "properties": {
         "apple": {
@@ -9519,22 +9519,22 @@
       "required": [],
       "title": "MobileApps"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@RegionOptions": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@RegionOptions": {
       "type": "object",
       "properties": {
         "currency": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
           "title": "Currency"
         },
         "language": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
           "title": "Language"
         }
       },
       "required": [],
       "title": "RegionOptions"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Layout": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Layout": {
       "type": "object",
       "properties": {
         "backgroundColor": {
@@ -9673,7 +9673,7 @@
       "required": [],
       "title": "Layout"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "logo": {
@@ -9714,7 +9714,7 @@
               "title": "Description"
             },
             "form": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@NewsletterForm",
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@NewsletterForm",
               "title": "Form"
             }
           },
@@ -9722,7 +9722,7 @@
           "title": "Newsletter"
         },
         "sections": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Section[]",
           "title": "Sections"
         },
         "social": {
@@ -9736,7 +9736,7 @@
               "title": "Title"
             },
             "items": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem[]",
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@SocialItem[]",
               "title": "Items"
             }
           },
@@ -9756,7 +9756,7 @@
               "title": "Title"
             },
             "items": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem[]",
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@PaymentItem[]",
               "title": "Items"
             }
           },
@@ -9766,15 +9766,15 @@
           "title": "Payments"
         },
         "mobileApps": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@MobileApps",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@MobileApps",
           "title": "Mobile Apps"
         },
         "regionOptions": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@RegionOptions",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@RegionOptions",
           "title": "Region Options"
         },
         "extraLinks": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Item[]",
           "title": "Extra Links"
         },
         "backToTheTop": {
@@ -9792,14 +9792,14 @@
           "title": "Back To The Top"
         },
         "layout": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Layout",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Layout",
           "title": "Layout"
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/components/footer/Footer.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/footer/Footer.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoYmFyLnRzeA==@EditableProps": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoYmFyLnRzeA==@EditableProps": {
       "type": "object",
       "properties": {
         "placeholder": {
@@ -9840,7 +9840,7 @@
       "required": [],
       "title": "EditableProps"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem": {
       "type": "object",
       "properties": {
         "label": {
@@ -9918,14 +9918,14 @@
       ],
       "title": "NavItem"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem"
       },
       "title": "NavItem[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "alerts": {
@@ -9936,11 +9936,11 @@
           "title": "Alerts"
         },
         "searchbar": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoYmFyLnRzeA==@EditableProps",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoYmFyLnRzeA==@EditableProps",
           "title": "Search Bar"
         },
         "navItems": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@NavItem[]",
           "title": "Navigation items",
           "description": "Navigation items used both on mobile and desktop menus"
         },
@@ -9957,9 +9957,9 @@
       "required": [
         "alerts"
       ],
-      "title": "deco-sites/madeinbraziltec/components/header/Header.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/header/Header.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner": {
       "type": "object",
       "properties": {
         "srcMobile": {
@@ -9988,14 +9988,14 @@
       ],
       "title": "Banner"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner"
       },
       "title": "Banner[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -10161,7 +10161,7 @@
           "description": "Item's border radius in px"
         },
         "banners": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner[]",
           "title": "Banners"
         }
       },
@@ -10170,9 +10170,9 @@
         "borderRadius",
         "banners"
       ],
-      "title": "deco-sites/madeinbraziltec/components/ui/BannerGrid.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/ui/BannerGrid.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner": {
       "type": "object",
       "properties": {
         "desktop": {
@@ -10226,18 +10226,18 @@
       ],
       "title": "Banner"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner"
       },
       "title": "Banner[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Props": {
       "type": "object",
       "properties": {
         "images": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner[]",
           "title": "Images"
         },
         "preload": {
@@ -10258,9 +10258,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/components/ui/BannerCarousel.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/ui/BannerCarousel.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner": {
       "type": "object",
       "properties": {
         "srcMobile": {
@@ -10289,14 +10289,14 @@
       ],
       "title": "Banner"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner"
       },
       "title": "Banner[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -10314,7 +10314,7 @@
           "title": "Description"
         },
         "banners": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Banner[]",
           "maxItems": 4,
           "minItems": 4,
           "title": "Banners"
@@ -10475,9 +10475,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Images/ImageGallery.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Images/ImageGallery.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin": {
       "type": "object",
       "properties": {
         "mobile": {
@@ -10532,14 +10532,14 @@
       ],
       "title": "Pin"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin"
       },
       "title": "Pin[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Props": {
       "type": "object",
       "properties": {
         "image": {
@@ -10565,7 +10565,7 @@
           "title": "Image"
         },
         "pins": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Pin[]",
           "title": "Pins"
         },
         "text": {
@@ -10605,9 +10605,9 @@
         "image",
         "pins"
       ],
-      "title": "deco-sites/madeinbraziltec/sections/Images/ShoppableBanner.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Images/ShoppableBanner.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link": {
       "type": "object",
       "properties": {
         "label": {
@@ -10625,14 +10625,14 @@
       ],
       "title": "Link"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link"
       },
       "title": "Link[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social": {
       "type": "object",
       "properties": {
         "label": {
@@ -10662,14 +10662,14 @@
       ],
       "title": "Social"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social[]": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social"
       },
       "title": "Social[]"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -10687,7 +10687,7 @@
           "title": "Description"
         },
         "links": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Link[]",
           "title": "Links"
         },
         "bgImage": {
@@ -10699,14 +10699,14 @@
           "title": "Avatar"
         },
         "social": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Social[]",
           "title": "Social"
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/components/ui/LinkTree.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/ui/LinkTree.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Shortcut": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Shortcut": {
       "type": "object",
       "properties": {
         "label": {
@@ -10933,13 +10933,13 @@
       "required": [],
       "title": "Shortcut"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "shortcuts": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Shortcut"
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Shortcut"
           },
           "title": "Shortcuts"
         },
@@ -10961,14 +10961,14 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Links/Shortcuts.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Links/Shortcuts.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@HTML": {
       "type": "string",
       "format": "html",
       "title": "HTML"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "text": {
@@ -11062,9 +11062,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Miscellaneous/CampaignTimer.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Miscellaneous/CampaignTimer.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9Db29raWVDb25zZW50LnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9Db29raWVDb25zZW50LnRzeA==@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -11174,9 +11174,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/components/ui/CookieConsent.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/ui/CookieConsent.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Form": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Form": {
       "type": "object",
       "properties": {
         "placeholder": {
@@ -11205,7 +11205,7 @@
       "required": [],
       "title": "Form"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -11224,7 +11224,7 @@
           "title": "Description"
         },
         "form": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Form",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Form",
           "title": "Form"
         },
         "layout": {
@@ -11303,9 +11303,9 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/sections/Newsletter/Newsletter.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Newsletter/Newsletter.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3REZXRhaWxzLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3REZXRhaWxzLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "page": {
@@ -11338,9 +11338,9 @@
       "required": [
         "page"
       ],
-      "title": "deco-sites/madeinbraziltec/components/product/ProductDetails.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/product/ProductDetails.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RTaGVsZi50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RTaGVsZi50c3g=@Props": {
       "type": "object",
       "properties": {
         "products": {
@@ -11614,9 +11614,9 @@
       "required": [
         "products"
       ],
-      "title": "deco-sites/madeinbraziltec/components/product/ProductShelf.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/product/ProductShelf.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RHYWxsZXJ5LnRzeA==@Columns": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RHYWxsZXJ5LnRzeA==@Columns": {
       "type": "object",
       "properties": {
         "mobile": {
@@ -11637,7 +11637,7 @@
       "required": [],
       "title": "Columns"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoUmVzdWx0LnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoUmVzdWx0LnRzeA==@Props": {
       "type": "object",
       "properties": {
         "page": {
@@ -11662,7 +11662,7 @@
           "title": "Variant"
         },
         "columns": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RHYWxsZXJ5LnRzeA==@Columns",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RHYWxsZXJ5LnRzeA==@Columns",
           "description": "Number of products per line on grid",
           "title": "Columns"
         }
@@ -11671,9 +11671,9 @@
         "page",
         "columns"
       ],
-      "title": "deco-sites/madeinbraziltec/components/search/SearchResult.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/search/SearchResult.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@layout": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@layout": {
       "type": "object",
       "properties": {
         "headerAlignment": {
@@ -11712,7 +11712,7 @@
       "required": [],
       "title": "layout"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -11736,16 +11736,16 @@
           "title": "Facebook Token"
         },
         "layout": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@layout",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@layout",
           "title": "Layout"
         }
       },
       "required": [
         "facebookToken"
       ],
-      "title": "deco-sites/madeinbraziltec/sections/Social/InstagramPosts.tsx@Props"
+      "title": "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9XaGF0c0FwcC50c3g=@Props": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9XaGF0c0FwcC50c3g=@Props": {
       "type": "object",
       "properties": {
         "phone": {
@@ -11757,7 +11757,7 @@
         }
       },
       "required": [],
-      "title": "deco-sites/madeinbraziltec/components/ui/WhatsApp.tsx@Props"
+      "title": "deco-sites/madeinbrazil/components/ui/WhatsApp.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
@@ -12961,13 +12961,13 @@
       ],
       "title": "deco-sites/std/packs/vtex/actions/wishlist/removeItem.ts@Props"
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz": {
       "title": "Company List Loader",
       "description": "Gets company information",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz@Props"
         }
       ],
       "required": [
@@ -12977,13 +12977,13 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/functions/companyListLoader.ts"
+            "deco-sites/madeinbrazil/functions/companyListLoader.ts"
           ],
-          "default": "deco-sites/madeinbraziltec/functions/companyListLoader.ts"
+          "default": "deco-sites/madeinbrazil/functions/companyListLoader.ts"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2ZpbHRlckxpc3RMb2FkZXIudHM=": {
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvZnVuY3Rpb25zL2ZpbHRlckxpc3RMb2FkZXIudHM=": {
       "title": "filter List Loader",
       "description": "Gets filters from company information",
       "type": "object",
@@ -12994,9 +12994,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+            "deco-sites/madeinbrazil/functions/filterListLoader.ts"
           ],
-          "default": "deco-sites/madeinbraziltec/functions/filterListLoader.ts"
+          "default": "deco-sites/madeinbrazil/functions/filterListLoader.ts"
         }
       }
     },
@@ -14111,7 +14111,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4@Props"
         }
       ],
       "required": [
@@ -14148,7 +14148,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props"
         }
       ],
       "required": [
@@ -14167,6 +14167,11 @@
     "Li9pc2xhbmRzL0NvbXBhbmllc1BhZ2UudHN4": {
       "title": "./islands/CompaniesPage.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -14297,7 +14302,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9TaGlwcGluZ1NpbXVsYXRpb24udHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9TaGlwcGluZ1NpbXVsYXRpb24udHN4@Props"
         }
       ],
       "required": [
@@ -14633,12 +14638,12 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlCYW5uZXIudHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/Category/CategoryBanner.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlCYW5uZXIudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Category/CategoryBanner.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9DYXRlZ29yeUJhbm5lci50c3g=@Props"
         }
       ],
       "required": [
@@ -14648,18 +14653,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Category/CategoryBanner.tsx"
+            "deco-sites/madeinbrazil/sections/Category/CategoryBanner.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Category/CategoryBanner.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Category/CategoryBanner.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA==@Props"
         }
       ],
       "required": [
@@ -14669,18 +14674,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx"
+            "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Category/CategoryList.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/CompaniesFloatingButton.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4@Props"
         }
       ],
       "required": [
@@ -14690,14 +14695,14 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/CompaniesFloatingButton.tsx"
+            "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/CompaniesFloatingButton.tsx"
+          "default": "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx",
       "type": "object",
       "required": [
         "__resolveType"
@@ -14706,39 +14711,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx"
+            "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/CompaniesHeader.tsx"
+          "default": "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/CompaniesList.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/madeinbraziltec/sections/CompaniesList.tsx"
-          ],
-          "default": "deco-sites/madeinbraziltec/sections/CompaniesList.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesList.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTGlzdC50c3g=@Props"
         }
       ],
       "required": [
@@ -14748,18 +14732,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx"
+            "deco-sites/madeinbrazil/sections/CompaniesList.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/CompaniesPage.tsx"
+          "default": "deco-sites/madeinbrazil/sections/CompaniesList.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesPage.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props"
         }
       ],
       "required": [
@@ -14769,18 +14753,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx"
+            "deco-sites/madeinbrazil/sections/CompaniesPage.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Content/Benefits.tsx"
+          "default": "deco-sites/madeinbrazil/sections/CompaniesPage.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/Content/Faq.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Content/Benefits.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=@Props"
         }
       ],
       "required": [
@@ -14790,18 +14774,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Content/Faq.tsx"
+            "deco-sites/madeinbrazil/sections/Content/Benefits.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Content/Faq.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Content/Benefits.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Content/Logos.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Content/Faq.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4@Props"
         }
       ],
       "required": [
@@ -14811,18 +14795,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Content/Logos.tsx"
+            "deco-sites/madeinbrazil/sections/Content/Faq.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Content/Logos.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Content/Faq.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/Content/Testimonials.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Content/Logos.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g=@Props"
         }
       ],
       "required": [
@@ -14832,18 +14816,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Content/Testimonials.tsx"
+            "deco-sites/madeinbrazil/sections/Content/Logos.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Content/Testimonials.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Content/Logos.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/DesignSystem/DesignSystem.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Content/Testimonials.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4@Props"
         }
       ],
       "required": [
@@ -14853,18 +14837,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/DesignSystem/DesignSystem.tsx"
+            "deco-sites/madeinbrazil/sections/Content/Testimonials.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/DesignSystem/DesignSystem.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Content/Testimonials.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRm9vdGVyL0Zvb3Rlci50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Footer/Footer.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/DesignSystem/DesignSystem.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g=@Props"
         }
       ],
       "required": [
@@ -14874,18 +14858,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Footer/Footer.tsx"
+            "deco-sites/madeinbrazil/sections/DesignSystem/DesignSystem.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Footer/Footer.tsx"
+          "default": "deco-sites/madeinbrazil/sections/DesignSystem/DesignSystem.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSGVhZGVyL0hlYWRlci50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Header/Header.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRm9vdGVyL0Zvb3Rlci50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Footer/Footer.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvRm9vdGVyLnRzeA==@Props"
         }
       ],
       "required": [
@@ -14895,18 +14879,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Header/Header.tsx"
+            "deco-sites/madeinbrazil/sections/Footer/Footer.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Header/Header.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Footer/Footer.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0Jhbm5lckdyaWQudHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/Images/BannerGrid.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSGVhZGVyL0hlYWRlci50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Header/Header.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@Props"
         }
       ],
       "required": [
@@ -14916,18 +14900,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Images/BannerGrid.tsx"
+            "deco-sites/madeinbrazil/sections/Header/Header.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Images/BannerGrid.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Header/Header.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0Nhcm91c2VsLnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Images/Carousel.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0Jhbm5lckdyaWQudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Images/BannerGrid.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Props"
         }
       ],
       "required": [
@@ -14937,18 +14921,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Images/Carousel.tsx"
+            "deco-sites/madeinbrazil/sections/Images/BannerGrid.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Images/Carousel.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Images/BannerGrid.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Images/ImageGallery.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0Nhcm91c2VsLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Images/Carousel.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Props"
         }
       ],
       "required": [
@@ -14958,18 +14942,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Images/ImageGallery.tsx"
+            "deco-sites/madeinbrazil/sections/Images/Carousel.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Images/ImageGallery.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Images/Carousel.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Images/ShoppableBanner.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Images/ImageGallery.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g=@Props"
         }
       ],
       "required": [
@@ -14979,18 +14963,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Images/ShoppableBanner.tsx"
+            "deco-sites/madeinbrazil/sections/Images/ImageGallery.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Images/ShoppableBanner.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Images/ImageGallery.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvTGlua1RyZWUudHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/Links/LinkTree.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Images/ShoppableBanner.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g=@Props"
         }
       ],
       "required": [
@@ -15000,18 +14984,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Links/LinkTree.tsx"
+            "deco-sites/madeinbrazil/sections/Images/ShoppableBanner.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Links/LinkTree.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Images/ShoppableBanner.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Links/Shortcuts.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvTGlua1RyZWUudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Links/LinkTree.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9MaW5rVHJlZS50c3g=@Props"
         }
       ],
       "required": [
@@ -15021,18 +15005,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Links/Shortcuts.tsx"
+            "deco-sites/madeinbrazil/sections/Links/LinkTree.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Links/Shortcuts.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Links/LinkTree.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Miscellaneous/CampaignTimer.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Links/Shortcuts.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA==@Props"
         }
       ],
       "required": [
@@ -15042,18 +15026,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Miscellaneous/CampaignTimer.tsx"
+            "deco-sites/madeinbrazil/sections/Links/Shortcuts.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Miscellaneous/CampaignTimer.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Links/Shortcuts.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9Db29raWVDb25zZW50LnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Miscellaneous/CookieConsent.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Miscellaneous/CampaignTimer.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9Db29raWVDb25zZW50LnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA==@Props"
         }
       ],
       "required": [
@@ -15063,18 +15047,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Miscellaneous/CookieConsent.tsx"
+            "deco-sites/madeinbrazil/sections/Miscellaneous/CampaignTimer.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Miscellaneous/CookieConsent.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Miscellaneous/CampaignTimer.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Newsletter/Newsletter.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9Db29raWVDb25zZW50LnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Miscellaneous/CookieConsent.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9Db29raWVDb25zZW50LnRzeA==@Props"
         }
       ],
       "required": [
@@ -15084,18 +15068,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Newsletter/Newsletter.tsx"
+            "deco-sites/madeinbrazil/sections/Miscellaneous/CookieConsent.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Newsletter/Newsletter.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Miscellaneous/CookieConsent.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0RGV0YWlscy50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Product/ProductDetails.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Newsletter/Newsletter.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3REZXRhaWxzLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA==@Props"
         }
       ],
       "required": [
@@ -15105,18 +15089,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Product/ProductDetails.tsx"
+            "deco-sites/madeinbrazil/sections/Newsletter/Newsletter.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Product/ProductDetails.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Newsletter/Newsletter.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0U2hlbGYudHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/Product/ProductShelf.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0RGV0YWlscy50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Product/ProductDetails.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RTaGVsZi50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3REZXRhaWxzLnRzeA==@Props"
         }
       ],
       "required": [
@@ -15126,18 +15110,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Product/ProductShelf.tsx"
+            "deco-sites/madeinbrazil/sections/Product/ProductDetails.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Product/ProductShelf.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Product/ProductDetails.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9TZWFyY2hSZXN1bHQudHN4": {
-      "title": "deco-sites/madeinbraziltec/sections/Product/SearchResult.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0U2hlbGYudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Product/ProductShelf.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoUmVzdWx0LnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3RTaGVsZi50c3g=@Props"
         }
       ],
       "required": [
@@ -15147,18 +15131,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Product/SearchResult.tsx"
+            "deco-sites/madeinbrazil/sections/Product/ProductShelf.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Product/SearchResult.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Product/ProductShelf.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9XaXNobGlzdC50c3g=": {
-      "title": "deco-sites/madeinbraziltec/sections/Product/Wishlist.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9TZWFyY2hSZXN1bHQudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Product/SearchResult.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoUmVzdWx0LnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoUmVzdWx0LnRzeA==@Props"
         }
       ],
       "required": [
@@ -15168,18 +15152,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Product/Wishlist.tsx"
+            "deco-sites/madeinbrazil/sections/Product/SearchResult.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Product/Wishlist.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Product/SearchResult.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Social/InstagramPosts.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9XaXNobGlzdC50c3g=": {
+      "title": "deco-sites/madeinbrazil/sections/Product/Wishlist.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoUmVzdWx0LnRzeA==@Props"
         }
       ],
       "required": [
@@ -15189,18 +15173,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Social/InstagramPosts.tsx"
+            "deco-sites/madeinbrazil/sections/Product/Wishlist.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Social/InstagramPosts.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Product/Wishlist.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL1doYXRzQXBwLnRzeA==": {
-      "title": "deco-sites/madeinbraziltec/sections/Social/WhatsApp.tsx",
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvY29tcG9uZW50cy91aS9XaGF0c0FwcC50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA==@Props"
         }
       ],
       "required": [
@@ -15210,9 +15194,30 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/madeinbraziltec/sections/Social/WhatsApp.tsx"
+            "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx"
           ],
-          "default": "deco-sites/madeinbraziltec/sections/Social/WhatsApp.tsx"
+          "default": "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL1doYXRzQXBwLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy91aS9XaGF0c0FwcC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx"
+          ],
+          "default": "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx"
         }
       }
     },
@@ -16174,10 +16179,10 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvZnVuY3Rpb25zL2NvbXBhbnlMaXN0TG9hZGVyLnRz"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvZnVuY3Rpb25zL2ZpbHRlckxpc3RMb2FkZXIudHM="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvZnVuY3Rpb25zL2ZpbHRlckxpc3RMb2FkZXIudHM="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0Fkcy50cw=="
@@ -16478,88 +16483,88 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlCYW5uZXIudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlCYW5uZXIudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9GYXEudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9Mb2dvcy50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9UZXN0aW1vbmlhbHMudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRGVzaWduU3lzdGVtL0Rlc2lnblN5c3RlbS50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvRm9vdGVyL0Zvb3Rlci50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvRm9vdGVyL0Zvb3Rlci50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSGVhZGVyL0hlYWRlci50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSGVhZGVyL0hlYWRlci50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0Jhbm5lckdyaWQudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0Jhbm5lckdyaWQudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0Nhcm91c2VsLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0Nhcm91c2VsLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL0ltYWdlR2FsbGVyeS50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvSW1hZ2VzL1Nob3BwYWJsZUJhbm5lci50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvTGlua1RyZWUudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvTGlua1RyZWUudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTGlua3MvU2hvcnRjdXRzLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9DYW1wYWlnblRpbWVyLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9Db29raWVDb25zZW50LnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTWlzY2VsbGFuZW91cy9Db29raWVDb25zZW50LnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0RGV0YWlscy50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0RGV0YWlscy50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0U2hlbGYudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9Qcm9kdWN0U2hlbGYudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9TZWFyY2hSZXN1bHQudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9TZWFyY2hSZXN1bHQudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvUHJvZHVjdC9XaXNobGlzdC50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvUHJvZHVjdC9XaXNobGlzdC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL0luc3RhZ3JhbVBvc3RzLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvc2VjdGlvbnMvU29jaWFsL1doYXRzQXBwLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL1doYXRzQXBwLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="

@@ -1,6 +1,6 @@
 {
   "imports": {
-    "deco-sites/madeinbraziltec/": "./",
+    "deco-sites/madeinbrazil/": "./",
     "deco-sites/fashion/": "./",
     "$store/": "./",
     "deco-sites/std/": "https://denopkg.com/deco-sites/std@1.12.8/",
