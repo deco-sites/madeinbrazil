@@ -6,7 +6,7 @@ import CompaniesFilter from "./CompaniesFilter.tsx";
 import type {
   Company,
   FilterList,
-} from "deco-sites/madeinbraziltec/routes/api/companies.ts";
+} from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
 export type Props = {
   filterList: FilterList[] | undefined;

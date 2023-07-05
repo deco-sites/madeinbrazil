@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "preact/hooks";
 import type { SelectedFilters } from "../../types/filters.d.ts";
 import type {
   FilterList,
-} from "deco-sites/madeinbraziltec/routes/api/companies.ts";
+} from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
 interface Props {
   selectedFilters: SelectedFilters[];

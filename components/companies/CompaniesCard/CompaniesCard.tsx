@@ -4,7 +4,7 @@ import CompaniesUpvoteButton from "../CompaniesUpvoteButton.tsx";
 import CompaniesCardTag from "./CompaniesCardTag.tsx";
 import CompaniesCardLink from "./CompaniesCardLink.tsx";
 
-import type { Company } from "deco-sites/madeinbraziltec/routes/api/companies.ts";
+import type { Company } from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
 interface Props {
   company: Company;
