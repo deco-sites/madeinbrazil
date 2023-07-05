@@ -31,6 +31,7 @@ const fetchCompanies = async (
   companyStage: string | null,
   capital: string | null,
   segment: string | null,
+  likesThreshold: number,
 ) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
@@ -54,9 +55,15 @@ const fetchCompanies = async (
     segment: parseFilter(segment, "segment"),
   };
 
-  const filterByFormula = `AND(${
-    Object.values(filters).filter((f) => f).join(",")
-  })`;
+  const filtersFormatted = Object.values(filters).filter((f) => f).join(",");
+
+  const filterByFormula = filtersFormatted.length > 0
+    ? (
+      `AND(${filtersFormatted}, {companyUpvotes} >= ${likesThreshold})`
+    )
+    : (
+      `{companyUpvotes} >= ${likesThreshold}`
+    );
 
   const params = new URLSearchParams({
     "maxRecords": "100",
@@ -65,6 +72,8 @@ const fetchCompanies = async (
   });
 
   if (filterByFormula) {
+    console.log(filterByFormula);
+
     params.append("filterByFormula", filterByFormula);
   }
 
@@ -107,13 +116,15 @@ const fetchFilters = async () => {
   })
     .then((response) => response.json())
     .then((data: AirTableListResponse) => {
-      const filters = data.records.reduce<FilterListSet>(
+      const filters: FilterListSet = data.records.reduce<FilterListSet>(
         (acc, record) => {
           const { fields } = record;
-          acc.employees.values.add(fields.employees);
-          acc.companyStage.values.add(fields.companyStage);
-          acc.capital.values.add(fields.capital);
-          acc.segment.values.add(fields.segment);
+          acc.employees.values.add(fields.employees.trimStart().trimEnd());
+          acc.companyStage.values.add(
+            fields.companyStage.trimStart().trimEnd(),
+          );
+          acc.capital.values.add(fields.capital.trimStart().trimEnd());
+          acc.segment.values.add(fields.segment.trimStart().trimEnd());
 
           return acc;
         },
@@ -137,12 +148,30 @@ const fetchFilters = async () => {
         },
       );
 
+      const rangeValues: {
+        [key: string]: number;
+      } = {
+        "Self-employed": 0,
+        "1-10 employees": 1,
+        "11-50 employees": 2,
+        "51-200 employees": 3,
+        "201-500 employees": 4,
+        "501-1000 employees": 5,
+        "1001-5000 employees": 6,
+        "5001-10,000 employees": 7,
+        "10,001+ employees": 8,
+      };
+
       const filterList = Object.entries(filters).map(
         ([key, value]) => {
           return {
             name: key,
             label: value.name,
-            values: Array.from(value.values),
+            values: key === "employees"
+              ? Array.from(value.values).sort((a, b) =>
+                rangeValues[a] - rangeValues[b]
+              )
+              : Array.from(value.values).sort(),
           };
         },
       );
@@ -200,6 +229,7 @@ export const companies: {
     companyStage: string | null,
     capital: string | null,
     segment: string | null,
+    likesThreshold: number,
   ) => Promise<Company[]>;
   getFilters: () => Promise<FilterList[]>;
   update: (s: Company) => Promise<AirtableUpdateResponse>;
@@ -213,6 +243,7 @@ export const companies: {
     companyStage: string | null,
     capital: string | null,
     segment: string | null,
+    likesThreshold: number,
   ) {
     this.list = (await fetchCompanies(
       orderBy,
@@ -220,6 +251,7 @@ export const companies: {
       companyStage,
       capital,
       segment,
+      likesThreshold,
     )) as Company[];
     return this.list;
   },
@@ -247,6 +279,7 @@ export const handler: Handlers = {
     const companyStage = queryParameters.get("companyStage") ?? null;
     const capital = queryParameters.get("capital") ?? null;
     const segment = queryParameters.get("segment") ?? null;
+    const likesThreshold = Number(queryParameters.get("likesThreshold")) ?? 0;
 
     await companies.getList(
       orderBy,
@@ -254,6 +287,7 @@ export const handler: Handlers = {
       companyStage,
       capital,
       segment,
+      likesThreshold,
     );
 
     const status = 200;
@@ -320,23 +354,17 @@ export const handler: Handlers = {
   },
 };
 
+interface FilterListSetValue {
+  name: string;
+  values: Set<string>;
+}
+
 export interface FilterListSet {
-  employees: {
-    name: string;
-    values: Set<number>;
-  };
-  companyStage: {
-    name: string;
-    values: Set<string>;
-  };
-  capital: {
-    name: string;
-    values: Set<string>;
-  };
-  segment: {
-    name: string;
-    values: Set<string>;
-  };
+  [key: string]: FilterListSetValue;
+  employees: FilterListSetValue;
+  companyStage: FilterListSetValue;
+  capital: FilterListSetValue;
+  segment: FilterListSetValue;
 }
 
 export interface FilterList {
@@ -382,10 +410,10 @@ export interface Company {
   about: string;
   logo: AirtableAttachment[];
   banner: AirtableAttachment[];
-  website: string;
-  email: string;
-  instagram: string;
-  employees: number;
+  website: string | null;
+  email: string | null;
+  instagram: string | null;
+  employees: string;
   capital: string;
   segment: string;
   companyStage: string;
@@ -415,10 +443,10 @@ interface CompanyDB {
   about: string;
   logo: AirtableAttachment[];
   banner: AirtableAttachment[];
-  website: string;
-  email: string;
-  instagram: string;
-  employees: number;
+  website: string | null;
+  email: string | null;
+  instagram: string | null;
+  employees: string;
   capital: string;
   segment: string;
   companyStage: string;

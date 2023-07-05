@@ -13,6 +13,8 @@ export interface Props {
   capital?: string;
   /** @description segment */
   segment?: string;
+  /** @description likesThreshold */
+  likesThreshold?: number;
 }
 
 /**
@@ -28,6 +30,7 @@ const companyListLoader: LoaderFunction<Props, Company[]> = async (
     companyStage = null,
     capital = null,
     segment = null,
+    likesThreshold = 0,
   },
 ) => {
   await companies.getList(
@@ -36,6 +39,7 @@ const companyListLoader: LoaderFunction<Props, Company[]> = async (
     companyStage,
     capital,
     segment,
+    likesThreshold,
   );
 
   return {

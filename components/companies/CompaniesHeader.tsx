@@ -1,6 +1,14 @@
 import { useEffect, useRef } from "preact/hooks";
 
-export default function CompaniesHeader() {
+interface Props {
+  headerTitle?: string;
+  headerSubtitle?: string;
+}
+
+export default function CompaniesHeader({
+  headerTitle,
+  headerSubtitle,
+}: Props) {
   const backgroundRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,9 +40,13 @@ export default function CompaniesHeader() {
           >
           </div>
           <h1 className="relative text-primary --p font-semibold tracking-[-4.126px] leading-[90%] text-[13vw] md:text-[10.5rem] md:leading-[9rem] md:tracking-[-.75rem] z-10">
-            Unleash <br />
-            Brazil's <br />
-            Tech Brilliance.
+            {headerTitle || (
+              <>
+                Unleash <br />
+                Brazil's <br />
+                Tech Brilliance.
+              </>
+            )}
           </h1>
 
           <div className="absolute top-0 left-[63vw] md:left-[52rem] w-[14vw]">
@@ -48,9 +60,9 @@ export default function CompaniesHeader() {
 
         <div className="relative mt-14 md:mt-16">
           <p className="relative text-secondary --p font-montserrat font-normal text-xs md:text-[24px] md:leading-7 max-w-[781px]">
-            Discover the game-changers, innovators, and disruptors in our
-            catalog of Brazilian tech companies. Explore the forefront of
-            technological advancement in Brazil.
+            {headerSubtitle || (
+              "Discover the game-changers, innovators, and disruptors in our catalog of Brazilian tech companies. Explore the forefront oftechnological advancement in Brazil."
+            )}
           </p>
         </div>
 

@@ -203,19 +203,40 @@
           "title": "Banner"
         },
         "website": {
-          "type": "string",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
           "title": "Website"
         },
         "email": {
-          "type": "string",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
           "title": "Email"
         },
         "instagram": {
-          "type": "string",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
           "title": "Instagram"
         },
         "employees": {
-          "type": "number",
+          "type": "string",
           "title": "Employees"
         },
         "capital": {
@@ -326,6 +347,14 @@
           ],
           "description": "segment",
           "title": "Segment"
+        },
+        "likesThreshold": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "likesThreshold",
+          "title": "Likes Threshold"
         }
       },
       "required": [
@@ -7618,6 +7647,13 @@
         "filterList": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]|null",
           "title": "Filter List"
+        },
+        "likesThreshold": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Likes Threshold"
         }
       },
       "required": [
@@ -8333,10 +8369,41 @@
         "filterList": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWx0ZWMvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
           "title": "Filter List"
+        },
+        "headerTitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Header Title"
+        },
+        "headerSubtitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Header Subtitle"
+        },
+        "likesThreshold": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Likes Threshold"
+        },
+        "emailLink": {
+          "type": "string",
+          "title": "Email Link"
+        },
+        "instagramLink": {
+          "type": "string",
+          "title": "Instagram Link"
         }
       },
       "required": [
-        "filterList"
+        "filterList",
+        "emailLink",
+        "instagramLink"
       ],
       "title": "deco-sites/madeinbraziltec/components/companies/CompaniesPage.tsx@Props"
     },

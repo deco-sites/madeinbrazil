@@ -12,6 +12,15 @@ function GlobalTags() {
       {/* Web Manifest */}
       <link rel="manifest" href={asset("/site.webmanifest")} />
 
+      {/* title */}
+      <title>Made in Brazil</title>
+
+      {/* Description */}
+      <meta
+        name="description"
+        content="Discover the game-changers, innovators, and disruptors in our catalog of Brazilian tech companies. Explore the forefront oftechnological advancement in Brazil."
+      />
+
       <style
         dangerouslySetInnerHTML={{
           __html: `

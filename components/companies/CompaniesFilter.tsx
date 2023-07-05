@@ -52,22 +52,24 @@ export default function CompaniesFilter(
     )?.values.includes(option.toString());
   }, [selectedFilters]);
 
-  const getSearchedFilter = (filterName: string, filterLabel: string) => {
+  const getSearchedFilter = (filterName: string) => {
     const searchedFilter = selectedFilters.find((selectedFilter) =>
       selectedFilter.name === filterName
     );
 
     if (searchedFilter) {
       if (searchedFilter.values.length === 1) {
-        return `${filterLabel}: ${searchedFilter.values[0]}`;
+        return `${searchedFilter.values[0]}`;
       } else if (searchedFilter.values.length > 1) {
-        return `${filterLabel}: ${searchedFilter.values[0]}, +${
+        return `${searchedFilter.values[0]}, +${
           searchedFilter.values.length - 1
         }`;
       } else {
         return "";
       }
     }
+
+    return "";
   };
 
   return (
@@ -89,7 +91,24 @@ export default function CompaniesFilter(
       >
         <div className="flex items-center pr-4 pl-6 py-2">
           <span className="text-secondary font-medium text-base pr-2 rounded-[40px] transition-all ease-in-out uppercase">
-            {getSearchedFilter(filter.name, filter.label) || filter.label}
+            {getSearchedFilter(
+                filter.name,
+              )?.length > 0
+              ? (
+                <>
+                  <span>
+                    {filter.label}:{" "}
+                  </span>
+                  <span className="text-primary">
+                    {getSearchedFilter(
+                      filter.name,
+                    )}
+                  </span>
+                </>
+              )
+              : (
+                filter.label
+              )}
           </span>
           <span
             className={`ml-2 transition-all ease-in-out transform ${
@@ -102,7 +121,7 @@ export default function CompaniesFilter(
       </button>
       {isOpen && (
         <div className="flex flex-col gap-2 absolute top-[calc(100%+8px)] left-0 w-full bg-white rounded-lg shadow-[0_0_12px_0_rgba(0,0,0,0.2)] transition-all ease-in-out px-6 pt-6 pb-4 z-50 max-w-[230px] min-w-[230px] h-[228px]">
-          <div className="flex flex-col gap-4 overflow-y-auto h-[120px]">
+          <div className="flex flex-col gap-4 overflow-y-auto h-[120px] scrollbar-light">
             {filter.values.map((option) => (
               <div
                 key={option}

@@ -22,12 +22,8 @@ export default function CompaniesUpvoteButton({
   const [isUpvoted, setIsUpvoted] = useState(false);
 
   function setCookie(name: string, value: string, years: number) {
-    console.log("setCookie", name, value, years);
-
     const expirationDate = new Date();
     expirationDate.setFullYear(expirationDate.getFullYear() + years);
-
-    console.log("setCookie", name, value, years, expirationDate);
 
     const cookieString = `${encodeURIComponent(name)}=${
       encodeURIComponent(
@@ -38,8 +34,6 @@ export default function CompaniesUpvoteButton({
   }
 
   function getCookie(name: string): string | null {
-    console.log("getCookie", name);
-
     const encodedName = encodeURIComponent(name);
     const cookieArray = document.cookie.split(";");
 
@@ -111,7 +105,7 @@ export default function CompaniesUpvoteButton({
 
       setIsUpvoted(true);
     }).catch((err) => {
-      console.log(err);
+      console.error(err);
       setUpvotes(upvotes - 1);
     }).finally(() => {
       setIsUpvoting(false);

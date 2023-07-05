@@ -23,15 +23,6 @@ export default function CompaniesCard(
     setIsCardClicked(isCurrentCardClicked);
   }, [isCurrentCardClicked]);
 
-  const formatEmployees = (employees: number) => {
-    const formatter = new Intl.NumberFormat("en-US", {
-      notation: "compact",
-      compactDisplay: "short",
-    });
-
-    return `${formatter.format(employees)}+ employees`;
-  };
-
   return (
     <div
       className={`w-full cursor-pointer rounded-3xl shadow-[0_0_12px_0_rgba(0,0,0,0.2)] relative overflow-hidden mb-16 max-w-[590px] ${
@@ -63,7 +54,7 @@ export default function CompaniesCard(
                 {company.name}
               </h2>
               <div className="flex flex-wrap gap-2 pt-6">
-                <CompaniesCardTag tag={formatEmployees(company.employees)} />
+                <CompaniesCardTag tag={company.employees} />
                 <CompaniesCardTag tag={company.companyStage} />
                 <CompaniesCardTag tag={company.capital} />
                 <CompaniesCardTag tag={company.segment} />
@@ -72,21 +63,27 @@ export default function CompaniesCard(
             <div className="flex mt-8 h-12 relative">
               <div className="flex justify-between absolute gap-4 w-full z-10">
                 <div className="flex gap-1">
-                  <CompaniesCardLink
-                    href={`mailto:${company.email}`}
-                    imgSrc="/email-black.svg"
-                    alt="Email"
-                  />
-                  <CompaniesCardLink
-                    href={company.instagram}
-                    imgSrc="/instagram-black.svg"
-                    alt="Instagram"
-                  />
-                  <CompaniesCardLink
-                    href={company.website}
-                    imgSrc="/link-black.svg"
-                    alt="Website"
-                  />
+                  {company.email && (
+                    <CompaniesCardLink
+                      href={`mailto:${company.email}`}
+                      imgSrc="/email-black.svg"
+                      alt="Email"
+                    />
+                  )}
+                  {company.instagram && (
+                    <CompaniesCardLink
+                      href={company.instagram}
+                      imgSrc="/instagram-black.svg"
+                      alt="Instagram"
+                    />
+                  )}
+                  {company.website && (
+                    <CompaniesCardLink
+                      href={company.website}
+                      imgSrc="/link-black.svg"
+                      alt="Website"
+                    />
+                  )}
                 </div>
                 {orderBy === "createdTime" && (
                   <CompaniesUpvoteButton
@@ -117,7 +114,7 @@ export default function CompaniesCard(
               About the company
             </h2>
 
-            <p className="text-white font-montserrat font-medium text-sm mt-6">
+            <p className="text-white font-montserrat font-medium text-sm mt-6 max-h-56 overflow-y-auto scrollbar">
               {company.about}
             </p>
           </div>

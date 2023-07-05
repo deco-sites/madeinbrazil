@@ -10,6 +10,7 @@ import type {
 
 export type Props = {
   filterList: FilterList[] | undefined;
+  likesThreshold?: number;
 };
 
 enum OrderBy {
@@ -27,7 +28,9 @@ interface SelectedFilters {
   values: string[];
 }
 
-export default function CompaniesList({ filterList }: Props) {
+export default function CompaniesList(
+  { filterList, likesThreshold = 0 }: Props,
+) {
   const [isCardClicked, setCardClicked] = useState(false);
   const [orderBy, setOrderBy] = useState(OrderBy.MOST_POPULAR);
   const [companiesList, setCompaniesList] = useState([] as Company[]);
@@ -35,14 +38,18 @@ export default function CompaniesList({ filterList }: Props) {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchCompanies = (showReload = true) => {
-    const queryString = selectedFilters.reduce((acc, curr) => {
+    const filtersQueryString = selectedFilters.reduce((acc, curr) => {
       const values = curr.values.join(",");
       return `${acc}&${curr.name}=${values}`;
     }, "");
 
+    const likesQueryString = `&likesThreshold=${
+      orderBy === OrderBy.MOST_POPULAR ? likesThreshold.toString() : "0"
+    }`;
+
     showReload && setIsLoading(true);
     fetch(
-      `/api/companies?orderBy=${orderBy}${queryString}`,
+      `/api/companies?orderBy=${orderBy}${filtersQueryString}${likesQueryString}`,
       {
         method: "GET",
       },
