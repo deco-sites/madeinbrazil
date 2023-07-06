@@ -47,7 +47,13 @@ export default function CompaniesPage({
               </span>
             </span>
           </span>
-          <div className="max-w-[228px]">
+          <div className="flex flex-col md:gap-4 gap-6 max-w-[691px]">
+            <span className="text-secondary text-base font-montserrat font-medium tracking-[-0.8px]">
+              This website was made in Brazil and crafted by{" "}
+              <a href="https://deco.cx">deco.cx</a>, a global edge site builder,
+              with design by Malu Viana, from Recife/PE, and engineering by
+              Flavio Odas, from São Paulo/SP.
+            </span>
             <span className="text-secondary text-base font-montserrat font-medium tracking-[-0.8px]">
               Nominate a Brazilian company that should be here!
             </span>
