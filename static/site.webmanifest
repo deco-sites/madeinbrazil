@@ -1,9 +1,9 @@
 {
-    "name": "Fashion | Deco",
-    "short_name": "Fashion",
-    "theme_color": "#8c3d3d",
-    "background_color": "#ffffff",
-    "display": "browser",
-    "scope": "/",
-    "start_url": "/"
-  }
+  "name": "Made In Brazil",
+  "short_name": "Made In Brazil",
+  "theme_color": "#8c3d3d",
+  "background_color": "#ffffff",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
+}
