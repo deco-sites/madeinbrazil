@@ -9,39 +9,24 @@ export default function CompaniesHeader({
   headerTitle,
   headerSubtitle,
 }: Props) {
-  const backgroundRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const element = backgroundRef.current;
-    if (element) {
-      const timer = setTimeout(() => {
-        element.style.backgroundPosition = "-89.5% 0px";
-      }, 100);
-
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
   return (
-    <div className="z-[5] bg-white">
-      <div className="flex flex-col md:px-24 overflow-x-hidden relative pt-16 px-4 md:pt-32 border-b-2 md:border-x-2 border-black border-opacity-20">
+    <div className="z-[5] bg-white border-b-2 border-black border-opacity-20 md:px-[22px]">
+      <div className="flex flex-col md:px-24 overflow-x-hidden relative pt-16 px-4 md:pt-32 max-w-[1440px] mx-auto">
         <div className="relative">
-          <div
-            ref={backgroundRef}
-            className="absolute left-0 transform -translate-x-1/2 -translate-y-1/2 h-[10px] w-[88vw] md:h-[34px] top-[54%] md:w-[1135px]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgba(22, 184, 62, 0.40) 50%, rgba(255, 225, 31, 0.60) 50%)",
-              backgroundSize: "200% 100%",
-              backgroundPosition: "0 0",
-              transition: "background-position 2s",
-              zIndex: 1,
-            }}
-          >
-          </div>
           <h1 className="relative text-primary --p font-semibold tracking-[-4.126px] leading-[90%] text-[13vw] md:text-[10.5rem] md:leading-[9rem] md:tracking-[-.75rem] z-10">
             {headerTitle || (
               <>
+                <div className="absolute left-0 h-[10px] w-[88vw] md:h-[34px] top-[50%] md:w-[562px] z-[-1]">
+                  <div className="relative w-full h-full">
+                    <div className="absolute animate-widthlefttoright80 left-0 w-[80%] h-full bg-white z-[2]">
+                      <div className="w-full h-full bg-yellow-opaque" />
+                    </div>
+
+                    <div className="absolute animate-widthlefttoright100 left-0 w-full h-full bg-white z-[1]">
+                      <div className="w-full h-full bg-green-opaque" />
+                    </div>
+                  </div>
+                </div>
                 Unleash <br />
                 Brazil's <br />
                 Tech Brilliance.

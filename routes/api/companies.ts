@@ -48,6 +48,9 @@ const fetchCompanies = async (
     return filterFormula;
   };
 
+  const defaultFilters =
+    `{companyUpvotes} >= ${likesThreshold}, {approved} = 1`;
+
   const filters = {
     employees: parseFilter(employees, "employees"),
     companyStage: parseFilter(companyStage, "companyStage"),
@@ -59,11 +62,9 @@ const fetchCompanies = async (
 
   const filterByFormula = filtersFormatted.length > 0
     ? (
-      `AND(${filtersFormatted}, {companyUpvotes} >= ${likesThreshold})`
+      `AND(${filtersFormatted}, ${defaultFilters})`
     )
-    : (
-      `{companyUpvotes} >= ${likesThreshold}`
-    );
+    : (`AND(${defaultFilters})`);
 
   const params = new URLSearchParams({
     "maxRecords": "100",
@@ -407,6 +408,7 @@ interface AirtableUpdateResponse {
 export interface Company {
   id?: string;
   name: string;
+  approved: boolean;
   about: string;
   logo: AirtableAttachment[];
   banner: AirtableAttachment[];
@@ -440,6 +442,7 @@ interface Record {
 
 interface CompanyDB {
   name: string;
+  approved: boolean;
   about: string;
   logo: AirtableAttachment[];
   banner: AirtableAttachment[];

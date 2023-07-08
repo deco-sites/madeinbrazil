@@ -125,8 +125,8 @@ export default function CompaniesList(
   };
 
   return (
-    <div className="min-h-[calc(100vh-98px)] text-zinc-100 flex justify-between flex-col mx-auto z-[5] w-full">
-      <div className="flex flex-col mx-auto max-w-[1440px] min-h-[calc(100vh-98px)] w-full bg-white md:border-x-2 border-b-2 border-black border-opacity-20 pt-14 px-4 md:px-24 items-center md:items-start">
+    <div className="min-h-[calc(100vh-98px)] text-zinc-100 flex justify-between flex-col mx-auto z-[5] w-full border-b-2 border-black border-opacity-20 md:px-[22px]">
+      <div className="flex flex-col mx-auto max-w-[1440px] min-h-[calc(100vh-98px)] w-full bg-white pt-14 px-4 md:px-24 items-center md:items-start">
         <button
           onClick={() => handleOrderBy()}
           className="flex bg-gray-opaque rounded-[40px] w-fit hover:bg-opacity-80 transition-all ease-in-out"

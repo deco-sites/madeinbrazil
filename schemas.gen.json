@@ -68,10 +68,14 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/AddToCartButton.tsx",
+              "./islands/CompaniesBackToTop.tsx",
               "./islands/CompaniesFloatingButton.tsx",
+              "./islands/CompaniesFooter.tsx",
               "./islands/CompaniesHeader.tsx",
               "./islands/CompaniesList.tsx",
+              "./islands/CompaniesNominateForm.tsx",
               "./islands/CompaniesPage.tsx",
+              "./islands/CompaniesScrollBar.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
@@ -98,10 +102,14 @@
               "$live/sections/UseSlot.tsx",
               "deco-sites/madeinbrazil/sections/Category/CategoryBanner.tsx",
               "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesBackToTop.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesFooter.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesList.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesPage.tsx",
+              "deco-sites/madeinbrazil/sections/CompaniesScrollBar.tsx",
               "deco-sites/madeinbrazil/sections/Content/Benefits.tsx",
               "deco-sites/madeinbrazil/sections/Content/Faq.tsx",
               "deco-sites/madeinbrazil/sections/Content/Logos.tsx",
@@ -188,6 +196,10 @@
           "type": "string",
           "title": "Name"
         },
+        "approved": {
+          "type": "boolean",
+          "title": "Approved"
+        },
         "about": {
           "type": "string",
           "title": "About"
@@ -258,6 +270,7 @@
       },
       "required": [
         "name",
+        "approved",
         "about",
         "logo",
         "banner",
@@ -14173,6 +14186,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvbXBhbmllc0JhY2tUb1RvcC50c3g=": {
+      "title": "./islands/CompaniesBackToTop.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesBackToTop.tsx"
+          ],
+          "default": "./islands/CompaniesBackToTop.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0NvbXBhbmllc0Zsb2F0aW5nQnV0dG9uLnRzeA==": {
       "title": "./islands/CompaniesFloatingButton.tsx",
       "type": "object",
@@ -14191,6 +14220,22 @@
             "./islands/CompaniesFloatingButton.tsx"
           ],
           "default": "./islands/CompaniesFloatingButton.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0NvbXBhbmllc0Zvb3Rlci50c3g=": {
+      "title": "./islands/CompaniesFooter.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesFooter.tsx"
+          ],
+          "default": "./islands/CompaniesFooter.tsx"
         }
       }
     },
@@ -14231,6 +14276,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvbXBhbmllc05vbWluYXRlRm9ybS50c3g=": {
+      "title": "./islands/CompaniesNominateForm.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesNominateForm.tsx"
+          ],
+          "default": "./islands/CompaniesNominateForm.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0NvbXBhbmllc1BhZ2UudHN4": {
       "title": "./islands/CompaniesPage.tsx",
       "type": "object",
@@ -14244,6 +14305,22 @@
             "./islands/CompaniesPage.tsx"
           ],
           "default": "./islands/CompaniesPage.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0NvbXBhbmllc1Njcm9sbEJhci50c3g=": {
+      "title": "./islands/CompaniesScrollBar.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesScrollBar.tsx"
+          ],
+          "default": "./islands/CompaniesScrollBar.tsx"
         }
       }
     },
@@ -14742,6 +14819,22 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzQmFja1RvVG9wLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesBackToTop.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbrazil/sections/CompaniesBackToTop.tsx"
+          ],
+          "default": "deco-sites/madeinbrazil/sections/CompaniesBackToTop.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4": {
       "title": "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx",
       "type": "object",
@@ -14760,6 +14853,22 @@
             "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx"
           ],
           "default": "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzRm9vdGVyLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesFooter.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbrazil/sections/CompaniesFooter.tsx"
+          ],
+          "default": "deco-sites/madeinbrazil/sections/CompaniesFooter.tsx"
         }
       }
     },
@@ -14800,6 +14909,22 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTm9taW5hdGVGb3JtLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx"
+          ],
+          "default": "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g=": {
       "title": "deco-sites/madeinbrazil/sections/CompaniesPage.tsx",
       "type": "object",
@@ -14818,6 +14943,22 @@
             "deco-sites/madeinbrazil/sections/CompaniesPage.tsx"
           ],
           "default": "deco-sites/madeinbrazil/sections/CompaniesPage.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzU2Nyb2xsQmFyLnRzeA==": {
+      "title": "deco-sites/madeinbrazil/sections/CompaniesScrollBar.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbrazil/sections/CompaniesScrollBar.tsx"
+          ],
+          "default": "deco-sites/madeinbrazil/sections/CompaniesScrollBar.tsx"
         }
       }
     },
@@ -16437,7 +16578,13 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0FkZFRvQ2FydEJ1dHRvbi50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0JhY2tUb1RvcC50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0Zsb2F0aW5nQnV0dG9uLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0Zvb3Rlci50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g="
@@ -16446,7 +16593,13 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0xpc3QudHN4"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc05vbWluYXRlRm9ybS50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc1BhZ2UudHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc1Njcm9sbEJhci50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
@@ -16551,7 +16704,13 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ2F0ZWdvcnkvQ2F0ZWdvcnlMaXN0LnRzeA=="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzQmFja1RvVG9wLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzRmxvYXRpbmdCdXR0b24udHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzRm9vdGVyLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzSGVhZGVyLnRzeA=="
@@ -16560,7 +16719,13 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTm9taW5hdGVGb3JtLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzU2Nyb2xsQmFyLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g="

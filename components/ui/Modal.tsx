@@ -1,6 +1,5 @@
 import Button from "$store/components/ui/Button.tsx";
 import { useEffect, useRef } from "preact/hooks";
-import { useCart } from "deco-sites/std/packs/vtex/hooks/useCart.ts";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { useSignal } from "@preact/signals";
 import type { JSX } from "preact";
@@ -16,7 +15,8 @@ if (IS_BROWSER && typeof window.HTMLDialogElement === "undefined") {
 
 export type Props = JSX.IntrinsicElements["dialog"] & {
   title?: string;
-  mode?: "sidebar-right" | "sidebar-left" | "center";
+  subtitle?: string;
+  mode?: "sidebar-right" | "sidebar-left" | "sidebar-bottom" | "center";
   onClose?: () => Promise<void> | void;
   loading?: "lazy" | "eager";
 };
@@ -24,24 +24,28 @@ export type Props = JSX.IntrinsicElements["dialog"] & {
 const dialogStyles = {
   "sidebar-right": "animate-slide-left",
   "sidebar-left": "animate-slide-right",
+  "sidebar-bottom": "animate-bottomtotop140",
   center: "animate-fade-in",
 };
 
 const sectionStyles = {
   "sidebar-right": "justify-end",
   "sidebar-left": "justify-start",
+  "sidebar-bottom": "justify-center",
   center: "justify-center items-center",
 };
 
 const containerStyles = {
   "sidebar-right": "h-full w-full sm:max-w-lg",
   "sidebar-left": "h-full w-full sm:max-w-lg",
+  "sidebar-bottom": "h-full w-full sm:max-w-lg",
   center: "",
 };
 
 const Modal = ({
   open,
   title,
+  subtitle,
   mode = "sidebar-right",
   onClose,
   children,
@@ -78,24 +82,34 @@ const Modal = ({
       onClose={onClose}
     >
       <section
-        class={`w-full h-full flex bg-transparent ${sectionStyles[mode]}`}
+        class={`relative w-full h-full flex bg-transparent ${
+          sectionStyles[mode]
+        }`}
       >
         <div
-          class={`bg-base-100 flex flex-col max-h-full ${
+          class={`bg-base-100 flex flex-col max-h-full w-full ${
             containerStyles[mode]
           }`}
         >
-          <header class="flex px-4 py-6 justify-between items-center border-b border-base-200">
-            <div class="flex gap-5 items-center">
-              <h1>
-                <span class="font-medium text-2xl">{title}</span>
-              </h1>
+          <header class="flex pb-6 justify-between items-center">
+            <div class="flex flex-col gap-3">
+              <h2>
+                <span class="font-semibold font-montserrat text-primary text-[20px]">
+                  {title}
+                </span>
+              </h2>
+              <p class="text-secondary text-sm font-medium font-montserrat">
+                {subtitle}
+              </p>
             </div>
-            <Button class="btn btn-ghost" onClick={onClose}>
-              <Icon id="XMark" width={20} height={20} strokeWidth={2} />
+            <Button
+              class="btn btn-ghost absolute right-[1%] top-[-43px]"
+              onClick={onClose}
+            >
+              <Icon id="XMark" width={24} height={24} strokeWidth={1} />
             </Button>
           </header>
-          <div class="overflow-y-auto flex-grow flex flex-col">
+          <div class="overflow-y-auto flex-grow flex flex-col scrollbar-light pr-[37px]">
             {loading === "lazy" ? lazy.value && children : children}
           </div>
         </div>
