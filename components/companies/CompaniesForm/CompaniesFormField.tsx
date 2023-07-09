@@ -21,7 +21,7 @@ export default function FormField({
   errors,
 }: Props) {
   return (
-    <div class="mb-4">
+    <div class="mb-6 md:mb-4">
       <label
         class="block font-montserrat text-black text-sm font-medium mb-3"
         for={name}

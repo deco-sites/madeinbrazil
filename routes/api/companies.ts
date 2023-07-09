@@ -5,6 +5,9 @@ const AUTH_TOKEN =
 const AIRTABLE_URL =
   "https://api.airtable.com/v0/appUFpUsqerCzZAct/tblP1U9nfrENiiTiB";
 
+const IMAGEHOST_URL = "https://api.imgbb.com/1/upload";
+const IMAGEHOST_SECRET = "41133002c150ada5e529a603f86c9115";
+
 const parseBody = async <T>(
   body: ReadableStream<Uint8Array> | null,
 ): Promise<T | null> => {
@@ -221,6 +224,101 @@ const updateCompany = async (
     });
 };
 
+interface FreeImageHostResponse {
+  success: {
+    code: number;
+    message: string;
+  };
+  data: {
+    url: string;
+  };
+}
+
+const uploadImageToHost = async (image: string) => {
+  const formData = new FormData();
+
+  const imageSplit = image.split(",").pop();
+
+  if (!imageSplit) {
+    return null;
+  }
+
+  formData.append("image", imageSplit);
+
+  return await fetch(
+    `${IMAGEHOST_URL}?key=${IMAGEHOST_SECRET}`,
+    {
+      method: "POST",
+      body: formData,
+    },
+  )
+    .then((response) => response.json())
+    .then((res: FreeImageHostResponse) => {
+      console.log(res);
+      return res.data.url;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+export interface CreateCompanyRequest {
+  id?: string;
+  name: string;
+  about: string;
+  logo: string;
+  banner: string;
+  website: string | null;
+  email: string | null;
+  instagram: string | null;
+  employees: string;
+  capital: string;
+  segment: string;
+  companyStage: string;
+  [key: string]: string | number | null | undefined;
+}
+
+const addCompany = async (record: CreateCompanyRequest) => {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
+  myHeaders.append("Content-Type", "application/json");
+
+  const logo = record.logo && await uploadImageToHost(record.logo);
+  const banner = record.banner && await uploadImageToHost(record.banner);
+
+  const body = JSON.stringify({
+    fields: {
+      ...record,
+      logo: [
+        {
+          url: logo,
+        },
+      ],
+      banner: [
+        {
+          url: banner,
+        },
+      ],
+      approved: false,
+      companyUpvotes: 0,
+    },
+  });
+
+  return await fetch(AIRTABLE_URL, {
+    method: "POST",
+    headers: myHeaders,
+    body,
+  })
+    .then((response) => response.json())
+    .then((data: AirtableUpdateResponse) => {
+      return data;
+    })
+    .catch((error) => {
+      console.error(error);
+      throw new Error(error);
+    });
+};
+
 export const companies: {
   list: Company[];
   filterList: FilterList[];
@@ -234,7 +332,7 @@ export const companies: {
   ) => Promise<Company[]>;
   getFilters: () => Promise<FilterList[]>;
   update: (s: Company) => Promise<AirtableUpdateResponse>;
-  add: (s: Company) => Promise<void>;
+  add: (s: CreateCompanyRequest) => Promise<void>;
 } = {
   list: [],
   filterList: [] as FilterList[],
@@ -267,7 +365,7 @@ export const companies: {
     return response;
   },
   add: async function (company) {
-    await updateCompany(company, "POST");
+    await addCompany(company);
   },
 };
 
@@ -305,7 +403,7 @@ export const handler: Handlers = {
   },
 
   async POST(req) {
-    const body = await parseBody<Company>(req.body);
+    const body = await parseBody<CreateCompanyRequest>(req.body);
 
     if (!body) {
       return new Response("Insert a correct body", {

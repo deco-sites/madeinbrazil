@@ -23,11 +23,13 @@ export interface Company {
 }
 
 interface NewCompanyFormProps {
-  onSubmit: (company: Company) => void;
+  open: boolean;
+  onClose: () => Promise<void> | void;
 }
 
 export default function CompaniesNominateForm({
-  onSubmit,
+  open,
+  onClose,
 }: NewCompanyFormProps) {
   const [formState, setFormState] = useState<Company>({
     name: "",
@@ -47,6 +49,17 @@ export default function CompaniesNominateForm({
     {},
   );
 
+  const sendNewCompanyRequest = async (company: Company) => {
+    const response = await fetch("/api/companies", {
+      method: "POST",
+      body: JSON.stringify(company),
+    });
+
+    const data = await response.json();
+
+    console.log("data", data);
+  };
+
   const handleChange = (event: any) => {
     const { name, value, type, checked } = event.target;
     setFormState((prevState) => ({
@@ -55,20 +68,37 @@ export default function CompaniesNominateForm({
     }));
   };
 
-  const handleLogoChange = (event: any) => {
-    const files: string[] = Array.from(event.target.files || []);
-    setFormState((prevState) => ({
-      ...prevState,
-      logo: files[0],
-    }));
+  const handleLogoChange = (file: File) => {
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      if (reader?.result && typeof reader.result === "string") {
+        const fileBase64 = reader.result;
+
+        setFormState((prevState) => ({
+          ...prevState,
+          logo: fileBase64,
+        }));
+      }
+    };
   };
 
-  const handleBannerChange = (event: any) => {
-    const files: string[] = Array.from(event.target.files || []);
-    setFormState((prevState) => ({
-      ...prevState,
-      banner: files[0],
-    }));
+  const handleBannerChange = (file: File) => {
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+
+    reader.onload = () => {
+      if (reader?.result && typeof reader.result === "string") {
+        const fileBase64 = reader.result;
+
+        setFormState((prevState) => ({
+          ...prevState,
+          banner: fileBase64,
+        }));
+      }
+    };
   };
 
   const validateForm = (): boolean => {
@@ -92,23 +122,23 @@ export default function CompaniesNominateForm({
   const handleSubmit = (event: any) => {
     event.preventDefault();
 
-    console.log("alo");
-
     if (validateForm()) {
-      onSubmit(formState);
-
       console.log("formState", formState);
+
+      sendNewCompanyRequest(formState);
     }
   };
 
   return (
     <Modal
-      open={true}
+      open={open}
       title="Nominate"
       subtitle="Nominate Your Favorite Brazilian Tech Company for the Tech Made in Brazil List"
       mode={isMobile() ? "sidebar-bottom" : "center"}
-      className="w-full h-full overflow-hidden md:max-w-[792px] md:max-h-[628px] rounded-[40px] shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light pr-[9px] pl-[57px] pt-16 pb-8"
-      onClose={() => {}}
+      className="w-full h-[95%] top-auto md:top-0 md:h-full overflow-hidden max-w-none max-h-none md:max-w-[792px] 
+      md:max-h-[628px] rounded-[40px] shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light px-4 
+      md:pr-[9px] md:pl-[57px] pt-16 pb-8"
+      onClose={onClose}
     >
       <form onSubmit={handleSubmit} class="w-full mx-auto pb-10">
         <FormField

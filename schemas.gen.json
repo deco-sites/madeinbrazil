@@ -71,11 +71,13 @@
               "./islands/CompaniesBackToTop.tsx",
               "./islands/CompaniesFloatingButton.tsx",
               "./islands/CompaniesFooter.tsx",
+              "./islands/CompaniesFormField.tsx",
               "./islands/CompaniesHeader.tsx",
               "./islands/CompaniesList.tsx",
               "./islands/CompaniesNominateForm.tsx",
               "./islands/CompaniesPage.tsx",
               "./islands/CompaniesScrollBar.tsx",
+              "./islands/DragAndDropImageZone.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
@@ -107,7 +109,6 @@
               "deco-sites/madeinbrazil/sections/CompaniesFooter.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesList.tsx",
-              "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesPage.tsx",
               "deco-sites/madeinbrazil/sections/CompaniesScrollBar.tsx",
               "deco-sites/madeinbrazil/sections/Content/Benefits.tsx",
@@ -7674,6 +7675,50 @@
       ],
       "title": "deco-sites/madeinbrazil/components/companies/CompaniesList.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "filterList": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
+          "title": "Filter List"
+        },
+        "headerTitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Header Title"
+        },
+        "headerSubtitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Header Subtitle"
+        },
+        "likesThreshold": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Likes Threshold"
+        },
+        "emailLink": {
+          "type": "string",
+          "title": "Email Link"
+        },
+        "instagramLink": {
+          "type": "string",
+          "title": "Instagram Link"
+        }
+      },
+      "required": [
+        "filterList",
+        "emailLink",
+        "instagramLink"
+      ],
+      "title": "deco-sites/madeinbrazil/components/companies/CompaniesPage.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9mb290ZXIvTmV3c2xldHRlci50c3g=@Form": {
       "type": "object",
       "properties": {
@@ -8375,50 +8420,6 @@
       },
       "required": [],
       "title": "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "filterList": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvcm91dGVzL2FwaS9jb21wYW5pZXMudHM=@FilterList[]",
-          "title": "Filter List"
-        },
-        "headerTitle": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Header Title"
-        },
-        "headerSubtitle": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Header Subtitle"
-        },
-        "likesThreshold": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "title": "Likes Threshold"
-        },
-        "emailLink": {
-          "type": "string",
-          "title": "Email Link"
-        },
-        "instagramLink": {
-          "type": "string",
-          "title": "Instagram Link"
-        }
-      },
-      "required": [
-        "filterList",
-        "emailLink",
-        "instagramLink"
-      ],
-      "title": "deco-sites/madeinbrazil/components/companies/CompaniesPage.tsx@Props"
     },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29udGVudC9CZW5lZml0cy50c3g=@Props": {
       "type": "object",
@@ -14239,6 +14240,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvbXBhbmllc0Zvcm1GaWVsZC50c3g=": {
+      "title": "./islands/CompaniesFormField.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompaniesFormField.tsx"
+          ],
+          "default": "./islands/CompaniesFormField.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g=": {
       "title": "./islands/CompaniesHeader.tsx",
       "type": "object",
@@ -14295,6 +14312,11 @@
     "Li9pc2xhbmRzL0NvbXBhbmllc1BhZ2UudHN4": {
       "title": "./islands/CompaniesPage.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzUGFnZS50c3g=@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -14321,6 +14343,22 @@
             "./islands/CompaniesScrollBar.tsx"
           ],
           "default": "./islands/CompaniesScrollBar.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0RyYWdBbmREcm9wSW1hZ2Vab25lLnRzeA==": {
+      "title": "./islands/DragAndDropImageZone.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/DragAndDropImageZone.tsx"
+          ],
+          "default": "./islands/DragAndDropImageZone.tsx"
         }
       }
     },
@@ -14906,22 +14944,6 @@
             "deco-sites/madeinbrazil/sections/CompaniesList.tsx"
           ],
           "default": "deco-sites/madeinbrazil/sections/CompaniesList.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTm9taW5hdGVGb3JtLnRzeA==": {
-      "title": "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx"
-          ],
-          "default": "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx"
         }
       }
     },
@@ -16587,6 +16609,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0Zvb3Rlci50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0Zvcm1GaWVsZC50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g="
         },
         {
@@ -16600,6 +16625,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc1Njcm9sbEJhci50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0RyYWdBbmREcm9wSW1hZ2Vab25lLnRzeA=="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
@@ -16717,9 +16745,6 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTGlzdC50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzTm9taW5hdGVGb3JtLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvQ29tcGFuaWVzUGFnZS50c3g="

@@ -1,8 +1,10 @@
 // deno-lint-ignore-file no-explicit-any
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
+
+import isMobile from "../../helpers/isMobile.ts";
 
 interface Props {
-  onChange: (event: any) => void;
+  onChange: (file: File) => void;
 }
 
 const DragAndDropImageZone = ({ onChange }: Props) => {
@@ -12,23 +14,24 @@ const DragAndDropImageZone = ({ onChange }: Props) => {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (validateImage(file)) {
-      onChange(event);
       displayImage(file);
+      onChange(file);
     }
   };
 
   const handleInputChange = (event: any) => {
+    event.preventDefault();
     const file = event.target.files[0];
     if (validateImage(file)) {
-      onChange(event);
       displayImage(file);
+      onChange(file);
     }
   };
 
   const validateImage = (file: File): boolean => {
-    const maxSize = 100 * 1024 * 1024; // 100MB
+    const maxSize = 1000 * 1024 * 1024;
     if (file.size > maxSize) {
-      alert("Please select an image smaller than 100MB.");
+      alert("Please select an image smaller than 34MB.");
       return false;
     }
     return true;
@@ -36,12 +39,12 @@ const DragAndDropImageZone = ({ onChange }: Props) => {
 
   const displayImage = (file: File) => {
     const reader = new FileReader();
+    reader.readAsDataURL(file);
     reader.onload = () => {
       if (reader?.result && typeof reader.result === "string") {
         setImage(reader.result);
       }
     };
-    reader.readAsDataURL(file);
   };
 
   const removeImage = () => {
@@ -49,61 +52,101 @@ const DragAndDropImageZone = ({ onChange }: Props) => {
   };
 
   return (
-    <div
-      class={`w-full h-[130px] p-1 rounded-lg flex justify-center items-center ${
-        image ? "bg-primary" : "bg-gray-opaque"
-      }`}
-      onDragOver={(event) => event.preventDefault()}
-      onDrop={handleDrop}
-    >
+    <>
       <div
-        class={`relative w-full h-full rounded-lg ${
-          image ? "" : "border-2 border-dashed border-gray-opaque-dark"
-        }  flex justify-center items-center`}
+        class={`w-full h-[130px] p-1 rounded-lg flex justify-center items-center ${
+          image ? "bg-primary" : "bg-gray-opaque"
+        }`}
+        onDragOver={(event) => event.preventDefault()}
+        onDrop={handleDrop}
       >
-        {image
-          ? (
-            <>
-              <img
-                src={image}
-                alt="Uploaded"
-                class="mx-auto max-h-full max-w-full"
-              />
-              <div class="absolute h-full top-0 right-0 flex flex-col gap-[18px] justify-center items-center py-2 mr-2">
-                <button class="font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline hover:bg-gray-opaque transition-all ease-in-out">
-                  <img src="/edit.svg" alt="Edit" />
-                </button>
-                <button
-                  onClick={removeImage}
-                  class="font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline
-                  hover:bg-gray-opaque transition-all ease-in-out"
-                >
-                  <img src="/trash.svg" alt="Delete" />
-                </button>
-              </div>
-            </>
-          )
-          : (
-            <>
-              <p class="font-montserrat font-medium text-secondary text-xs">
-                {"Drag and drop a file here (jpeg or png) or click to upload"}
-              </p>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleInputChange}
-                class="hidden"
-                id="uploadInput"
-              />
-              <label
-                type="button"
-                class="absolute top-0 left-0 w-full h-full cursor-pointer"
-                for="uploadInput"
-              />
-            </>
-          )}
+        <div
+          class={`relative w-full h-full rounded-lg ${
+            image ? "" : "border-2 border-dashed border-gray-opaque-dark"
+          }  flex justify-center items-center`}
+        >
+          {image?.length
+            ? (
+              <>
+                <img
+                  src={image}
+                  alt="Uploaded"
+                  class="mx-auto max-h-full max-w-full"
+                />
+                {!isMobile() && (
+                  <div class="md:absolute md:h-full md:top-0 md:right-0 flex md:flex-col md:gap-[18px] md:justify-center items-center py-2 md:mr-2">
+                    <button class="flex gap-2 font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline hover:bg-gray-opaque transition-all ease-in-out">
+                      <img
+                        src="/edit.svg"
+                        alt="Edit"
+                      />
+                    </button>
+                    <button
+                      onClick={removeImage}
+                      class="flex gap-2 font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline
+                                hover:bg-gray-opaque transition-all ease-in-out"
+                    >
+                      <img
+                        src="/trash.svg"
+                        alt="Delete"
+                      />
+                    </button>
+                  </div>
+                )}
+              </>
+            )
+            : (
+              <>
+                <p class="font-montserrat font-medium text-secondary text-xs px-4">
+                  {"Drag and drop a file here (jpeg or png) or click to upload"}
+                </p>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleInputChange}
+                  class="hidden"
+                  id="uploadInput"
+                />
+                <label
+                  type="button"
+                  class="absolute top-0 left-0 w-full h-full cursor-pointer"
+                  for="uploadInput"
+                />
+              </>
+            )}
+        </div>
       </div>
-    </div>
+      {image && isMobile() && (
+        <div class="flex justify-center items-center py-2">
+          <button class="flex w-full justify-center items-center gap-2 font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline hover:bg-gray-opaque transition-all ease-in-out">
+            <img
+              src={`${isMobile() ? "/edit-dark.svg" : "/edit.svg"}`}
+              alt="Edit"
+            />
+            {isMobile() && (
+              <span class="font-montserrat font-medium text-primary text-sm">
+                Edit
+              </span>
+            )}
+          </button>
+          <button
+            onClick={removeImage}
+            class="flex w-full justify-center items-center gap-2 font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline
+                                hover:bg-gray-opaque transition-all ease-in-out"
+          >
+            <img
+              src={`${isMobile() ? "/trash-dark.svg" : "/trash.svg"}`}
+              alt="Delete"
+            />
+            {isMobile() && (
+              <span class="font-montserrat font-medium text-primary text-sm">
+                Delete
+              </span>
+            )}
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 
