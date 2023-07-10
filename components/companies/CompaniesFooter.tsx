@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 
 import isMobile from "../helpers/isMobile.ts";
 
-interface Props {
+export interface Props {
   email: string;
   instagram: string;
 }

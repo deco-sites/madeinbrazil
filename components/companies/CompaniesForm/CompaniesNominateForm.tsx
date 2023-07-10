@@ -1,12 +1,14 @@
 // deno-lint-ignore-file no-explicit-any
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
+
+import { useToast } from "$store/sdk/useToast.ts";
 
 import Modal from "../../ui/Modal.tsx";
 import FormField from "./CompaniesFormField.tsx";
 
 import isMobile from "../../helpers/isMobile.ts";
 
-export interface Company {
+interface Company {
   id?: string;
   name: string;
   about: string;
@@ -22,15 +24,17 @@ export interface Company {
   [key: string]: string | number | null | undefined;
 }
 
-interface NewCompanyFormProps {
+export interface Props {
   open: boolean;
-  onClose: () => Promise<void> | void;
+  setIsModalOpen: (isOpen: boolean) => void;
 }
 
 export default function CompaniesNominateForm({
   open,
-  onClose,
-}: NewCompanyFormProps) {
+  setIsModalOpen,
+}: Props) {
+  const { displayToast, toastContent } = useToast();
+
   const [formState, setFormState] = useState<Company>({
     name: "",
     about: "",
@@ -45,9 +49,19 @@ export default function CompaniesNominateForm({
     companyStage: "",
   });
 
+  const [success, setSuccess] = useState(false);
+
   const [errors, setErrors] = useState<Partial<Record<keyof Company, string>>>(
     {},
   );
+
+  useEffect(() => {
+    if (success) {
+      setIsModalOpen(false);
+      toastContent.value = "Company successfully nominated!";
+      displayToast.value = true;
+    }
+  }, [success]);
 
   const sendNewCompanyRequest = async (company: Company) => {
     const response = await fetch("/api/companies", {
@@ -57,7 +71,9 @@ export default function CompaniesNominateForm({
 
     const data = await response.json();
 
-    console.log("data", data);
+    if (data.status < 400) {
+      setSuccess(true);
+    }
   };
 
   const handleChange = (event: any) => {
@@ -138,7 +154,7 @@ export default function CompaniesNominateForm({
       className="w-full h-[95%] top-auto md:top-0 md:h-full overflow-hidden max-w-none max-h-none md:max-w-[792px] 
       md:max-h-[628px] rounded-[40px] shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light px-4 
       md:pr-[9px] md:pl-[57px] pt-16 pb-8"
-      onClose={onClose}
+      onClose={() => setIsModalOpen(false)}
     >
       <form onSubmit={handleSubmit} class="w-full mx-auto pb-10">
         <FormField

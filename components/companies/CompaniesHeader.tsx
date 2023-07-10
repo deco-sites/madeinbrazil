@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 
 import CompaniesNominateForm from "./CompaniesForm/CompaniesNominateForm.tsx";
 
-interface Props {
+export interface Props {
   headerTitle?: string;
   headerSubtitle?: string;
 }
@@ -70,7 +70,7 @@ export default function CompaniesHeader({
       </div>
       <CompaniesNominateForm
         open={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        setIsModalOpen={setIsModalOpen}
       />
     </>
   );
