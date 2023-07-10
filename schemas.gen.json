@@ -85,6 +85,7 @@
               "./islands/SearchControls.tsx",
               "./islands/ShippingSimulation.tsx",
               "./islands/SliderJS.tsx",
+              "./islands/Toast.tsx",
               "./islands/WishlistButton.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
@@ -132,6 +133,7 @@
               "deco-sites/madeinbrazil/sections/Product/Wishlist.tsx",
               "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx",
               "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx",
+              "deco-sites/madeinbrazil/sections/Toast.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configNuvemShop.tsx",
@@ -14473,6 +14475,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL1RvYXN0LnRzeA==": {
+      "title": "./islands/Toast.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Toast.tsx"
+          ],
+          "default": "./islands/Toast.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL1dpc2hsaXN0QnV0dG9uLnRzeA==": {
       "title": "./islands/WishlistButton.tsx",
       "type": "object",
@@ -15421,6 +15439,22 @@
             "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx"
           ],
           "default": "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvVG9hc3QudHN4": {
+      "title": "deco-sites/madeinbrazil/sections/Toast.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/madeinbrazil/sections/Toast.tsx"
+          ],
+          "default": "deco-sites/madeinbrazil/sections/Toast.tsx"
         }
       }
     },
@@ -16629,6 +16663,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL1NsaWRlckpTLnRzeA=="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1RvYXN0LnRzeA=="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL1dpc2hsaXN0QnV0dG9uLnRzeA=="
         }
       ]
@@ -16792,6 +16829,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvU29jaWFsL1doYXRzQXBwLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvc2VjdGlvbnMvVG9hc3QudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="

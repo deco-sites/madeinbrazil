@@ -67,7 +67,6 @@ const fetchCompanies = async (
     : (`AND(${defaultFilters})`);
 
   const params = new URLSearchParams({
-    "maxRecords": "100",
     "sort[0][field]": orderBy,
     "sort[0][direction]": "desc",
   });
@@ -96,6 +95,10 @@ const fetchFilters = async () => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
 
+  const params = new URLSearchParams({
+    "filterByFormula": "{approved} = 1",
+  });
+
   const filterList = [
     "employees",
     "companyStage",
@@ -103,18 +106,17 @@ const fetchFilters = async () => {
     "segment",
   ];
 
-  const filtersQuery = filterList.map((filter, index) => {
-    if (index === 0) {
-      return `fields[]=${filter}`;
-    } else {
-      return `&fields[]=${filter}`;
-    }
+  const filtersQuery = filterList.map((filter) => {
+    return `&fields[]=${filter}`;
   });
 
-  return await fetch(`${AIRTABLE_URL}?${encodeURI(filtersQuery.join(""))}`, {
-    method: "GET",
-    headers: myHeaders,
-  })
+  return await fetch(
+    `${AIRTABLE_URL}?${params.toString()}${encodeURI(filtersQuery.join(""))}`,
+    {
+      method: "GET",
+      headers: myHeaders,
+    },
+  )
     .then((response) => response.json())
     .then((data: AirTableListResponse) => {
       const filters: FilterListSet = data.records.reduce<FilterListSet>(

@@ -2,7 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 
 import LoadingIcon from "../utils/LoadingIcon.tsx";
 
-// import { getCookie, setCookie } from "../../functions/cookieUtils.ts";
+import { useToast } from "$store/sdk/useToast.ts";
 
 import type { Company } from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
@@ -15,6 +15,8 @@ export default function CompaniesUpvoteButton({
   company,
   fetchCompanies,
 }: Props) {
+  const { displayToast, toastContent } = useToast();
+
   const [upvotes, setUpvotes] = useState(company.companyUpvotes);
   const [isUpvoting, setIsUpvoting] = useState(false);
   const [isUpvoted, setIsUpvoted] = useState(false);
@@ -102,6 +104,8 @@ export default function CompaniesUpvoteButton({
       }
 
       setIsUpvoted(true);
+      toastContent.value = "Thanks for your contribution!";
+      displayToast.value = true;
     }).catch((err) => {
       console.error(err);
       setUpvotes(upvotes - 1);
