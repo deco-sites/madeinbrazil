@@ -74,7 +74,7 @@ const Modal = ({
     <dialog
       {...props}
       ref={ref}
-      class={`bg-transparent p-0 m-0 max-w-full w-full max-h-full h-full backdrop-opacity-50 ${
+      class={`bg-transparent p-0 m-0 w-full max-h-full h-full backdrop-opacity-50 ${
         dialogStyles[mode]
       } ${props.class ?? ""}`}
       onClick={(e) =>
@@ -91,10 +91,10 @@ const Modal = ({
             containerStyles[mode]
           }`}
         >
-          <header class="flex pb-6 justify-between items-center">
+          <header class="flex pb-10 md:pb-6 justify-between items-center">
             <div class="flex flex-col gap-3">
               <h2>
-                <span class="font-semibold font-montserrat text-primary text-[20px]">
+                <span class="font-medium md:font-semibold font-montserrat text-primary text-[20px]">
                   {title}
                 </span>
               </h2>
@@ -109,7 +109,7 @@ const Modal = ({
               <Icon id="XMark" width={24} height={24} strokeWidth={1} />
             </Button>
           </header>
-          <div class="overflow-y-auto flex-grow flex flex-col scrollbar-light pr-[37px]">
+          <div class="overflow-y-auto flex-grow flex flex-col scrollbar-light pr-[10px] md:pr-[37px]">
             {loading === "lazy" ? lazy.value && children : children}
           </div>
         </div>
