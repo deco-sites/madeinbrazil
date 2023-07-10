@@ -20,7 +20,6 @@ const DragAndDropImageZone = ({ onChange }: Props) => {
   };
 
   const handleInputChange = (event: any) => {
-    event.preventDefault();
     const file = event.target.files[0];
     if (validateImage(file)) {
       displayImage(file);
@@ -29,7 +28,7 @@ const DragAndDropImageZone = ({ onChange }: Props) => {
   };
 
   const validateImage = (file: File): boolean => {
-    const maxSize = 1000 * 1024 * 1024;
+    const maxSize = 34 * 1024 * 1024;
     if (file.size > maxSize) {
       alert("Please select an image smaller than 34MB.");
       return false;

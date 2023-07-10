@@ -2,7 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 
 import CompaniesCard from "./CompaniesCard/CompaniesCard.tsx";
 import CompaniesCardLoader from "./CompaniesCard/CompaniesCardLoader.tsx";
-import CompaniesFilter from "./CompaniesFilter.tsx";
+import CompaniesFilter from "./CompaniesFilter/CompaniesFilter.tsx";
 import type {
   Company,
   FilterList,

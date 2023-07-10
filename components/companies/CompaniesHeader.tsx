@@ -1,6 +1,4 @@
-import { useState } from "preact/hooks";
-
-import CompaniesNominateForm from "./CompaniesForm/CompaniesNominateForm.tsx";
+import { useFormModal } from "$store/sdk/useFormModal.ts";
 
 export interface Props {
   headerTitle?: string;
@@ -11,7 +9,7 @@ export default function CompaniesHeader({
   headerTitle,
   headerSubtitle,
 }: Props) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { displayFormModal } = useFormModal();
 
   return (
     <>
@@ -61,17 +59,13 @@ export default function CompaniesHeader({
               className="bg-primary text-primary-content font-medium
              text-base px-6 py-4 rounded-[40px] hover:bg-opacity-80 shadow-md
               transition ease-in-out w-full md:w-fit"
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => displayFormModal.value = true}
             >
               NOMINATE A COMPANY
             </button>
           </div>
         </div>
       </div>
-      <CompaniesNominateForm
-        open={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-      />
     </>
   );
 }

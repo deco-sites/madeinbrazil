@@ -91,7 +91,7 @@ const Modal = ({
             containerStyles[mode]
           }`}
         >
-          <header class="flex pb-10 md:pb-6 justify-between items-center">
+          <header class="flex pl-4 md:pl-[57px] pb-10 md:pb-6 justify-between items-center">
             <div class="flex flex-col gap-3">
               <h2>
                 <span class="font-medium md:font-semibold font-montserrat text-primary text-[20px]">
@@ -109,7 +109,7 @@ const Modal = ({
               <Icon id="XMark" width={24} height={24} strokeWidth={1} />
             </Button>
           </header>
-          <div class="overflow-y-auto flex-grow flex flex-col scrollbar-light pr-[10px] md:pr-[37px]">
+          <div class="overflow-y-auto flex-grow flex flex-col scrollbar-light pl-4 md:pl-[57px] pr-[10px] md:pr-[37px]">
             {loading === "lazy" ? lazy.value && children : children}
           </div>
         </div>

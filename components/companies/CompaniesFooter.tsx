@@ -1,5 +1,7 @@
 import { useState } from "preact/hooks";
 
+import { useFormModal } from "$store/sdk/useFormModal.ts";
+
 import isMobile from "../helpers/isMobile.ts";
 
 export interface Props {
@@ -11,6 +13,8 @@ export default function CompaniesFooter({
   email,
   instagram,
 }: Props) {
+  const { displayFormModal } = useFormModal();
+
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -50,6 +54,15 @@ export default function CompaniesFooter({
                 <a href="https://deco.cx">deco.cx</a>, a global edge site
                 builder, with design by Malu Viana, from Recife/PE, and
                 engineering by Flavio Odas, from São Paulo/SP.
+              </span>
+              <span className="text-secondary text-base font-montserrat font-medium tracking-[-0.8px]">
+                <span
+                  className="underline cursor-pointer"
+                  onClick={() => displayFormModal.value = true}
+                >
+                  Nominate
+                </span>{" "}
+                a Brazilian company that should be here!
               </span>
             </div>
           </div>

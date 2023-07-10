@@ -72,7 +72,6 @@
               "./islands/CompaniesFloatingButton.tsx",
               "./islands/CompaniesFooter.tsx",
               "./islands/CompaniesFormField.tsx",
-              "./islands/CompaniesHeader.tsx",
               "./islands/CompaniesList.tsx",
               "./islands/CompaniesNominateForm.tsx",
               "./islands/CompaniesScrollBar.tsx",
@@ -8419,17 +8418,32 @@
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzRm9ybS9Db21wYW5pZXNOb21pbmF0ZUZvcm0udHN4@Props": {
       "type": "object",
       "properties": {
-        "open": {
-          "type": "boolean",
-          "title": "Open"
+        "employees": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Employees"
         },
-        "setIsModalOpen": {
-          "title": "Set Is Modal Open"
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Stages"
+        },
+        "capital": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Capital"
         }
       },
       "required": [
-        "open",
-        "setIsModalOpen"
+        "employees",
+        "stages",
+        "capital"
       ],
       "title": "deco-sites/madeinbrazil/components/companies/CompaniesForm/CompaniesNominateForm.tsx@Props"
     },
@@ -14253,22 +14267,6 @@
         }
       }
     },
-    "Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g=": {
-      "title": "./islands/CompaniesHeader.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/CompaniesHeader.tsx"
-          ],
-          "default": "./islands/CompaniesHeader.tsx"
-        }
-      }
-    },
     "Li9pc2xhbmRzL0NvbXBhbmllc0xpc3QudHN4": {
       "title": "./islands/CompaniesList.tsx",
       "type": "object",
@@ -16606,9 +16604,6 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0Zvcm1GaWVsZC50c3g="
-        },
-        {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0hlYWRlci50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbmllc0xpc3QudHN4"

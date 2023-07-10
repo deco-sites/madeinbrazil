@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 import CompaniesUpvoteButton from "../CompaniesUpvoteButton.tsx";
 import CompaniesCardTag from "./CompaniesCardTag.tsx";
@@ -17,11 +17,29 @@ interface Props {
 export default function CompaniesCard(
   { company, isCardClicked, orderBy, setIsCardClicked, fetchCompanies }: Props,
 ) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
   const [isCurrentCardClicked, setIsCurrentCardClicked] = useState(false);
 
   useEffect(() => {
     setIsCardClicked(isCurrentCardClicked);
   }, [isCurrentCardClicked]);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      cardRef.current &&
+      !cardRef.current.contains(event.target as Node)
+    ) {
+      setIsCurrentCardClicked(false);
+    }
+  };
+
+  useEffect(() => {
+    self.addEventListener("click", handleClickOutside);
+    return () => {
+      self.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div
@@ -31,6 +49,7 @@ export default function CompaniesCard(
           : ""
       }  hover:shadow-[0_0_12px_0_rgba(0,0,0,0.4)] transition ease-in-out`}
       onClick={() => setIsCurrentCardClicked(!isCurrentCardClicked)}
+      ref={cardRef}
     >
       <div>
         <div className="h-[170px] bg-primary rounded-t-3xl">

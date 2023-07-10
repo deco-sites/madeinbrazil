@@ -1,6 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 import { useEffect, useState } from "preact/hooks";
 
+import { useFormModal } from "$store/sdk/useFormModal.ts";
 import { useToast } from "$store/sdk/useToast.ts";
 
 import Modal from "../../ui/Modal.tsx";
@@ -25,14 +26,17 @@ interface Company {
 }
 
 export interface Props {
-  open: boolean;
-  setIsModalOpen: (isOpen: boolean) => void;
+  employees: string[];
+  stages: string[];
+  capital: string[];
 }
 
 export default function CompaniesNominateForm({
-  open,
-  setIsModalOpen,
+  employees,
+  stages,
+  capital,
 }: Props) {
+  const { displayFormModal } = useFormModal();
   const { displayToast, toastContent } = useToast();
 
   const [formState, setFormState] = useState<Company>({
@@ -57,9 +61,9 @@ export default function CompaniesNominateForm({
 
   useEffect(() => {
     if (success) {
-      setIsModalOpen(false);
       toastContent.value = "Company successfully nominated!";
       displayToast.value = true;
+      displayFormModal.value = false;
     }
   }, [success]);
 
@@ -81,6 +85,13 @@ export default function CompaniesNominateForm({
     setFormState((prevState) => ({
       ...prevState,
       [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleDropdownSelect = (option: string, name: string) => {
+    setFormState((prevState) => ({
+      ...prevState,
+      [name]: option,
     }));
   };
 
@@ -128,10 +139,6 @@ export default function CompaniesNominateForm({
 
     setErrors(newErrors);
 
-    console.log("Object.keys(newErrors)", Object.keys(newErrors));
-
-    console.log("Object.keys(newErrors).length", Object.keys(newErrors).length);
-
     return Object.values(newErrors).length === 0;
   };
 
@@ -139,22 +146,22 @@ export default function CompaniesNominateForm({
     event.preventDefault();
 
     if (validateForm()) {
-      console.log("formState", formState);
-
       sendNewCompanyRequest(formState);
     }
   };
 
   return (
     <Modal
-      open={open}
+      open={displayFormModal.value}
       title="Nominate"
       subtitle="Nominate Your Favorite Brazilian Tech Company for the Tech Made in Brazil List"
       mode={isMobile() ? "sidebar-bottom" : "center"}
       className="w-full h-[95%] top-auto md:top-0 md:h-full overflow-hidden max-w-none max-h-none md:max-w-[792px] 
-      md:max-h-[628px] rounded-[40px] shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light px-4 
-      md:pr-[9px] md:pl-[57px] pt-16 pb-8"
-      onClose={() => setIsModalOpen(false)}
+      md:max-h-[628px] rounded-[40px] shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light pr-4 
+      md:pr-[9px] pl-0 pt-16 pb-8"
+      onClose={() => {
+        displayFormModal.value = false;
+      }}
     >
       <form onSubmit={handleSubmit} class="w-full mx-auto pb-10">
         <FormField
@@ -189,19 +196,50 @@ export default function CompaniesNominateForm({
           errors={errors}
           onChange={handleBannerChange}
         />
+        <div class="flex flex-col md:flex-row justify-between items-center md:gap-6">
+          <FormField
+            label="Employees"
+            type="select"
+            name="employees"
+            value={formState.employees}
+            values={employees}
+            errors={errors}
+            onChange={handleDropdownSelect}
+          />
+          <FormField
+            label="Company Stage"
+            type="select"
+            name="companyStage"
+            value={formState.companyStage}
+            values={stages}
+            errors={errors}
+            onChange={handleDropdownSelect}
+          />
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center md:gap-6">
+          <FormField
+            label="Capital"
+            type="select"
+            name="capital"
+            value={formState.capital}
+            values={capital}
+            errors={errors}
+            onChange={handleDropdownSelect}
+          />
+          <FormField
+            label="Segment"
+            type="text"
+            name="segment"
+            value={formState.segment || ""}
+            errors={errors}
+            onChange={handleChange}
+          />
+        </div>
         <FormField
           label="Website"
           type="text"
           name="website"
           value={formState.website || ""}
-          errors={errors}
-          onChange={handleChange}
-        />
-        <FormField
-          label="Email"
-          type="text"
-          name="email"
-          value={formState.email || ""}
           errors={errors}
           onChange={handleChange}
         />
@@ -214,34 +252,10 @@ export default function CompaniesNominateForm({
           onChange={handleChange}
         />
         <FormField
-          label="Employees"
+          label="Email"
           type="text"
-          name="employees"
-          value={formState.employees}
-          errors={errors}
-          onChange={handleChange}
-        />
-        <FormField
-          label="Capital"
-          type="text"
-          name="capital"
-          value={formState.capital}
-          errors={errors}
-          onChange={handleChange}
-        />
-        <FormField
-          label="Segment"
-          type="text"
-          name="segment"
-          value={formState.segment}
-          errors={errors}
-          onChange={handleChange}
-        />
-        <FormField
-          label="Company Stage"
-          type="text"
-          name="companyStage"
-          value={formState.companyStage}
+          name="email"
+          value={formState.email || ""}
           errors={errors}
           onChange={handleChange}
         />
