@@ -102,12 +102,12 @@ export default function DragAndDropImageZone({ name, label, onChange }: Props) {
                   accept="image/*"
                   onChange={handleInputChange}
                   class="hidden"
-                  id="uploadInput"
+                  id={name + "Input"}
                 />
                 <label
                   type="button"
                   class="absolute top-0 left-0 w-full h-full cursor-pointer"
-                  for="uploadInput"
+                  for={name + "Input"}
                 />
               </>
             )}
