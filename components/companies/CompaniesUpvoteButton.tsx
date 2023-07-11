@@ -78,10 +78,7 @@ export default function CompaniesUpvoteButton({
         id: company.id,
         companyUpvotes: company.companyUpvotes + 1,
       }),
-    }).then((res) => res.json()).then((data) => {
-      if (data) {
-        console.log(data);
-      }
+    }).then((res) => res.json()).then(() => {
       fetchCompanies(false);
       setIsUpvoting(false);
 

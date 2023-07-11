@@ -43,7 +43,7 @@ export default function CompaniesCard(
 
   return (
     <div
-      className={`w-full cursor-pointer rounded-3xl shadow-[0_0_12px_0_rgba(0,0,0,0.2)] relative overflow-hidden mb-16 max-w-[590px] ${
+      className={`w-full cursor-pointer rounded-3xl shadow-[0_0_12px_0_rgba(0,0,0,0.2)] relative overflow-hidden mb-16 max-w-[395px] ${
         isCardClicked && !isCurrentCardClicked
           ? "opacity-40 pointer-events-none"
           : ""
@@ -51,15 +51,15 @@ export default function CompaniesCard(
       onClick={() => setIsCurrentCardClicked(!isCurrentCardClicked)}
       ref={cardRef}
     >
-      <div>
+      <div className="h-full flex flex-col">
         <div className="h-[170px] bg-primary rounded-t-3xl">
           <img
-            className="h-full w-full object-cover rounded-t-3xl"
+            className="h-[inherit] w-full object-cover rounded-t-3xl"
             src={company.banner[0].url}
             alt={company.name}
           />
         </div>
-        <div className="bg-white rounded-b-3xl relative">
+        <div className="bg-white rounded-b-3xl relative h-[inherit]">
           <div className="flex items-center absolute top-[-32px] left-[24px] w-[64px] h-[64px] bg-white rounded-full">
             <img
               className="object-contain rounded-full"

@@ -32,16 +32,16 @@ export default function CompaniesFooter({
               </span>
               <span className="text-primary text-[32px] md:text-5xl leading-[110%] md:leading-normal font-semibold">
                 Made in{" "}
-                <span className="relative">
+                <span className="relative z-[1]">
                   Brazil.
 
                   <div
-                    className="absolute left-0 h-[10px] md:h-[16px] w-[92px] md:w-[159px] z-[-1] top-[45%]"
+                    className="absolute left-0 h-[10px] md:h-[16px] w-[92px] md:w-[141px] z-[-1] top-[45%]"
                     style={{
                       backgroundImage:
                         "linear-gradient(to right, rgba(22, 184, 62, 0.40) 50%, rgba(255, 225, 31, 0.60) 50%)",
                       backgroundSize: "200% 100%",
-                      backgroundPosition: isMobile() ? "70px 0" : "137px 0",
+                      backgroundPosition: isMobile() ? "70px 0" : "110px 0",
                     }}
                   >
                   </div>
@@ -66,7 +66,7 @@ export default function CompaniesFooter({
               </span>
             </div>
           </div>
-          <div className="flex md:flex-col mt-14 md:mt-0 items-end justify-between gap-2">
+          <div className="flex md:flex-col mt-14 md:mt-0 items-end justify-between gap-2 md:gap-7 md:items-center md:justify-start">
             <div className="flex flex-col gap-3 md:gap-2">
               <span className="text-primary text-sm font-montserrat font-medium">
                 Powered by
@@ -78,7 +78,7 @@ export default function CompaniesFooter({
               />
             </div>
             <div className="flex gap-4">
-              {isHovered && (
+              {(isHovered || isMobile()) && (
                 <>
                   <a
                     onClick={(e) => e.stopPropagation()}

@@ -1,5 +1,7 @@
 import { Handlers } from "$fresh/server.ts";
 
+import type { CompanyForm } from "$store/types/company.d.ts";
+
 const AUTH_TOKEN =
   "patqPStV56SAyWPdL.b8ee254879699e0c7cd3cb4c9fd128d52b2bf5d99eccd89cf5b1b6c7dd594ee1";
 const AIRTABLE_URL =
@@ -35,6 +37,7 @@ const fetchCompanies = async (
   capital: string | null,
   segment: string | null,
   likesThreshold: number,
+  offset: string | null = null,
 ) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
@@ -42,7 +45,12 @@ const fetchCompanies = async (
   const parseFilter = (filter: string | null, filterName: string) => {
     if (!filter) return null;
 
-    const filterValues = filter.split(",").map((value) => value.trim());
+    const filterValues = decodeURIComponent(filter).replace(
+      /(\d+,\d+)/g,
+      (match) => `${match.replace(",", "#PLACEHOLDER#")}`,
+    )
+      .split(",").map((value) => value.trim().replace(/#PLACEHOLDER#/g, ","));
+
     const filterConditions = filterValues.map((value) =>
       `{${filterName}} = "${value}"`
     );
@@ -70,13 +78,13 @@ const fetchCompanies = async (
     : (`AND(${defaultFilters})`);
 
   const params = new URLSearchParams({
+    "pageSize": "6",
     "sort[0][field]": orderBy,
     "sort[0][direction]": "desc",
+    "offset": offset ?? "",
   });
 
   if (filterByFormula) {
-    console.log(filterByFormula);
-
     params.append("filterByFormula", filterByFormula);
   }
 
@@ -86,7 +94,12 @@ const fetchCompanies = async (
   })
     .then((response) => response.json())
     .then((data: AirTableListResponse) => {
-      return data.records.map(toCompany);
+      const companies = {
+        offset: data?.offset ?? null,
+        companyList: data.records.map(toCompany),
+      };
+
+      return companies;
     })
     .catch((error) => {
       console.error(error);
@@ -246,6 +259,7 @@ const uploadImageToHost = async (image: string) => {
   }
 
   formData.append("image", imageSplit);
+  formData.append("expiration", "2000");
 
   return await fetch(
     `${IMAGEHOST_URL}?key=${IMAGEHOST_SECRET}`,
@@ -256,7 +270,6 @@ const uploadImageToHost = async (image: string) => {
   )
     .then((response) => response.json())
     .then((res: FreeImageHostResponse) => {
-      console.log(res);
       return res.data.url;
     })
     .catch((error) => {
@@ -264,23 +277,7 @@ const uploadImageToHost = async (image: string) => {
     });
 };
 
-export interface CreateCompanyRequest {
-  id?: string;
-  name: string;
-  about: string;
-  logo: string;
-  banner: string;
-  website: string | null;
-  email: string | null;
-  instagram: string | null;
-  employees: string;
-  capital: string;
-  segment: string;
-  companyStage: string;
-  [key: string]: string | number | null | undefined;
-}
-
-const addCompany = async (record: CreateCompanyRequest) => {
+const addCompany = async (record: CompanyForm) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer ${AUTH_TOKEN}`);
   myHeaders.append("Content-Type", "application/json");
@@ -323,6 +320,7 @@ const addCompany = async (record: CreateCompanyRequest) => {
 
 export const companies: {
   list: Company[];
+  getListResponse: CompanyResponse;
   filterList: FilterList[];
   getList: (
     orderBy: string,
@@ -331,12 +329,14 @@ export const companies: {
     capital: string | null,
     segment: string | null,
     likesThreshold: number,
+    offset?: string | null,
   ) => Promise<Company[]>;
   getFilters: () => Promise<FilterList[]>;
   update: (s: Company) => Promise<AirtableUpdateResponse>;
-  add: (s: CreateCompanyRequest) => Promise<void>;
+  add: (s: CompanyForm) => Promise<void>;
 } = {
   list: [],
+  getListResponse: {} as CompanyResponse,
   filterList: [] as FilterList[],
   getList: async function (
     orderBy: string,
@@ -345,15 +345,17 @@ export const companies: {
     capital: string | null,
     segment: string | null,
     likesThreshold: number,
+    offset?: string | null,
   ) {
-    this.list = (await fetchCompanies(
+    this.getListResponse = (await fetchCompanies(
       orderBy,
       employees,
       companyStage,
       capital,
       segment,
       likesThreshold,
-    )) as Company[];
+      offset,
+    )) as CompanyResponse;
     return this.list;
   },
   getFilters: async function () {
@@ -381,6 +383,7 @@ export const handler: Handlers = {
     const capital = queryParameters.get("capital") ?? null;
     const segment = queryParameters.get("segment") ?? null;
     const likesThreshold = Number(queryParameters.get("likesThreshold")) ?? 0;
+    const offset = queryParameters.get("offset") ?? null;
 
     await companies.getList(
       orderBy,
@@ -389,6 +392,7 @@ export const handler: Handlers = {
       capital,
       segment,
       likesThreshold,
+      offset,
     );
 
     const status = 200;
@@ -396,7 +400,7 @@ export const handler: Handlers = {
     return new Response(
       JSON.stringify({
         status,
-        data: companies.list,
+        data: companies.getListResponse,
       }),
       {
         status,
@@ -405,7 +409,7 @@ export const handler: Handlers = {
   },
 
   async POST(req) {
-    const body = await parseBody<CreateCompanyRequest>(req.body);
+    const body = await parseBody<CompanyForm>(req.body);
 
     if (!body) {
       return new Response("Insert a correct body", {
@@ -430,8 +434,6 @@ export const handler: Handlers = {
 
   async PATCH(req) {
     const body = await parseBody<Company>(req.body);
-
-    console.log(body);
 
     if (!body) {
       return new Response("Insert a correct body", {
@@ -520,6 +522,11 @@ export interface Company {
   segment: string;
   companyStage: string;
   companyUpvotes: number;
+}
+
+export interface CompanyResponse {
+  offset: string | null;
+  companyList: Company[];
 }
 
 export type CompanyRequest =

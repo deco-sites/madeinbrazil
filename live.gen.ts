@@ -14,21 +14,22 @@ import * as $$$$$1 from "./islands/HeaderSearchbar.tsx";
 import * as $$$$$2 from "./islands/CompaniesList.tsx";
 import * as $$$$$3 from "./islands/HeaderModals.tsx";
 import * as $$$$$4 from "./islands/CompaniesFormField.tsx";
-import * as $$$$$5 from "./islands/Newsletter.tsx";
-import * as $$$$$6 from "./islands/Toast.tsx";
-import * as $$$$$7 from "./islands/SearchControls.tsx";
-import * as $$$$$8 from "./islands/CompaniesFooter.tsx";
-import * as $$$$$9 from "./islands/ProductImageZoom.tsx";
-import * as $$$$$10 from "./islands/CompaniesNominateForm.tsx";
-import * as $$$$$11 from "./islands/SliderJS.tsx";
-import * as $$$$$12 from "./islands/CompaniesFloatingButton.tsx";
-import * as $$$$$13 from "./islands/CompaniesScrollBar.tsx";
-import * as $$$$$14 from "./islands/DragAndDropImageZone.tsx";
-import * as $$$$$15 from "./islands/WishlistButton.tsx";
-import * as $$$$$16 from "./islands/HeaderButton.tsx";
-import * as $$$$$17 from "./islands/ShippingSimulation.tsx";
-import * as $$$$$18 from "./islands/CompaniesBackToTop.tsx";
-import * as $$$$$19 from "./islands/AddToCartButton.tsx";
+import * as $$$$$5 from "./islands/CompaniesHeader.tsx";
+import * as $$$$$6 from "./islands/Newsletter.tsx";
+import * as $$$$$7 from "./islands/Toast.tsx";
+import * as $$$$$8 from "./islands/SearchControls.tsx";
+import * as $$$$$9 from "./islands/CompaniesFooter.tsx";
+import * as $$$$$10 from "./islands/ProductImageZoom.tsx";
+import * as $$$$$11 from "./islands/CompaniesNominateForm.tsx";
+import * as $$$$$12 from "./islands/SliderJS.tsx";
+import * as $$$$$13 from "./islands/CompaniesFloatingButton.tsx";
+import * as $$$$$14 from "./islands/CompaniesScrollBar.tsx";
+import * as $$$$$15 from "./islands/DragAndDropImageZone.tsx";
+import * as $$$$$16 from "./islands/WishlistButton.tsx";
+import * as $$$$$17 from "./islands/HeaderButton.tsx";
+import * as $$$$$18 from "./islands/ShippingSimulation.tsx";
+import * as $$$$$19 from "./islands/CompaniesBackToTop.tsx";
+import * as $$$$$20 from "./islands/AddToCartButton.tsx";
 import * as $$$$$$$$0 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$$$1 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$$$2 from "./sections/Miscellaneous/CampaignTimer.tsx";
@@ -237,26 +238,27 @@ const manifest = {
     "./routes/styles.css.ts": $$$$2,
   },
   "islands": {
-    "./islands/AddToCartButton.tsx": $$$$$19,
-    "./islands/CompaniesBackToTop.tsx": $$$$$18,
-    "./islands/CompaniesFloatingButton.tsx": $$$$$12,
-    "./islands/CompaniesFooter.tsx": $$$$$8,
+    "./islands/AddToCartButton.tsx": $$$$$20,
+    "./islands/CompaniesBackToTop.tsx": $$$$$19,
+    "./islands/CompaniesFloatingButton.tsx": $$$$$13,
+    "./islands/CompaniesFooter.tsx": $$$$$9,
     "./islands/CompaniesFormField.tsx": $$$$$4,
+    "./islands/CompaniesHeader.tsx": $$$$$5,
     "./islands/CompaniesList.tsx": $$$$$2,
-    "./islands/CompaniesNominateForm.tsx": $$$$$10,
-    "./islands/CompaniesScrollBar.tsx": $$$$$13,
-    "./islands/DragAndDropImageZone.tsx": $$$$$14,
-    "./islands/HeaderButton.tsx": $$$$$16,
+    "./islands/CompaniesNominateForm.tsx": $$$$$11,
+    "./islands/CompaniesScrollBar.tsx": $$$$$14,
+    "./islands/DragAndDropImageZone.tsx": $$$$$15,
+    "./islands/HeaderButton.tsx": $$$$$17,
     "./islands/HeaderModals.tsx": $$$$$3,
     "./islands/HeaderSearchbar.tsx": $$$$$1,
-    "./islands/Newsletter.tsx": $$$$$5,
+    "./islands/Newsletter.tsx": $$$$$6,
     "./islands/OutOfStock.tsx": $$$$$0,
-    "./islands/ProductImageZoom.tsx": $$$$$9,
-    "./islands/SearchControls.tsx": $$$$$7,
-    "./islands/ShippingSimulation.tsx": $$$$$17,
-    "./islands/SliderJS.tsx": $$$$$11,
-    "./islands/Toast.tsx": $$$$$6,
-    "./islands/WishlistButton.tsx": $$$$$15,
+    "./islands/ProductImageZoom.tsx": $$$$$10,
+    "./islands/SearchControls.tsx": $$$$$8,
+    "./islands/ShippingSimulation.tsx": $$$$$18,
+    "./islands/SliderJS.tsx": $$$$$12,
+    "./islands/Toast.tsx": $$$$$7,
+    "./islands/WishlistButton.tsx": $$$$$16,
   },
   "sections": {
     "$live/sections/Conditional_Beta.tsx": i2$$$$$0,

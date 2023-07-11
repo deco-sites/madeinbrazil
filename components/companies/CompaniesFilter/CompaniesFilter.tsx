@@ -101,7 +101,7 @@ export default function CompaniesFilter({
             {getSearchedFilter(filter.name)?.length > 0
               ? (
                 <>
-                  <span>{filter.label}:</span>
+                  <span>{filter.label}:&nbsp;</span>
                   <span className="text-primary">
                     {getSearchedFilter(filter.name)}
                   </span>

@@ -1,10 +1,11 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 import CompaniesCard from "./CompaniesCard/CompaniesCard.tsx";
 import CompaniesCardLoader from "./CompaniesCard/CompaniesCardLoader.tsx";
 import CompaniesFilter from "./CompaniesFilter/CompaniesFilter.tsx";
 import type {
   Company,
+  CompanyResponse,
   FilterList,
 } from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
@@ -18,8 +19,8 @@ enum OrderBy {
   NEWEST = "createdTime",
 }
 
-interface CompanyResponse {
-  data: Company[];
+interface GetCompanyResponse {
+  data: CompanyResponse;
   status: number;
 }
 
@@ -31,16 +32,23 @@ interface SelectedFilters {
 export default function CompaniesList(
   { filterList, likesThreshold = 0 }: Props,
 ) {
-  const [isCardClicked, setCardClicked] = useState(false);
-  const [orderBy, setOrderBy] = useState(OrderBy.MOST_POPULAR);
+  const listRef = useRef<HTMLDivElement>(null);
+
   const [companiesList, setCompaniesList] = useState([] as Company[]);
+
+  const [orderBy, setOrderBy] = useState(OrderBy.MOST_POPULAR);
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilters[]>([]);
+
   const [isLoading, setIsLoading] = useState(true);
+  const [isCardClicked, setCardClicked] = useState(false);
+  const [isFetchingMore, setIsFetchingMore] = useState(false);
+
+  const [offset, setOffset] = useState<string | null>(null);
 
   const fetchCompanies = (showReload = true) => {
     const filtersQueryString = selectedFilters.reduce((acc, curr) => {
       const values = curr.values.join(",");
-      return `${acc}&${curr.name}=${values}`;
+      return `${acc}&${curr.name}=${encodeURIComponent(values)}`;
     }, "");
 
     const likesQueryString = `&likesThreshold=${
@@ -54,17 +62,66 @@ export default function CompaniesList(
         method: "GET",
       },
     ).then((res) => res.json()).then(
-      (data: CompanyResponse) => {
-        setCompaniesList(data.data);
+      (data: GetCompanyResponse) => {
+        setCompaniesList(data.data.companyList);
+        setOffset(data.data?.offset ?? null);
       },
     ).finally(() => {
       showReload && setIsLoading(false);
     });
   };
 
+  const fetchMoreCompanies = () => {
+    if (!offset || isLoading || isFetchingMore) {
+      return;
+    }
+
+    const filtersQueryString = selectedFilters.reduce((acc, curr) => {
+      const values = curr.values.join(",");
+      return `${acc}&${curr.name}=${values}`;
+    }, "");
+
+    const likesQueryString = `&likesThreshold=${
+      orderBy === OrderBy.MOST_POPULAR ? likesThreshold.toString() : "0"
+    }`;
+
+    setIsFetchingMore(true);
+    fetch(
+      `/api/companies?orderBy=${orderBy}${filtersQueryString}${likesQueryString}&offset=${offset}`,
+      {
+        method: "GET",
+      },
+    )
+      .then((res) => res.json())
+      .then((data: GetCompanyResponse) => {
+        setCompaniesList((prevCompanies) => {
+          return [...prevCompanies, ...data.data.companyList];
+        });
+        setOffset(data.data?.offset ?? null);
+      })
+      .finally(() => {
+        setIsFetchingMore(false);
+      });
+  };
+
   useEffect(() => {
     fetchCompanies();
   }, [orderBy]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const { scrollTop, clientHeight, scrollHeight } =
+        self.document.documentElement;
+      if (scrollTop + clientHeight >= scrollHeight - 480) {
+        fetchMoreCompanies();
+      }
+    };
+
+    self.addEventListener("scroll", handleScroll);
+    return () => {
+      self.removeEventListener("scroll", handleScroll);
+    };
+  }, [offset, isLoading, isFetchingMore]);
 
   const applyFilters = () => {
     fetchCompanies();
@@ -125,7 +182,10 @@ export default function CompaniesList(
   };
 
   return (
-    <div className="min-h-[calc(100vh-98px)] text-zinc-100 flex justify-between flex-col mx-auto z-[5] w-full border-b-2 border-black border-opacity-20 md:px-[22px]">
+    <div
+      className="min-h-[calc(100vh-98px)] text-zinc-100 flex justify-between flex-col mx-auto z-[5] w-full border-b-2 border-black border-opacity-20 md:px-[22px]"
+      ref={listRef}
+    >
       <div className="flex flex-col mx-auto max-w-[1440px] min-h-[calc(100vh-98px)] w-full bg-white pt-14 px-4 md:px-24 items-center md:items-start">
         <button
           onClick={() => handleOrderBy()}
@@ -170,7 +230,7 @@ export default function CompaniesList(
             <div className="mt-14 w-full">
               {isLoading
                 ? (
-                  <div className="grid min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3 auto-cols-max w-full">
+                  <div className="grid justify-items-center min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3 w-full">
                     {Array.from({ length: 6 }).map((_, index) => (
                       <CompaniesCardLoader key={index} />
                     ))}
@@ -178,7 +238,7 @@ export default function CompaniesList(
                 )
                 : companiesList.length
                 ? (
-                  <div className="grid min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3 w-full">
+                  <div className="grid justify-items-center min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3 w-full">
                     {companiesList.map((company) => (
                       <CompaniesCard
                         key={company.id}
@@ -196,6 +256,13 @@ export default function CompaniesList(
                     <h1 className="text-3xl">No companies found</h1>
                   </div>
                 )}
+              {isFetchingMore && (
+                <div className="grid justify-items-center min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1300px]:grid-cols-3 w-full">
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <CompaniesCardLoader key={index} />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -25,13 +25,14 @@ export default function FormField({
 }: Props) {
   return (
     <div class="mb-6 md:mb-4 w-full">
-      <label
-        class="block font-montserrat text-black text-sm font-medium mb-3"
-        for={name}
-      >
-        {label}:
-      </label>
-
+      {type !== "file" && (
+        <label
+          class="block font-montserrat text-black text-sm font-medium mb-3"
+          for={name}
+        >
+          {label}:
+        </label>
+      )}
       {(() => {
         switch (type) {
           case "textarea":
@@ -49,7 +50,13 @@ export default function FormField({
               />
             );
           case "file":
-            return <DragAndDropImageZone onChange={onChange} />;
+            return (
+              <DragAndDropImageZone
+                name={name}
+                label={label}
+                onChange={onChange}
+              />
+            );
           case "select":
             return (
               <CompaniesFormDropdown

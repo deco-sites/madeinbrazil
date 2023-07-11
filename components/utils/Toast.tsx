@@ -10,7 +10,6 @@ export default function Toast() {
   const [currentClass, setCurrentClass] = useState("translate-y-[200%]");
 
   useEffect(() => {
-    console.log("displayToast.value", displayToast.value);
     setCurrentClass("translate-y-0");
 
     setTimeout(() => {
