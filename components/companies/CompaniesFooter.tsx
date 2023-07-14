@@ -1,19 +1,28 @@
-import { useState } from "preact/hooks";
+import { useRef, useState } from "preact/hooks";
 
 import { useFormModal } from "$store/sdk/useFormModal.ts";
+import { useUI } from "$store/sdk/useUI.ts";
 
 import isMobile from "../helpers/isMobile.ts";
 
 export interface Props {
-  email: string;
+  discord: string;
   instagram: string;
+  logoLink?: string;
+  /** @format html */
+  footerText?: string;
 }
 
 export default function CompaniesFooter({
-  email,
+  discord,
   instagram,
+  logoLink = "https://deco.cx",
+  footerText,
 }: Props) {
   const { displayFormModal } = useFormModal();
+  const { displayTerms, displayCookies, displayPrivacy } = useUI();
+
+  const footerTextRef = useRef<HTMLDivElement>(null);
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -49,11 +58,22 @@ export default function CompaniesFooter({
               </span>
             </span>
             <div className="flex flex-col md:gap-4 gap-6 max-w-[691px]">
-              <span className="text-secondary text-base font-montserrat font-medium tracking-[-0.8px]">
-                This website was made in Brazil and crafted by{" "}
-                <a href="https://deco.cx">deco.cx</a>, a global edge site
-                builder, with design by Malu Viana, from Recife/PE, and
-                engineering by Flavio Odas, from São Paulo/SP.
+              <span
+                className="text-secondary text-base font-montserrat font-medium tracking-[-0.8px]"
+                ref={footerTextRef}
+              >
+                {footerText
+                  ? <span dangerouslySetInnerHTML={{ __html: footerText }} />
+                  : (
+                    <span>
+                      This website was made in Brazil and crafted by{" "}
+                      <a className="underline" href="https://deco.cx">
+                        deco.cx
+                      </a>, a global edge site builder, with design by Malu
+                      Viana, from Recife/PE, and engineering by Flavio Odas,
+                      from São Paulo/SP.
+                    </span>
+                  )}
               </span>
               <span className="text-secondary text-base font-montserrat font-medium tracking-[-0.8px]">
                 <span
@@ -71,21 +91,28 @@ export default function CompaniesFooter({
               <span className="text-primary text-sm font-montserrat font-medium">
                 Powered by
               </span>
-              <img
-                className="max-w-[144px] md:max-w-[100%]"
-                src="/deco-full-logo.svg"
-                alt="Deco.cx"
-              />
+              <a href={logoLink}>
+                <img
+                  className="max-w-[144px] md:max-w-[100%]"
+                  src="/deco-full-logo.svg"
+                  alt="Deco.cx"
+                />
+              </a>
             </div>
             <div className="flex gap-4">
               {(isHovered || isMobile()) && (
                 <>
                   <a
                     onClick={(e) => e.stopPropagation()}
-                    href={`mailto:${email}`}
+                    href={discord}
                     className="flex items-center animate-bottomtotop140 justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 transition ease-in-out"
                   >
-                    <img src="/email-white.svg" alt="Email" />
+                    <img
+                      width="34px"
+                      height="34px"
+                      src="/discord.png"
+                      alt="Discord"
+                    />
                   </a>
                   <a
                     onClick={(e) => e.stopPropagation()}
@@ -103,13 +130,22 @@ export default function CompaniesFooter({
       <div>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:px-[102px] md:pt-4 md:pb-7 max-w-[1440px] mx-auto">
           <div className="flex flex-col md:flex-row gap-2 md:gap-4">
-            <span className="text-primary text-sm font-montserrat font-medium px-3 py-2">
+            <span
+              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer"
+              onClick={() => displayTerms.value = true}
+            >
               Terms
             </span>
-            <span className="text-primary text-sm font-montserrat font-medium px-3 py-2">
+            <span
+              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer"
+              onClick={() => displayPrivacy.value = true}
+            >
               Privacy policy
             </span>
-            <span className="text-primary text-sm font-montserrat font-medium px-3 py-2">
+            <span
+              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer"
+              onClick={() => displayCookies.value = true}
+            >
               Cookies
             </span>
           </div>

@@ -1,6 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 import DragAndDropImageZone from "./DragAndDropImageZone.tsx";
 import CompaniesFormDropdown from "./CompaniesFormDropdown.tsx";
+import CompaniesFormCheckbox from "./CompaniesFormCheckbox.tsx";
 
 import type { CompanyForm } from "deco-sites/madeinbrazil/types/company.d.ts";
 
@@ -8,7 +9,7 @@ interface Props {
   label: string;
   type: string;
   name: string;
-  value: string;
+  value: string | boolean;
   errors: Partial<Record<keyof CompanyForm, string>>;
   onChange: any;
   values?: string[];
@@ -25,7 +26,7 @@ export default function FormField({
 }: Props) {
   return (
     <div class="mb-6 md:mb-4 w-full">
-      {type !== "file" && (
+      {(type !== "file" && type !== "checkbox") && (
         <label
           class="block font-montserrat text-black text-sm font-medium mb-3"
           for={name}
@@ -40,7 +41,7 @@ export default function FormField({
               <textarea
                 id={name}
                 name={name}
-                value={value}
+                value={value.toString()}
                 onChange={onChange}
                 placeholder="Enter a description..."
                 class={`font-montserrat font-normal text-sm text-secondary appearance-none border rounded-lg w-full h-[134px] px-[14px] py-[10px] leading-tight focus:outline-none focus:shadow-outline resize-none
@@ -62,9 +63,18 @@ export default function FormField({
               <CompaniesFormDropdown
                 name={name}
                 onChange={onChange}
-                currentValue={value}
+                currentValue={value.toString()}
                 values={values}
                 errors={errors}
+              />
+            );
+          case "checkbox":
+            return (
+              <CompaniesFormCheckbox
+                name={name}
+                handleCheckbox={onChange}
+                currentValue={!!value}
+                label={label}
               />
             );
           default:
@@ -73,7 +83,7 @@ export default function FormField({
                 type={type}
                 id={name}
                 name={name}
-                value={value}
+                value={value.toString()}
                 onChange={onChange}
                 class={`font-montserrat font-normal text-sm text-secondary appearance-none border rounded-lg w-full px-[14px] py-[10px] leading-tight focus:outline-none focus:shadow-outline ${
                   errors[name] ? "border-[#F04438]" : "border-gray-opaque-dark"

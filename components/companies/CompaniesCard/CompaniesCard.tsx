@@ -12,10 +12,18 @@ interface Props {
   orderBy: string;
   setIsCardClicked: (isCardClicked: boolean) => void;
   fetchCompanies: (showReload: boolean) => void;
+  likeButtonVisibleIn: "MOST POPULAR" | "ALL" | "BOTH";
 }
 
 export default function CompaniesCard(
-  { company, isCardClicked, orderBy, setIsCardClicked, fetchCompanies }: Props,
+  {
+    company,
+    isCardClicked,
+    orderBy,
+    setIsCardClicked,
+    fetchCompanies,
+    likeButtonVisibleIn,
+  }: Props,
 ) {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -31,6 +39,16 @@ export default function CompaniesCard(
       !cardRef.current.contains(event.target as Node)
     ) {
       setIsCurrentCardClicked(false);
+    }
+  };
+
+  const handleLikeButtonVisibility = () => {
+    if (likeButtonVisibleIn === "MOST POPULAR") {
+      return "companyUpvotes";
+    } else if (likeButtonVisibleIn === "ALL") {
+      return "createdTime";
+    } else {
+      return orderBy;
     }
   };
 
@@ -104,7 +122,7 @@ export default function CompaniesCard(
                     />
                   )}
                 </div>
-                {orderBy === "createdTime" && (
+                {orderBy === handleLikeButtonVisibility() && (
                   <CompaniesUpvoteButton
                     company={company}
                     fetchCompanies={fetchCompanies}

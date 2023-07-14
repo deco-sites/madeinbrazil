@@ -30,6 +30,7 @@ import * as $$$$$17 from "./islands/HeaderButton.tsx";
 import * as $$$$$18 from "./islands/ShippingSimulation.tsx";
 import * as $$$$$19 from "./islands/CompaniesBackToTop.tsx";
 import * as $$$$$20 from "./islands/AddToCartButton.tsx";
+import * as $$$$$21 from "./islands/CompaniesModals.tsx";
 import * as $$$$$$$$0 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$$$1 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$$$2 from "./sections/Miscellaneous/CampaignTimer.tsx";
@@ -62,6 +63,7 @@ import * as $$$$$$$$28 from "./sections/Images/BannerGrid.tsx";
 import * as $$$$$$$$29 from "./sections/Category/CategoryList.tsx";
 import * as $$$$$$$$30 from "./sections/Category/CategoryBanner.tsx";
 import * as $$$$$$$$31 from "./sections/CompaniesBackToTop.tsx";
+import * as $$$$$$$$32 from "./sections/CompaniesModals.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -245,6 +247,7 @@ const manifest = {
     "./islands/CompaniesFormField.tsx": $$$$$4,
     "./islands/CompaniesHeader.tsx": $$$$$5,
     "./islands/CompaniesList.tsx": $$$$$2,
+    "./islands/CompaniesModals.tsx": $$$$$21,
     "./islands/CompaniesNominateForm.tsx": $$$$$11,
     "./islands/CompaniesScrollBar.tsx": $$$$$14,
     "./islands/DragAndDropImageZone.tsx": $$$$$15,
@@ -273,6 +276,7 @@ const manifest = {
     "deco-sites/madeinbrazil/sections/CompaniesFooter.tsx": $$$$$$$$16,
     "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx": $$$$$$$$11,
     "deco-sites/madeinbrazil/sections/CompaniesList.tsx": $$$$$$$$8,
+    "deco-sites/madeinbrazil/sections/CompaniesModals.tsx": $$$$$$$$32,
     "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx": $$$$$$$$17,
     "deco-sites/madeinbrazil/sections/CompaniesScrollBar.tsx": $$$$$$$$24,
     "deco-sites/madeinbrazil/sections/Content/Benefits.tsx": $$$$$$$$19,

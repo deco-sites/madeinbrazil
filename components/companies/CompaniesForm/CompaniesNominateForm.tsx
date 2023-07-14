@@ -25,16 +25,31 @@ interface Company {
   [key: string]: string | number | null | undefined;
 }
 
+export interface Checkbox {
+  name: string;
+  label: string;
+}
+
 export interface Props {
+  isVisibleTurnItOffAfterTesting?: boolean;
+  title?: string;
+  subtitle?: string;
   employees: string[];
   stages: string[];
   capital: string[];
+  /** @description: Please insert a unique name, so the checkboxes can be validated properly */
+  checkboxes?: Array<Checkbox>;
 }
 
 export default function CompaniesNominateForm({
+  isVisibleTurnItOffAfterTesting = false,
+  title = "Nominate",
+  subtitle =
+    "Nominate Your Favorite Brazilian Tech Company for the Tech Made in Brazil List",
   employees,
   stages,
   capital,
+  checkboxes = [],
 }: Props) {
   const { displayFormModal } = useFormModal();
   const { displayToast, toastContent } = useToast();
@@ -52,6 +67,13 @@ export default function CompaniesNominateForm({
     segment: "",
     companyStage: "",
   });
+
+  const [checkboxesState, setCheckboxesState] = useState<
+    Record<string, boolean>
+  >(checkboxes.reduce((acc, checkbox) => {
+    acc[checkbox.name] = false;
+    return acc;
+  }, {} as Record<string, boolean>));
 
   const [success, setSuccess] = useState(false);
 
@@ -81,10 +103,10 @@ export default function CompaniesNominateForm({
   };
 
   const handleChange = (event: any) => {
-    const { name, value, type, checked } = event.target;
+    const { name, value } = event.target;
     setFormState((prevState) => ({
       ...prevState,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
   };
 
@@ -92,6 +114,15 @@ export default function CompaniesNominateForm({
     setFormState((prevState) => ({
       ...prevState,
       [name]: option,
+    }));
+  };
+
+  const handleCheckboxChange = (event: any, name: string) => {
+    const { checked } = event.target;
+
+    setCheckboxesState((prevState) => ({
+      ...prevState,
+      [name]: checked,
     }));
   };
 
@@ -137,6 +168,13 @@ export default function CompaniesNominateForm({
       }
     });
 
+    // check if checkboxes are selected
+    Object.entries(checkboxesState).forEach(([checkboxName, checkboxValue]) => {
+      if (!checkboxValue) {
+        newErrors[checkboxName] = "This field is required";
+      }
+    });
+
     setErrors(newErrors);
 
     return Object.values(newErrors).length === 0;
@@ -152,9 +190,9 @@ export default function CompaniesNominateForm({
 
   return (
     <Modal
-      open={displayFormModal.value}
-      title="Nominate"
-      subtitle="Nominate Your Favorite Brazilian Tech Company for the Tech Made in Brazil List"
+      open={isVisibleTurnItOffAfterTesting || displayFormModal.value}
+      title={title}
+      subtitle={subtitle}
       mode={isMobile() ? "sidebar-bottom" : "center"}
       className="w-full h-[95%] top-auto md:top-0 md:h-full overflow-hidden max-w-none max-h-none md:max-w-[792px] 
       md:max-h-[628px] rounded-[40px] shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light pr-4 
@@ -259,6 +297,16 @@ export default function CompaniesNominateForm({
           errors={errors}
           onChange={handleChange}
         />
+        {checkboxes?.map((checkbox) => (
+          <FormField
+            label={checkbox.label}
+            type="checkbox"
+            name={checkbox.name}
+            value={checkboxesState[checkbox.name]}
+            errors={errors}
+            onChange={handleCheckboxChange}
+          />
+        ))}
         <div class="flex justify-end items-center gap-6 mt-6">
           <button
             type="button"

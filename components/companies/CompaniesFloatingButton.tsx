@@ -1,12 +1,13 @@
 import { useState } from "preact/hooks";
 
 export interface Props {
-  email: string;
+  logoLink: string;
+  discord: string;
   instagram: string;
 }
 
 export default function CompaniesFloatingButton(
-  { email, instagram }: Props,
+  { logoLink = "https://deco.cx", discord, instagram }: Props,
 ) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -20,10 +21,10 @@ export default function CompaniesFloatingButton(
         <div className="flex flex-col gap-4 transition-all z-40">
           <a
             onClick={(e) => e.stopPropagation()}
-            href={`mailto:${email}`}
+            href={discord}
             className="flex items-center animate-bottomtotop275 justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 shadow-md transition ease-in-out"
           >
-            <img src="/email-white.svg" alt="Email" />
+            <img width="34px" height="34px" src="/discord.png" alt="Discord" />
           </a>
           <a
             onClick={(e) => e.stopPropagation()}
@@ -34,9 +35,11 @@ export default function CompaniesFloatingButton(
           </a>
         </div>
       )}
-      <button className="bg-primary rounded-full shadow-md flex items-center justify-center w-14 h-14 hover:bg-opacity-80 transition-all ease-in-out z-[100]">
-        <img src="/deco-icon.svg" alt="Add" />
-      </button>
+      <a href={logoLink} className="z-[100] cursor-pointer">
+        <button className="bg-primary rounded-full shadow-md flex items-center justify-center w-14 h-14 hover:bg-opacity-80 transition-all ease-in-out">
+          <img src="/deco-icon.svg" alt="Add" />
+        </button>
+      </a>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 
+import { useOrderBy } from "$store/sdk/useOrderBy.ts";
+
 import CompaniesCard from "./CompaniesCard/CompaniesCard.tsx";
 import CompaniesCardLoader from "./CompaniesCard/CompaniesCardLoader.tsx";
 import CompaniesFilter from "./CompaniesFilter/CompaniesFilter.tsx";
@@ -9,15 +11,15 @@ import type {
   FilterList,
 } from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
+import { OrderBy } from "$store/types/orderBy.ts";
+
 export type Props = {
   filterList: FilterList[] | undefined;
   likesThreshold?: number;
+  orderByMostPopularText?: string;
+  orderByAllText?: string;
+  likeButtonVisibleIn?: "MOST POPULAR" | "ALL" | "BOTH";
 };
-
-enum OrderBy {
-  MOST_POPULAR = "companyUpvotes",
-  NEWEST = "createdTime",
-}
 
 interface GetCompanyResponse {
   data: CompanyResponse;
@@ -30,13 +32,20 @@ interface SelectedFilters {
 }
 
 export default function CompaniesList(
-  { filterList, likesThreshold = 0 }: Props,
+  {
+    filterList,
+    likesThreshold = 0,
+    orderByMostPopularText = "MOST POPULAR",
+    orderByAllText = "ALL",
+    likeButtonVisibleIn = "BOTH",
+  }: Props,
 ) {
   const listRef = useRef<HTMLDivElement>(null);
 
+  const { orderBy } = useOrderBy();
+
   const [companiesList, setCompaniesList] = useState([] as Company[]);
 
-  const [orderBy, setOrderBy] = useState(OrderBy.MOST_POPULAR);
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilters[]>([]);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -52,12 +61,12 @@ export default function CompaniesList(
     }, "");
 
     const likesQueryString = `&likesThreshold=${
-      orderBy === OrderBy.MOST_POPULAR ? likesThreshold.toString() : "0"
+      orderBy.value === OrderBy.MOST_POPULAR ? likesThreshold.toString() : "0"
     }`;
 
     showReload && setIsLoading(true);
     fetch(
-      `/api/companies?orderBy=${orderBy}${filtersQueryString}${likesQueryString}`,
+      `/api/companies?orderBy=${orderBy.value}${filtersQueryString}${likesQueryString}`,
       {
         method: "GET",
       },
@@ -82,12 +91,12 @@ export default function CompaniesList(
     }, "");
 
     const likesQueryString = `&likesThreshold=${
-      orderBy === OrderBy.MOST_POPULAR ? likesThreshold.toString() : "0"
+      orderBy.value === OrderBy.MOST_POPULAR ? likesThreshold.toString() : "0"
     }`;
 
     setIsFetchingMore(true);
     fetch(
-      `/api/companies?orderBy=${orderBy}${filtersQueryString}${likesQueryString}&offset=${offset}`,
+      `/api/companies?orderBy=${orderBy.value}${filtersQueryString}${likesQueryString}&offset=${offset}`,
       {
         method: "GET",
       },
@@ -106,7 +115,7 @@ export default function CompaniesList(
 
   useEffect(() => {
     fetchCompanies();
-  }, [orderBy]);
+  }, [orderBy.value]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,12 +146,11 @@ export default function CompaniesList(
   };
 
   const handleOrderBy = () => {
-    setOrderBy(() => {
-      if (orderBy === OrderBy.MOST_POPULAR) {
-        return OrderBy.NEWEST;
-      }
-      return OrderBy.MOST_POPULAR;
-    });
+    if (orderBy.value === OrderBy.MOST_POPULAR) {
+      orderBy.value = OrderBy.NEWEST;
+    } else {
+      orderBy.value = OrderBy.MOST_POPULAR;
+    }
   };
 
   const handleSelectedFilters = (
@@ -194,21 +202,21 @@ export default function CompaniesList(
           <div className="flex items-center px-2 py-3">
             <span
               className={`${
-                orderBy === OrderBy.MOST_POPULAR
+                orderBy.value === OrderBy.MOST_POPULAR
                   ? "text-white bg-primary"
                   : "text-secondary"
               } font-medium text-base px-4 py-3 rounded-[40px] transition-all ease-in-out`}
             >
-              MOST POPULAR
+              {orderByMostPopularText}
             </span>
             <span
               className={`${
-                orderBy === OrderBy.NEWEST
+                orderBy.value === OrderBy.NEWEST
                   ? "text-white bg-primary"
                   : "text-secondary"
               } font-medium text-base px-4 py-3 rounded-[40px] transition-all ease-in-out`}
             >
-              NEWEST
+              {orderByAllText}
             </span>
           </div>
         </button>
@@ -244,9 +252,10 @@ export default function CompaniesList(
                         key={company.id}
                         company={company}
                         isCardClicked={isCardClicked}
-                        orderBy={orderBy}
+                        orderBy={orderBy.value}
                         setIsCardClicked={setCardClicked}
                         fetchCompanies={fetchCompanies}
+                        likeButtonVisibleIn={likeButtonVisibleIn}
                       />
                     ))}
                   </div>
