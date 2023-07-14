@@ -5,11 +5,19 @@ export interface Props {
   /** @format html */
   headerTitle?: string;
   headerSubtitle?: string;
+  /** @description Use "unset" to reset default values */
+  customStampPosition?: {
+    top?: string;
+    left?: string;
+    right?: string;
+    bottom?: string;
+  };
 }
 
 export default function CompaniesHeader({
   headerTitle,
   headerSubtitle,
+  customStampPosition,
 }: Props) {
   const { displayFormModal } = useFormModal();
 
@@ -49,7 +57,10 @@ export default function CompaniesHeader({
               </>
             </h1>
 
-            <div className="absolute top-0 left-[63vw] md:left-[55vw] min-[1359px]:left-[52rem] w-[14vw]">
+            <div
+              className="absolute top-0 left-[63vw] md:left-[55vw] min-[1359px]:left-[52rem] w-[14vw]"
+              style={customStampPosition}
+            >
               <img
                 className={`animate-[spin_12s_linear] ${
                   isHovering ? "animate-[spin_12s_linear_infinite]" : ""

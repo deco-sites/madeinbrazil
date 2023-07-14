@@ -7715,6 +7715,42 @@
             "null"
           ],
           "title": "Header Subtitle"
+        },
+        "customStampPosition": {
+          "type": "object",
+          "properties": {
+            "top": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Top"
+            },
+            "left": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Left"
+            },
+            "right": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Right"
+            },
+            "bottom": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Bottom"
+            }
+          },
+          "required": [],
+          "title": "Custom Stamp Position",
+          "description": "Use \"unset\" to reset default values"
         }
       },
       "required": [],
