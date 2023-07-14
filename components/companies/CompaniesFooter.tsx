@@ -131,19 +131,19 @@ export default function CompaniesFooter({
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:px-[102px] md:pt-4 md:pb-7 max-w-[1440px] mx-auto">
           <div className="flex flex-col md:flex-row gap-2 md:gap-4">
             <span
-              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer"
+              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer hover:underline transition ease-in-out"
               onClick={() => displayTerms.value = true}
             >
               Terms
             </span>
             <span
-              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer"
+              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer hover:underline transition ease-in-out"
               onClick={() => displayPrivacy.value = true}
             >
               Privacy policy
             </span>
             <span
-              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer"
+              className="text-primary text-sm font-montserrat font-medium px-3 py-2 cursor-pointer hover:underline transition ease-in-out"
               onClick={() => displayCookies.value = true}
             >
               Cookies

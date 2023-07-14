@@ -7793,10 +7793,6 @@
           "type": "string",
           "title": "Title"
         },
-        "subtitle": {
-          "type": "string",
-          "title": "Subtitle"
-        },
         "content": {
           "type": "string",
           "format": "html",
@@ -7805,7 +7801,6 @@
       },
       "required": [
         "title",
-        "subtitle",
         "content"
       ],
       "title": "ModalProps"

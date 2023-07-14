@@ -29,7 +29,7 @@ export default function CompaniesBackToTop(
     return (
       <>
         {content && (
-          <div className="flex items-center justify-center fixed bottom-10 left-0 right-0 z-50">
+          <div className="flex items-center justify-center fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
             <a
               href="#top"
               className="btn uppercase text-white bg-primary font-medium text-sm rounded-full border-0 shadow-[0_0_16px_0_rgba(0,0,0,0.4)] hover:bg-opacity-80"

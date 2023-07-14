@@ -6,7 +6,6 @@ import isMobile from "../helpers/isMobile.ts";
 
 export interface ModalProps {
   title: string;
-  subtitle: string;
   /** @format html */
   content: string;
 }
