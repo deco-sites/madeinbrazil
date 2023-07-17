@@ -78,13 +78,12 @@ const Modal = ({
         dialogStyles[mode]
       } ${props.class ?? ""}`}
       onClick={(e) =>
-        (e.target as HTMLDialogElement).tagName === "SECTION" && onClose?.()}
+        (e.target as HTMLDialogElement).tagName === "DIALOG" && onClose?.()}
       onClose={onClose}
     >
       <section
-        class={`relative w-full h-full flex bg-transparent ${
-          sectionStyles[mode]
-        }`}
+        class={`relative w-full h-full flex bg-transparent pr-4 
+        md:pr-[9px] pl-0 pt-16 pb-8 ${sectionStyles[mode]}`}
       >
         <div
           class={`bg-base-100 flex flex-col max-h-full w-full ${
@@ -103,7 +102,7 @@ const Modal = ({
               </p>
             </div>
             <Button
-              class="btn btn-ghost absolute right-[1%] top-[-43px]"
+              class="btn btn-ghost absolute right-[2%] top-[20px]"
               onClick={onClose}
             >
               <Icon id="XMark" width={24} height={24} strokeWidth={1} />

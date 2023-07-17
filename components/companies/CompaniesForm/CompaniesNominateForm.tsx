@@ -194,9 +194,8 @@ export default function CompaniesNominateForm({
       title={title}
       subtitle={subtitle}
       mode={isMobile() ? "sidebar-bottom" : "center"}
-      className="w-full h-[95%] top-auto md:top-0 md:h-full overflow-hidden max-w-none max-h-none md:max-w-[792px] 
-      md:max-h-[628px] rounded-[40px] shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light pr-4 
-      md:pr-[9px] pl-0 pt-16 pb-8"
+      className="p-0 w-full h-[95%] top-auto md:top-0 md:h-full overflow-hidden max-w-none max-h-none md:max-w-[792px] 
+      md:max-h-[628px] rounded-[40px] max-md:rounded-b-none shadow-[0_0_12_0_rgba(0,0,0,0.2)] scrollbar-light"
       onClose={() => {
         displayFormModal.value = false;
       }}
@@ -311,6 +310,9 @@ export default function CompaniesNominateForm({
           <button
             type="button"
             class="text-primary font-montserrat font-medium text-sm px-6 py-4 rounded-[40px] transition ease-in-out w-fit hover:bg-gray-opaque-light"
+            onClick={() => {
+              displayFormModal.value = false;
+            }}
           >
             Cancel
           </button>
