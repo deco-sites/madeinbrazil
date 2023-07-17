@@ -54,7 +54,7 @@ export default function CompaniesHeader({
             </h1>
 
             <div
-              className="absolute top-0 left-[63vw] md:left-[55vw] min-[1359px]:left-[52rem] w-[14vw]"
+              className="absolute top-0 left-[63vw] md:left-[55vw] min-[1359px]:left-[52rem] w-[14vw] z-[11]"
               style={customStampPosition}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}

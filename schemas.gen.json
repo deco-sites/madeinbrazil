@@ -8261,61 +8261,76 @@
       ],
       "title": "deco-sites/madeinbrazil/components/companies/CompaniesList.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTW9kYWxzLnRzeA==@TermsProps": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "content": {
+          "type": "string",
+          "format": "html",
+          "title": "Content"
+        }
+      },
+      "required": [
+        "title",
+        "content"
+      ],
+      "title": "TermsProps"
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTW9kYWxzLnRzeA==@PrivacyProps": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "content": {
+          "type": "string",
+          "format": "html",
+          "title": "Content"
+        }
+      },
+      "required": [
+        "title",
+        "content"
+      ],
+      "title": "PrivacyProps"
+    },
+    "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTW9kYWxzLnRzeA==@CookiesProps": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "content": {
+          "type": "string",
+          "format": "html",
+          "title": "Content"
+        }
+      },
+      "required": [
+        "title",
+        "content"
+      ],
+      "title": "CookiesProps"
+    },
     "ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTW9kYWxzLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "terms": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string",
-              "title": "Title"
-            },
-            "content": {
-              "type": "string",
-              "title": "Content"
-            }
-          },
-          "required": [
-            "title",
-            "content"
-          ],
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTW9kYWxzLnRzeA==@TermsProps",
           "title": "Terms"
         },
         "privacy": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string",
-              "title": "Title"
-            },
-            "content": {
-              "type": "string",
-              "title": "Content"
-            }
-          },
-          "required": [
-            "title",
-            "content"
-          ],
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTW9kYWxzLnRzeA==@PrivacyProps",
           "title": "Privacy"
         },
         "cookies": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string",
-              "title": "Title"
-            },
-            "content": {
-              "type": "string",
-              "title": "Content"
-            }
-          },
-          "required": [
-            "title",
-            "content"
-          ],
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9tYWRlaW5icmF6aWwvY29tcG9uZW50cy9jb21wYW5pZXMvQ29tcGFuaWVzTW9kYWxzLnRzeA==@CookiesProps",
           "title": "Cookies"
         }
       },

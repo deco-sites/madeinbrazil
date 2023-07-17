@@ -4,22 +4,28 @@ import Modal from "$store/components/ui/Modal.tsx";
 
 import isMobile from "../helpers/isMobile.ts";
 
+export interface TermsProps {
+  title: string;
+  /** @format html */
+  content: string;
+}
+
+export interface PrivacyProps {
+  title: string;
+  /** @format html */
+  content: string;
+}
+
+export interface CookiesProps {
+  title: string;
+  /** @format html */
+  content: string;
+}
+
 export interface Props {
-  terms: {
-    title: string;
-    /** @format html */
-    content: string;
-  };
-  privacy: {
-    title: string;
-    /** @format html */
-    content: string;
-  };
-  cookies: {
-    title: string;
-    /** @format html */
-    content: string;
-  };
+  terms: TermsProps;
+  privacy: PrivacyProps;
+  cookies: CookiesProps;
 }
 
 export default function CompaniesModals({ cookies, privacy, terms }: Props) {
