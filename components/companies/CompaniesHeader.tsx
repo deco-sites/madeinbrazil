@@ -1,5 +1,5 @@
 import { useFormModal } from "$store/sdk/useFormModal.ts";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 export interface Props {
   /** @format html */
@@ -22,6 +22,14 @@ export default function CompaniesHeader({
   const { displayFormModal } = useFormModal();
 
   const [isHovering, setIsHovering] = useState(false);
+  const [isSpinning, setIsSpinning] = useState(false);
+
+  useEffect(() => {
+    setIsSpinning(true);
+    setTimeout(() => {
+      setIsSpinning(false);
+    }, 12000);
+  }, [isHovering]);
 
   return (
     <>
@@ -60,8 +68,8 @@ export default function CompaniesHeader({
               onMouseLeave={() => setIsHovering(false)}
             >
               <img
-                className={`animate-[spin_12s_linear] ${
-                  isHovering ? "animate-[spin_12s_linear_infinite]" : ""
+                className={`${
+                  isSpinning ? "animate-[spin_12s_linear_infinite]" : ""
                 }`}
                 src="/stamp.png"
                 alt="Stamp"
