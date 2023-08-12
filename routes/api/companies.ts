@@ -151,11 +151,11 @@ const fetchFilters = async () => {
         },
         {
           employees: {
-            name: "Number of Employees",
+            name: "Employees",
             values: new Set([]),
           },
           companyStage: {
-            name: "Company Stage",
+            name: "Stage",
             values: new Set([]),
           },
           capital: {

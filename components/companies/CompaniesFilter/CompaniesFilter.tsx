@@ -81,9 +81,7 @@ export default function CompaniesFilter({
   return (
     <div
       key={filter.name}
-      className={`flex flex-col relative min-w-[150px] ${
-        isOpen ? "min-w-[219px]" : ""
-      } transition-all duration-300 ease-in-out`}
+      className={`flex flex-col relative min-w-[150px] transition-all duration-300 ease-in-out`}
       ref={dropdownRef}
     >
       <button
@@ -96,8 +94,8 @@ export default function CompaniesFilter({
         } hover:bg-gray-opaque-light`}
         onClick={toggleDropdown}
       >
-        <div className="flex items-center pr-4 pl-6 py-2">
-          <span className="text-secondary text-base pr-2 rounded-[40px] transition-all ease-in-out uppercase">
+        <div className="flex items-center pr-2 pl-4 py-2">
+          <span className="text-secondary text-base text-sm pr-2 rounded-[40px] transition-all ease-in-out uppercase">
             {getSearchedFilter(filter.name)?.length > 0
               ? (
                 <>
@@ -122,7 +120,7 @@ export default function CompaniesFilter({
       </button>
       {isOpen && (
         <div className="flex flex-col gap-2 absolute top-[calc(100%+8px)] left-0 w-full bg-white rounded-lg shadow-[0_0_12px_0_rgba(0,0,0,0.2)] transition-all ease-in-out px-6 pt-6 pb-4 z-50 max-w-[230px] min-w-[230px] h-[228px]">
-          <div className="flex flex-col gap-4 overflow-y-auto h-[120px] scrollbar-light">
+          <div className="flex flex-col gap-2 overflow-y-auto h-[120px] scrollbar-light">
             {filter.values.map((option) => (
               <CompaniesFilterItem
                 key={option}

@@ -77,7 +77,7 @@ export default function CompaniesHeader({
           </div>
 
           <div className="relative mt-10 md:mt-12">
-            <p className="relative text-primary --p font-montserrat font-normal md:text-[24px] md:leading-7 max-w-[781px]">
+            <p className="relative text-primary --p font-montserrat font-normal md:text-[24px] md:leading-7 max-w-[760px]">
               {headerSubtitle}
             </p>
           </div>

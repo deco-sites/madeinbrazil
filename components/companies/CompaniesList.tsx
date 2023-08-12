@@ -195,7 +195,7 @@ export default function CompaniesList(
       ref={listRef}
     >
       <div className="flex flex-col mx-auto max-w-[1440px] min-h-[calc(100vh-98px)] w-full bg-white  px-4 md:px-24 items-center md:items-start">
-        <div className="flex flex-col justify-between items-center mt-10 w-full">
+        <div className="flex flex-col justify-between items-center mt-6 md:mt-10 w-full">
           <div className="flex flex-wrap justify-start gap-4 w-full transition-all ease-in-out">
             {filterList?.map((filter) => (
               <CompaniesFilter
@@ -221,7 +221,7 @@ export default function CompaniesList(
                 )
                 : companiesList.length
                 ? (
-                  <div className="grid justify-items-center min-[744px]:grid-cols-2 min-[744px]:gap-8 min-[1024px]:gap-12 min-[1440px]:grid-cols-3 w-full">
+                  <div className="grid justify-items-center min-[744px]:grid-cols-2 min-[744px]:gap-6 min-[1024px]:gap-8 min-[1440px]:grid-cols-3 w-full">
                     {companiesList.map((company) => (
                       <CompaniesCard
                         key={company.id}
