@@ -1,4 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
+import { fetchSafe } from "deco-sites/std/utils/fetch.ts";
 
 import type { CompanyForm } from "$store/types/company.d.ts";
 
@@ -88,9 +89,10 @@ const fetchCompanies = async (
     params.append("filterByFormula", filterByFormula);
   }
 
-  return await fetch(`${AIRTABLE_URL}?${params.toString()}`, {
+  return await fetchSafe(`${AIRTABLE_URL}?${params.toString()}`, {
     method: "GET",
     headers: myHeaders,
+    withProxyCache: true,
   })
     .then((response) => response.json())
     .then((data: AirTableListResponse) => {
