@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "preact/hooks";
+import Image from "deco-sites/std/components/Image.tsx";
 
 import CompaniesUpvoteButton from "../CompaniesUpvoteButton.tsx";
 import CompaniesCardTag from "./CompaniesCardTag.tsx";
@@ -71,18 +72,22 @@ export default function CompaniesCard(
     >
       <div className="h-full flex flex-col">
         <div className="h-[170px] bg-primary rounded-t-3xl">
-          <img
+          <Image
             className="h-[inherit] w-full object-cover rounded-t-3xl"
             src={company.banner[0].url}
             alt={company.name}
+            width={395}
+            height={170}
           />
         </div>
         <div className="bg-white rounded-b-3xl relative h-[inherit]">
           <div className="flex items-center absolute top-[-32px] left-[24px] w-[64px] h-[64px] bg-white rounded-full">
-            <img
+            <Image
               className="object-contain rounded-full"
               src={company.logo[0].url}
               alt={company.name}
+              width={64}
+              height={64}
             />
           </div>
           <div className="flex flex-col justify-between h-full p-6 pt-14">
@@ -140,10 +145,12 @@ export default function CompaniesCard(
       >
         <div className="flex flex-col items-start h-full px-8 py-12">
           <div className="flex items-start left-[40px] w-[48px] h-[48px] bg-white rounded-full">
-            <img
+            <Image
               className="object-contain rounded-full"
               src={company.logo[0].url}
               alt={company.name}
+              width={64}
+              height={64}
             />
           </div>
           <div className="flex flex-col">
