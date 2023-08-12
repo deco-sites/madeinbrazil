@@ -57,7 +57,7 @@ export default function CompaniesFooter({
                 </span>
               </span>
             </span>
-            <div className="flex flex-col md:gap-4 gap-6 max-w-[691px]">
+            <div className="flex flex-col md:gap-4 gap-6 max-w-[650px]">
               <span
                 className="text-secondary text-base font-montserrat font-medium tracking-[-0.8px]"
                 ref={footerTextRef}

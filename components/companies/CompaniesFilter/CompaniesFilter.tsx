@@ -97,7 +97,7 @@ export default function CompaniesFilter({
         onClick={toggleDropdown}
       >
         <div className="flex items-center pr-4 pl-6 py-2">
-          <span className="text-secondary font-medium text-base pr-2 rounded-[40px] transition-all ease-in-out uppercase">
+          <span className="text-secondary text-base pr-2 rounded-[40px] transition-all ease-in-out uppercase">
             {getSearchedFilter(filter.name)?.length > 0
               ? (
                 <>

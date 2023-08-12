@@ -34,13 +34,13 @@ export default function CompaniesHeader({
   return (
     <>
       <div className="z-[5] bg-white border-b-2 border-black border-opacity-20 md:px-[22px]">
-        <div className="flex flex-col md:px-24 overflow-x-hidden relative pt-16 px-4 md:pt-32 max-w-[1440px] mx-auto">
+        <div className="flex flex-col md:px-24 overflow-x-hidden relative pt-16 px-4 md:pt-32 max-w-[1240px] mx-auto">
           <div className="relative">
-            <h1 className="relative text-primary --p font-semibold tracking-[-4.126px] leading-[90%] text-[13vw] md:text-[12vw] min-[1359px]:leading-[9rem] md:tracking-[-.75rem] min-[1359px]:text-[10.5rem] z-10">
+            <h1 className="relative text-primary --p font-semibold tracking-[-4.126px] leading-[90%] text-[12vw] md:text-[12vw] min-[1359px]:leading-[9rem] md:tracking-[-.75rem] min-[1359px]:text-[9rem] z-10">
               <>
-                <div className="absolute left-0 h-[10px] w-[88vw] md:h-[34px] top-[50%] md:w-[38vw] min-[1359px]:w-[562px] z-[-1]">
+                <div className="absolute left-0 h-[10px] w-[70vw] md:h-[34px] top-[50%] md:w-[38vw] min-[1359px]:w-[656px] z-[-1]">
                   <div className="relative w-full h-full">
-                    <div className="absolute animate-widthlefttoright80 left-0 w-[80%] h-full bg-white z-[2]">
+                    <div className="absolute animate-widthlefttoright70 left-0 w-[70%] h-full bg-white z-[2]">
                       <div className="w-full h-full bg-yellow-opaque" />
                     </div>
 
@@ -53,16 +53,15 @@ export default function CompaniesHeader({
                   ? <span dangerouslySetInnerHTML={{ __html: headerTitle }} />
                   : (
                     <span>
-                      Unleash <br />
-                      Brazil's <br />
-                      Tech Brilliance.
+                      Brazil Tech,<br />
+                      Global Reach
                     </span>
                   )}
               </>
             </h1>
 
             <div
-              className="absolute top-0 left-[63vw] md:left-[55vw] min-[1359px]:left-[52rem] w-[14vw] z-[11]"
+              className="absolute top-0 left-[63vw] md:left-[55vw] min-[1359px]:left-[52rem] w-[16vw] md:w-[14vw] z-[11]"
               style={customStampPosition}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
@@ -77,15 +76,13 @@ export default function CompaniesHeader({
             </div>
           </div>
 
-          <div className="relative mt-14 md:mt-16">
-            <p className="relative text-secondary --p font-montserrat font-normal text-xs md:text-[24px] md:leading-7 max-w-[781px]">
-              {headerSubtitle || (
-                "Discover the game-changers, innovators, and disruptors in our catalog of Brazilian tech companies. Explore the forefront oftechnological advancement in Brazil."
-              )}
+          <div className="relative mt-10 md:mt-12">
+            <p className="relative text-primary --p font-montserrat font-normal md:text-[24px] md:leading-7 max-w-[781px]">
+              {headerSubtitle}
             </p>
           </div>
 
-          <div className="relative my-10 md:my-16">
+          <div className="relative my-8 md:my-12">
             <button
               className="bg-primary text-primary-content font-medium
              text-base px-6 py-4 rounded-[40px] hover:bg-opacity-80 shadow-md

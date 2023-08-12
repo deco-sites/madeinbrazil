@@ -30,9 +30,9 @@ export default {
           "0%": { transform: "translateY(275%)", opacity: 0 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
-        "width-left-to-right-80": {
+        "width-left-to-right-70": {
           "0%": { width: "0%" },
-          "100%": { width: "80%" },
+          "100%": { width: "70%" },
         },
         "width-left-to-right-100": {
           "0%": { width: "0%" },
@@ -42,7 +42,7 @@ export default {
       animation: {
         "bottomtotop140": "bottom-to-top-140 300ms ease-in-out",
         "bottomtotop275": "bottom-to-top-275 300ms ease-in-out",
-        "widthlefttoright80": "width-left-to-right-80 300ms ease-in-out",
+        "widthlefttoright70": "width-left-to-right-70 300ms ease-in-out",
         "widthlefttoright100": "width-left-to-right-100 600ms ease-in-out",
       },
     },
