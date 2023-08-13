@@ -114,7 +114,12 @@ export default function CompaniesFilter({
               isOpen ? "rotate-180" : ""
             }`}
           >
-            <img src="/caret-down.svg" alt="Arrow Down" />
+            <img
+              src="/caret-down.svg"
+              alt="Arrow Down"
+              width={24}
+              height={24}
+            />
           </span>
         </div>
       </button>

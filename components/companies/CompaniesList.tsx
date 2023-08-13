@@ -233,9 +233,10 @@ export default function CompaniesList(
                 : companiesList.length
                 ? (
                   <div className="grid justify-items-center min-[744px]:grid-cols-2 min-[744px]:gap-6 min-[1024px]:gap-8 min-[1440px]:grid-cols-3 w-full">
-                    {companiesList.map((company) => (
+                    {companiesList.map((company, index) => (
                       <CompaniesCard
                         key={company.id}
+                        index={index}
                         company={company}
                         isCardClicked={isCardClicked}
                         orderBy={orderBy.value}

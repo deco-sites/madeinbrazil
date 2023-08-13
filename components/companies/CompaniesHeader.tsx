@@ -72,6 +72,8 @@ export default function CompaniesHeader({
                 }`}
                 src="/stamp.png"
                 alt="Stamp"
+                width={180}
+                height={180}
               />
             </div>
           </div>

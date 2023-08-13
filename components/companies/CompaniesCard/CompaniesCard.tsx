@@ -9,6 +9,7 @@ import type { Company } from "deco-sites/madeinbrazil/routes/api/companies.ts";
 
 interface Props {
   company: Company;
+  index: number;
   isCardClicked: boolean;
   orderBy: string;
   setIsCardClicked: (isCardClicked: boolean) => void;
@@ -19,6 +20,7 @@ interface Props {
 export default function CompaniesCard(
   {
     company,
+    index,
     isCardClicked,
     orderBy,
     setIsCardClicked,
@@ -78,6 +80,7 @@ export default function CompaniesCard(
             alt={company.name}
             width={395}
             height={170}
+            loading={index < 3 ? "eager" : "lazy"}
           />
         </div>
         <div className="bg-white rounded-b-3xl relative h-[inherit]">
@@ -88,6 +91,7 @@ export default function CompaniesCard(
               alt={company.name}
               width={64}
               height={64}
+              loading={index < 3 ? "eager" : "lazy"}
             />
           </div>
           <div className="flex flex-col justify-between h-full p-6 pt-14">
