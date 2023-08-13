@@ -70,7 +70,12 @@ export default function CompaniesList(
       {
         method: "GET",
       },
-    ).then((res) => res.json()).then(
+    ).then((res) => {
+      if (res.status != 200) {
+        window.alert("Something went wrong. Please try again.");
+      }
+      return res.json();
+    }).then(
       (data: GetCompanyResponse) => {
         setCompaniesList(data.data.companyList);
         setOffset(data.data?.offset ?? null);
@@ -101,7 +106,13 @@ export default function CompaniesList(
         method: "GET",
       },
     )
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status != 200) {
+          console.log("Something went wrong. Reloading window.");
+          window.location.reload();
+        }
+        return res.json();
+      })
       .then((data: GetCompanyResponse) => {
         setCompaniesList((prevCompanies) => {
           return [...prevCompanies, ...data.data.companyList];

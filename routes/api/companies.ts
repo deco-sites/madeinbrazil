@@ -79,7 +79,7 @@ const fetchCompanies = async (
     : (`AND(${defaultFilters})`);
 
   const params = new URLSearchParams({
-    "pageSize": "6",
+    "pageSize": "100",
     "sort[0][field]": orderBy,
     "sort[0][direction]": "desc",
     "offset": offset ?? "",
@@ -94,7 +94,13 @@ const fetchCompanies = async (
     headers: myHeaders,
     withProxyCache: true,
   })
-    .then((response) => response.json())
+    .then(async (response) => {
+      const json = await response.json();
+      if (response.status !== 200 || !json.records) {
+        throw new Error(JSON.stringify(json));
+      }
+      return json;
+    })
     .then((data: AirTableListResponse) => {
       const companies = {
         offset: data?.offset ?? null,
@@ -102,10 +108,6 @@ const fetchCompanies = async (
       };
 
       return companies;
-    })
-    .catch((error) => {
-      console.error(error);
-      throw new Error(error);
     });
 };
 
@@ -128,11 +130,12 @@ const fetchFilters = async () => {
     return `&fields[]=${filter}`;
   });
 
-  return await fetch(
+  return await fetchSafe(
     `${AIRTABLE_URL}?${params.toString()}${encodeURI(filtersQuery.join(""))}`,
     {
       method: "GET",
       headers: myHeaders,
+      withProxyCache: true,
     },
   )
     .then((response) => response.json())
