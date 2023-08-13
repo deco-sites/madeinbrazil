@@ -74,6 +74,7 @@ export default function CompaniesHeader({
                 alt="Stamp"
                 width={180}
                 height={180}
+                loading="lazy"
               />
             </div>
           </div>

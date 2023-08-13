@@ -80,7 +80,7 @@ export default function CompaniesCard(
             alt={company.name}
             width={395}
             height={170}
-            loading={index < 3 ? "eager" : "lazy"}
+            loading={index == 0 ? "eager" : "lazy"}
           />
         </div>
         <div className="bg-white rounded-b-3xl relative h-[inherit]">
@@ -91,7 +91,7 @@ export default function CompaniesCard(
               alt={company.name}
               width={64}
               height={64}
-              loading={index < 3 ? "eager" : "lazy"}
+              loading={index == 0 ? "eager" : "lazy"}
             />
           </div>
           <div className="flex flex-col justify-between h-full p-6 pt-14">
@@ -155,6 +155,7 @@ export default function CompaniesCard(
               alt={company.name}
               width={64}
               height={64}
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col">

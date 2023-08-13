@@ -119,6 +119,7 @@ export default function CompaniesFilter({
               alt="Arrow Down"
               width={24}
               height={24}
+              loading="lazy"
             />
           </span>
         </div>

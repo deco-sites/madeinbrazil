@@ -66,6 +66,7 @@ export default function CompaniesFormDropdown({
               alt="Arrow Down"
               width={24}
               height={24}
+              loading="lazy"
             />
           </span>
         </div>
