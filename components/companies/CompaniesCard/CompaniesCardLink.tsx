@@ -13,7 +13,7 @@ export default function CompaniesCardLink(
       href={href}
       className="flex items-center justify-center w-14 h-12 bg-transparent hover:bg-gray-opaque-light rounded-full transition ease-in-out"
     >
-      <img src={imgSrc} alt={alt} loading="lazy" />
+      <img src={imgSrc} alt={alt} loading="lazy" width={24} height={24} />
     </a>
   );
 }

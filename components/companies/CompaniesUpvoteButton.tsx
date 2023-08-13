@@ -121,7 +121,7 @@ export default function CompaniesUpvoteButton({
         handleUpvote();
       }}
     >
-      <img src="/like.svg" alt="Likes" loading="lazy" />
+      <img src="/like.svg" alt="Likes" loading="lazy" width={24} height={24} />
       <span>
         {isUpvoting
           ? (

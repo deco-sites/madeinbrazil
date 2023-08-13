@@ -80,6 +80,7 @@ export default function CompaniesCard(
             alt={company.name}
             width={395}
             height={170}
+            preload={index == 0}
             loading={index == 0 ? "eager" : "lazy"}
           />
         </div>
@@ -91,7 +92,7 @@ export default function CompaniesCard(
               alt={company.name}
               width={64}
               height={64}
-              loading={index == 0 ? "eager" : "lazy"}
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col justify-between h-full p-6 pt-14">
