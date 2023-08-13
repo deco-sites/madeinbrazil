@@ -48,22 +48,23 @@ import * as $$$$$$$$13 from "./sections/Content/Testimonials.tsx";
 import * as $$$$$$$$14 from "./sections/Content/Logos.tsx";
 import * as $$$$$$$$15 from "./sections/Content/Faq.tsx";
 import * as $$$$$$$$16 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$$$17 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$$$18 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$$$19 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$$$20 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$$$21 from "./sections/Miscellaneous/CampaignTimer.tsx";
-import * as $$$$$$$$22 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$$$23 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$$$24 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$$$25 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$$$26 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$$$27 from "./sections/CompaniesModals.tsx";
-import * as $$$$$$$$28 from "./sections/CompaniesNominateForm.tsx";
-import * as $$$$$$$$29 from "./sections/CompaniesBackToTop.tsx";
-import * as $$$$$$$$30 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$$$31 from "./sections/Toast.tsx";
-import * as $$$$$$$$32 from "./sections/Header/Header.tsx";
+import * as $$$$$$$$17 from "./sections/Theme.tsx";
+import * as $$$$$$$$18 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$$$19 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$$$20 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$$$21 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$$$22 from "./sections/Miscellaneous/CampaignTimer.tsx";
+import * as $$$$$$$$23 from "./sections/Miscellaneous/CookieConsent.tsx";
+import * as $$$$$$$$24 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$$$25 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$$$26 from "./sections/Links/LinkTree.tsx";
+import * as $$$$$$$$27 from "./sections/Links/Shortcuts.tsx";
+import * as $$$$$$$$28 from "./sections/CompaniesModals.tsx";
+import * as $$$$$$$$29 from "./sections/CompaniesNominateForm.tsx";
+import * as $$$$$$$$30 from "./sections/CompaniesBackToTop.tsx";
+import * as $$$$$$$$31 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$$$32 from "./sections/Toast.tsx";
+import * as $$$$$$$$33 from "./sections/Header/Header.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -334,13 +335,13 @@ const manifest = {
     "$live/sections/UseSlot.tsx": i2$$$$$4,
     "deco-sites/madeinbrazil/sections/Category/CategoryBanner.tsx": $$$$$$$$6,
     "deco-sites/madeinbrazil/sections/Category/CategoryList.tsx": $$$$$$$$7,
-    "deco-sites/madeinbrazil/sections/CompaniesBackToTop.tsx": $$$$$$$$29,
+    "deco-sites/madeinbrazil/sections/CompaniesBackToTop.tsx": $$$$$$$$30,
     "deco-sites/madeinbrazil/sections/CompaniesFloatingButton.tsx": $$$$$$$$12,
     "deco-sites/madeinbrazil/sections/CompaniesFooter.tsx": $$$$$$$$5,
     "deco-sites/madeinbrazil/sections/CompaniesHeader.tsx": $$$$$$$$4,
     "deco-sites/madeinbrazil/sections/CompaniesList.tsx": $$$$$$$$3,
-    "deco-sites/madeinbrazil/sections/CompaniesModals.tsx": $$$$$$$$27,
-    "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx": $$$$$$$$28,
+    "deco-sites/madeinbrazil/sections/CompaniesModals.tsx": $$$$$$$$28,
+    "deco-sites/madeinbrazil/sections/CompaniesNominateForm.tsx": $$$$$$$$29,
     "deco-sites/madeinbrazil/sections/CompaniesScrollBar.tsx": $$$$$$$$0,
     "deco-sites/madeinbrazil/sections/Content/Benefits.tsx": $$$$$$$$16,
     "deco-sites/madeinbrazil/sections/Content/Faq.tsx": $$$$$$$$15,
@@ -348,25 +349,26 @@ const manifest = {
     "deco-sites/madeinbrazil/sections/Content/Testimonials.tsx": $$$$$$$$13,
     "deco-sites/madeinbrazil/sections/DesignSystem/DesignSystem.tsx": $$$$$$$$2,
     "deco-sites/madeinbrazil/sections/Footer/Footer.tsx": $$$$$$$$1,
-    "deco-sites/madeinbrazil/sections/Header/Header.tsx": $$$$$$$$32,
+    "deco-sites/madeinbrazil/sections/Header/Header.tsx": $$$$$$$$33,
     "deco-sites/madeinbrazil/sections/Images/BannerGrid.tsx": $$$$$$$$9,
     "deco-sites/madeinbrazil/sections/Images/Carousel.tsx": $$$$$$$$11,
     "deco-sites/madeinbrazil/sections/Images/ImageGallery.tsx": $$$$$$$$10,
     "deco-sites/madeinbrazil/sections/Images/ShoppableBanner.tsx": $$$$$$$$8,
-    "deco-sites/madeinbrazil/sections/Links/LinkTree.tsx": $$$$$$$$25,
-    "deco-sites/madeinbrazil/sections/Links/Shortcuts.tsx": $$$$$$$$26,
+    "deco-sites/madeinbrazil/sections/Links/LinkTree.tsx": $$$$$$$$26,
+    "deco-sites/madeinbrazil/sections/Links/Shortcuts.tsx": $$$$$$$$27,
     "deco-sites/madeinbrazil/sections/Miscellaneous/CampaignTimer.tsx":
-      $$$$$$$$21,
-    "deco-sites/madeinbrazil/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$$$22,
-    "deco-sites/madeinbrazil/sections/Newsletter/Newsletter.tsx": $$$$$$$$30,
-    "deco-sites/madeinbrazil/sections/Product/ProductDetails.tsx": $$$$$$$$20,
-    "deco-sites/madeinbrazil/sections/Product/ProductShelf.tsx": $$$$$$$$19,
-    "deco-sites/madeinbrazil/sections/Product/SearchResult.tsx": $$$$$$$$18,
-    "deco-sites/madeinbrazil/sections/Product/Wishlist.tsx": $$$$$$$$17,
-    "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx": $$$$$$$$24,
-    "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx": $$$$$$$$23,
-    "deco-sites/madeinbrazil/sections/Toast.tsx": $$$$$$$$31,
+    "deco-sites/madeinbrazil/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$$$23,
+    "deco-sites/madeinbrazil/sections/Newsletter/Newsletter.tsx": $$$$$$$$31,
+    "deco-sites/madeinbrazil/sections/Product/ProductDetails.tsx": $$$$$$$$21,
+    "deco-sites/madeinbrazil/sections/Product/ProductShelf.tsx": $$$$$$$$20,
+    "deco-sites/madeinbrazil/sections/Product/SearchResult.tsx": $$$$$$$$19,
+    "deco-sites/madeinbrazil/sections/Product/Wishlist.tsx": $$$$$$$$18,
+    "deco-sites/madeinbrazil/sections/Social/InstagramPosts.tsx": $$$$$$$$25,
+    "deco-sites/madeinbrazil/sections/Social/WhatsApp.tsx": $$$$$$$$24,
+    "deco-sites/madeinbrazil/sections/Theme.tsx": $$$$$$$$17,
+    "deco-sites/madeinbrazil/sections/Toast.tsx": $$$$$$$$32,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$$5,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$$6,
     "deco-sites/std/sections/configLinxImpulse.global.tsx": i2$$$$$7,
