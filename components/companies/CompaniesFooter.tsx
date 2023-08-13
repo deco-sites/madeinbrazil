@@ -96,6 +96,7 @@ export default function CompaniesFooter({
                   className="max-w-[144px] md:max-w-[100%]"
                   src="/deco-full-logo.svg"
                   alt="Deco.cx"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -112,6 +113,7 @@ export default function CompaniesFooter({
                       height="34px"
                       src="/discord.png"
                       alt="Discord"
+                      loading="lazy"
                     />
                   </a>
                   <a
@@ -119,7 +121,11 @@ export default function CompaniesFooter({
                     href={instagram}
                     className="flex items-center animate-bottomtotop275  justify-center w-14 h-12 bg-primary rounded-full hover:bg-opacity-80 transition ease-in-out"
                   >
-                    <img src="/instagram-white.svg" alt="Instagram" />
+                    <img
+                      src="/instagram-white.svg"
+                      alt="Instagram"
+                      loading="lazy"
+                    />
                   </a>
                 </>
               )}

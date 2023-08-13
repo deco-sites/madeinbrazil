@@ -14,7 +14,8 @@ import type {
 import { OrderBy } from "$store/types/orderBy.ts";
 
 export type Props = {
-  filterList: FilterList[] | undefined;
+  serverList?: Company[];
+  filterList?: FilterList[];
   likesThreshold?: number;
   orderByMostPopularText?: string;
   orderByAllText?: string;
@@ -33,6 +34,7 @@ interface SelectedFilters {
 
 export default function CompaniesList(
   {
+    serverList,
     filterList,
     likesThreshold = 0,
     orderByMostPopularText = "MOST POPULAR",
@@ -43,12 +45,13 @@ export default function CompaniesList(
   const listRef = useRef<HTMLDivElement>(null);
 
   const { orderBy } = useOrderBy();
-
-  const [companiesList, setCompaniesList] = useState([] as Company[]);
+  const [companiesList, setCompaniesList] = useState(
+    serverList || [] as Company[],
+  );
 
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilters[]>([]);
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(!serverList);
   const [isCardClicked, setCardClicked] = useState(false);
   const [isFetchingMore, setIsFetchingMore] = useState(false);
 
@@ -124,24 +127,26 @@ export default function CompaniesList(
       });
   };
 
-  useEffect(() => {
-    fetchCompanies();
-  }, [orderBy.value]);
+  if (!serverList) {
+    useEffect(() => {
+      fetchCompanies();
+    }, [orderBy.value]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const { scrollTop, clientHeight, scrollHeight } =
-        self.document.documentElement;
-      if (scrollTop + clientHeight >= scrollHeight - 480) {
-        fetchMoreCompanies();
-      }
-    };
+    useEffect(() => {
+      const handleScroll = () => {
+        const { scrollTop, clientHeight, scrollHeight } =
+          self.document.documentElement;
+        if (scrollTop + clientHeight >= scrollHeight - 480) {
+          fetchMoreCompanies();
+        }
+      };
 
-    self.addEventListener("scroll", handleScroll);
-    return () => {
-      self.removeEventListener("scroll", handleScroll);
-    };
-  }, [offset, isLoading, isFetchingMore]);
+      self.addEventListener("scroll", handleScroll);
+      return () => {
+        self.removeEventListener("scroll", handleScroll);
+      };
+    }, [offset, isLoading, isFetchingMore]);
+  }
 
   const applyFilters = () => {
     fetchCompanies();

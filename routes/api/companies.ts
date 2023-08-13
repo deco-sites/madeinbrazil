@@ -31,7 +31,7 @@ const parseBody = async <T>(
   return JSON.parse(decodedData) as T;
 };
 
-const fetchCompanies = async (
+export const fetchCompanies = async (
   orderBy: string,
   employees: string | null,
   companyStage: string | null,
