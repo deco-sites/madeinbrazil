@@ -4,7 +4,18 @@
 /// <reference lib="esnext" />
 
 import { start } from "$fresh/server.ts";
-import config from "./fresh.config.ts";
+import plugins from "deco-sites/std/plugins/mod.ts";
+import partytownPlugin from "partytown/mod.ts";
 import manifest from "./fresh.gen.ts";
+import decoManifest from "./manifest.gen.ts";
 
-await start(manifest, config);
+await start(manifest, {
+  plugins: [
+    ...plugins(
+      {
+        manifest: decoManifest,
+      },
+    ),
+    partytownPlugin(),
+  ],
+});
